@@ -1,0 +1,7 @@
+site_name: 'F&iacute;sica B&aacute;sica'
+site_description: 'Introducci&oacute;n a la F&iacute;sica'
+site_author: 'Raul Jesus Lopez'
+site_url: http://www.rauljesus.com
+repo_url: https://github.com/example/repository/
+theme: null
+theme_dir: themes/material
