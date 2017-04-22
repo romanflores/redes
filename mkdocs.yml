@@ -1,7 +1,58 @@
-site_name: 'Redes de datos'
-site_description: 'Redes con Software Libre'
+# Información general
+site_name: 'F&iacute;sica B&aacute;sica'
+site_description: 'Introducci&oacute;n a la F&iacute;sica'
 site_author: 'Raul Jesus Lopez'
 site_url: http://www.rauljesus.com
-repo_url: https://github.com/la9una/redes
+
+# Repositorio
+repo_name: 'Ver en GitHub'
+repo_url: 'https://github.com/la9una/fisica'
+
+# Copyright
+#copyright: '2017 - Raul Jesus Lopez'
+
+# Tema
 theme: null
-theme_dir: themes/material
+theme_dir: 'themes/material'
+
+# Opciones
+extra:
+  palette:
+    primary: 'yellow'
+    accent: 'amber'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  social:
+#    - type: 'github'
+#      link: 'https://github.com/la9una'
+    - type: 'twitter'
+      link: 'https://twitter.com/la9una'
+#    - type: 'linkedin'
+#      link: 'https://de.linkedin.com/in/john-doe'
+#    - type: 'facebook'
+#      link: 'https://www.facebook.com/rauljesuslopez'
+
+# Google Analytics
+#google_analytics:
+#  - 'UA-XXXXXXXX-X'
+#  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - pymdownx.arithmatex
+  - admonition
+  - codehilite(guess_lang=false)
+  - toc(permalink=true)
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+
+# Extras
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
+# Páginas
+pages: 
+- Inicio: index.md
