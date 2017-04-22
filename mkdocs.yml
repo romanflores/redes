@@ -1,7 +1,7 @@
-site_name: 'F&iacute;sica B&aacute;sica'
-site_description: 'Introducci&oacute;n a la F&iacute;sica'
+site_name: 'Redes de datos'
+site_description: 'Redes con Software Libre'
 site_author: 'Raul Jesus Lopez'
 site_url: http://www.rauljesus.com
-repo_url: https://github.com/example/repository/
+repo_url: https://github.com/la9una/redes
 theme: null
 theme_dir: themes/material
