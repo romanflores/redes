@@ -6,7 +6,7 @@ site_url: http://www.redes.rauljesus.com
 
 # Repositorio
 repo_name: 'Ver en GitHub'
-repo_url: 'https://github.com/la9una/fisica'
+repo_url: 'https://github.com/la9una/redes'
 
 # Copyright
 #copyright: '2017 - Raul Jesus Lopez'
@@ -18,8 +18,8 @@ theme_dir: 'themes/material'
 # Opciones
 extra:
   palette:
-    primary: 'yellow'
-    accent: 'amber'
+    primary: 'deep purple'
+    accent: 'purple'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
