@@ -4,9 +4,31 @@
     
     <url>
      <loc>http://www.redes.rauljesus.com/</loc>
-     <lastmod>2017-04-22</lastmod>
+     <lastmod>2017-04-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/lampInstalacion/</loc>
+     <lastmod>2017-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/lampConfiguracionInicial/</loc>
+     <lastmod>2017-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/lampVerificandoInstalacion/</loc>
+     <lastmod>2017-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

@@ -56,3 +56,7 @@ extra_javascript:
 # Páginas
 pages: 
 - Inicio: index.md
+- LAMP:
+    - Instalación: 'lampInstalacion.md'
+    - Configuración inicial: 'lampConfiguracionInicial.md'
+    - Verificando instalación: 'lampVerificandoInstalacion.md'

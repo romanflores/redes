@@ -1,17 +1,12 @@
-# Welcome to MkDocs
+# Bienvenid@s
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+El presente espacio recopila teoría y ejercicios prácticos sobre temas relacionados con la implementación de redes y servicios utilizando, siempre que sea posible, software libre. Los contenidos intentan cubrir los objetivos propuestos en el diseño curricular de la materia **Instalación, mantenimiento y reparación de redes informáticas** correspondiente al séptimo año de estudios de la escuela secundaria técnica, con orientación **Técnico en Informática Profesional y Personal**, en Buenos Aires, Argentina. 
 
-## Commands
+## Temas
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+* [Networking](#)
+* [Servicios de red](#)
+* [Monitoreo de redes](#)
+* [Troubleshooting](#)
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Sitio en construcción...
