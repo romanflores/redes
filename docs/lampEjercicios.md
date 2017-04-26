@@ -6,6 +6,7 @@ A continuación se listan dos ejercicios en los que deberás aplicar los conocim
 La empresa "Penguin S.A.", dispone de un servidor web dedicado y tan solo una direccion IP. La empresa necesita que su servidor web gestione diferentes sitios web, cada uno con su nombre de dominio.
 
 Hablando con ejecutivos de la empresa, se acuerda en desplegar las siguientes plataformas webs: 
+
 1. Sitio oficial
 2. Sucursal Patagonia
 3. FrontEnd para la administración de la  base de datos MySQL. 
@@ -62,16 +63,16 @@ Se deben crear los archivos de configuración de cada **Host Virtual** solicitad
 #### Resolución de nombres ####
 Se debe realizar a través del método del archivo hosts.
 
-#### Creación de script [opcional]
-Tal vez sería más practico realizar todas las acciones anteriores valiendose de un script. ¿Te animás a escribirlo? 
+!!! tip "Automatización de tareas"
+	Tal vez sería más practico realizar todas las acciones anteriores valiendose de un script. ¿Te animás a escribirlo? 
 
+
+### Error 403
 
 !!! error "Error"
 
 	Es posible que con la configuración por defecto de Apache, obtengamos un ''error 403''. En ese caso, realizar los pasos que se describen a continuación
 
-
-### Error 403
 Para corregir dicho error, qbrimos el archivo de configuración general de Apache: 
 
 ```apache

@@ -407,13 +407,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#creacion-de-script-opcional" title="Creación de script [opcional]" class="md-nav__link">
-    Creación de script [opcional]
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#error-403" title="Error 403" class="md-nav__link">
     Error 403
   </a>
@@ -535,13 +528,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#creacion-de-script-opcional" title="Creación de script [opcional]" class="md-nav__link">
-    Creación de script [opcional]
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#error-403" title="Error 403" class="md-nav__link">
     Error 403
   </a>
@@ -600,10 +586,12 @@
                 <p>A continuación se listan dos ejercicios en los que deberás aplicar los conocimientos adquiridos. </p>
 <h2 id="ejercicio-1">Ejercicio 1<a class="headerlink" href="#ejercicio-1" title="Permanent link">&para;</a></h2>
 <p>La empresa "Penguin S.A.", dispone de un servidor web dedicado y tan solo una direccion IP. La empresa necesita que su servidor web gestione diferentes sitios web, cada uno con su nombre de dominio.</p>
-<p>Hablando con ejecutivos de la empresa, se acuerda en desplegar las siguientes plataformas webs: 
-1. Sitio oficial
-2. Sucursal Patagonia
-3. FrontEnd para la administración de la  base de datos MySQL. </p>
+<p>Hablando con ejecutivos de la empresa, se acuerda en desplegar las siguientes plataformas webs: </p>
+<ol>
+<li>Sitio oficial</li>
+<li>Sucursal Patagonia</li>
+<li>FrontEnd para la administración de la  base de datos MySQL. </li>
+</ol>
 <p>En la siguiente tabla se indican además las respectivas rutas donde deberán alojar los archivos de los sitios web. </p>
 <table>
 <thead>
@@ -662,13 +650,15 @@
 <p>Se deben crear los archivos de configuración de cada <strong>Host Virtual</strong> solicitado por el cliente. Tener en cuenta que para todos los casos, el administrador sera <code>admin@penguin.net</code>.</p>
 <h4 id="resolucion-de-nombres">Resolución de nombres<a class="headerlink" href="#resolucion-de-nombres" title="Permanent link">&para;</a></h4>
 <p>Se debe realizar a través del método del archivo hosts.</p>
-<h4 id="creacion-de-script-opcional">Creación de script [opcional]<a class="headerlink" href="#creacion-de-script-opcional" title="Permanent link">&para;</a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Automatización de tareas</p>
 <p>Tal vez sería más practico realizar todas las acciones anteriores valiendose de un script. ¿Te animás a escribirlo? </p>
+</div>
+<h3 id="error-403">Error 403<a class="headerlink" href="#error-403" title="Permanent link">&para;</a></h3>
 <div class="admonition error">
 <p class="admonition-title">Error</p>
 <p>Es posible que con la configuración por defecto de Apache, obtengamos un ''error 403''. En ese caso, realizar los pasos que se describen a continuación</p>
 </div>
-<h3 id="error-403">Error 403<a class="headerlink" href="#error-403" title="Permanent link">&para;</a></h3>
 <p>Para corregir dicho error, qbrimos el archivo de configuración general de Apache: </p>
 <div class="codehilite"><pre><span class="nb">sudo</span> vim etc/apache2/apache2.conf
 </pre></div>

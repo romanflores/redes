@@ -22,5 +22,5 @@ sudo a2enmod userdir
 Luego, reiniciamos el servidor para que incorpore los cambios:
 
 ```bash
-sudo service apache2 restart
+sudo systemctl restart apache2
 ```

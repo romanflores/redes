@@ -7,7 +7,7 @@ Los módulos se encuentran organizados en carpetas.
 Los módulos disponibles, pero aún **no habilitados**, se encuentran en una carpeta `/etc/apache2/mods-available` y los módulos activos o **habilitados** se encuentran en la carpeta `/etc/apache2/mods-enabled`
 
 
-##Habilitando módulos
+##Gestionando módulos
 
 La sintáxis básica para tabajar con módulos es la siguiente: 
 
