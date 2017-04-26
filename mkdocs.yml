@@ -55,7 +55,7 @@ extra_javascript:
 
 # Páginas
 pages: 
-- Inicio: index.md
+- Inicio: 'index.md'
 - Resolución de nombres: 
     - El archivo hosts: 'resolucionNombresHosts.md'
 - LAMP:
