@@ -56,7 +56,14 @@ extra_javascript:
 # Páginas
 pages: 
 - Inicio: index.md
+- Resolución de nombres: 
+    - El archivo hosts: 'resolucionNombresHosts.md'
 - LAMP:
     - Instalación: 'lampInstalacion.md'
     - Configuración inicial: 'lampConfiguracionInicial.md'
     - Verificando instalación: 'lampVerificandoInstalacion.md'
+    - Módulos de Apache: 'lampModulosApache.md'
+    - Web de usuario: 'lampUserdir.md'
+    - Hosts virtuales: 'lampVirtualHosts.md'
+    - Ejercicios prácticos: 'lampEjercicios.md'
+

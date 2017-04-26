@@ -1,3 +1,14 @@
+Una vez instalado el servidor web Apache se crea una estructura archivos y directorios, entre los que se destacan: 
+
+| Directorio o archivo     | Descripción          |
+| ---------------------- | --------------------------------------- |
+| `/etc/apache2/apache.conf`     | Archivo de configuración general de Apache|
+| `/etc/apache2/sites-available` | Directorio donde se alojan los archivos de configuración de los sitios  definidos pero aún no activos (es decir, no habilitados|
+| `/etc/apache2/sites-enabled`     | Directorio donde se alojan los archivos de configuración de los sitios  activos o habilitados|
+| `/var/www/html`| Directorio por del sitio web por defecto, donde Apache aloja las páginas web|
+| `/home/usuario/public_html`| Directorio donde se aloja el sitio web personal de cada usuario del sistema|
+
+
 Una vez finalizada la instalación, el servidor web Apache se iniciará automáticamente. Podemos verificarlo, ejecutando el siguiente comando: 
 
 ```bash
@@ -43,7 +54,7 @@ sudo systemctl restart apache2
 ```
 
 
-###Inicio y parada del servidor
+##Inicio y parada del servidor
 
 Existen diversos comandos para gestionar el servidor web Apache. 
 
