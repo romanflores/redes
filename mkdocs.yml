@@ -61,7 +61,6 @@ pages:
 - LAMP:
     - Instalación: 'lampInstalacion.md'
     - Configuración inicial: 'lampConfiguracionInicial.md'
-    - Verificando instalación: 'lampVerificandoInstalacion.md'
     - Módulos de Apache: 'lampModulosApache.md'
     - Web de usuario: 'lampUserdir.md'
     - Hosts virtuales: 'lampVirtualHosts.md'
