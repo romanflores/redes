@@ -9,7 +9,7 @@
         <meta name="description" content="Redes de datos con software libre">
       
       
-        <link rel="canonical" href="http://www.redes.rauljesus.com/lampVerificandoInstalacion/">
+        <link rel="canonical" href="http://www.redes.rauljesus.com/lampVirtualHosts/">
       
       
         <meta name="author" content="Raul Jesus Lopez">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Verificando instalación - Redes con software libre</title>
+        <title>Hosts virtuales - Redes con software libre</title>
       
     
     
@@ -86,7 +86,7 @@
                 </span>
               
             
-            Verificando instalación
+            Hosts virtuales
           
         </span>
       </div>
@@ -284,57 +284,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Verificando instalación
-      </label>
-    
-    <a href="./" title="Verificando instalación" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../lampVerificandoInstalacion/" title="Verificando instalación" class="md-nav__link">
       Verificando instalación
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -366,11 +320,64 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../lampVirtualHosts/" title="Hosts virtuales" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Hosts virtuales
+      </label>
+    
+    <a href="./" title="Hosts virtuales" class="md-nav__link md-nav__link--active">
       Hosts virtuales
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creando-el-contenido-web" title="Creando el contenido web" class="md-nav__link">
+    Creando el contenido web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-el-host-virtual" title="Configurando el Host Virtual" class="md-nav__link">
+    Configurando el Host Virtual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#habilitando-el-sitio-creado" title="Habilitando el sitio creado" class="md-nav__link">
+    Habilitando el sitio creado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accediendo-al-sitio-web" title="Accediendo al sitio web" class="md-nav__link">
+    Accediendo al sitio web
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -410,22 +417,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
+  <a href="#creando-el-contenido-web" title="Creando el contenido web" class="md-nav__link">
+    Creando el contenido web
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
+  <a href="#configurando-el-host-virtual" title="Configurando el Host Virtual" class="md-nav__link">
+    Configurando el Host Virtual
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
+  <a href="#habilitando-el-sitio-creado" title="Habilitando el sitio creado" class="md-nav__link">
+    Habilitando el sitio creado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accediendo-al-sitio-web" title="Accediendo al sitio web" class="md-nav__link">
+    Accediendo al sitio web
   </a>
   
 </li>
@@ -445,30 +459,77 @@
               
                 
                 
-                  <h1>Verificando instalación</h1>
+                  <h1>Hosts virtuales</h1>
                 
-                <p>Para verificar el correcto funcionamiento del servidor, seguiremos los siguientes pasos:</p>
-<h3 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h3>
-<p>Abrimos el navegador web y nos dirigimos a la siguiente dirección: <code>http://nombreDominioServidor</code> o <code>http://direccionIPServidor</code>. En cualquier caso deberíamos visualizar la página de bienvenida del servidor web:</p>
-<p><img alt="Apache" src="../lamp/lampWorks.png" /></p>
-<h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
-<p>Dentro de la carpeta raíz por defecto del servidor web <code>/var/www/html</code>, creamos un archivo con el nombre <code>info.php</code> (en realidad, se puede llamar como prefieras):</p>
-<div class="codehilite"><pre>sudo vim /var/www/html/info.php
+                <p>Una de las aplicaciones de la característica de Apache llamada <em>VirtualHosts</em> consiste en la posibilidad de crear <strong>diferentes sitios web</strong> cada uno con su <strong>nombre de dominio propio</strong> aunque éstos se encuentren alojados en un mismo servidor y, por lo tanto, tengan <strong>la misma dirección IP</strong>. </p>
+<div class="admonition blockquote">
+<p class="admonition-title">Documentación oficial de Apache</p>
+<p>El término <strong>Hosting Virtual</strong> se refiere a hacer funcionar más de un sitio web tales como <code>www.company1.com</code> y <code>www.company2.com</code> en una sola máquina. </p>
+<p>Los sitios web virtuales pueden estar <strong>"basados en direcciones IP"</strong>, lo que significa que cada sitio web tiene una dirección IP diferente, o <strong>"basados en nombres diferentes"</strong>, lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres (de dominio). </p>
+<p>El hecho de que estén funcionando en la misma máquina física pasa completamente desapercibido para el usuario que visita esos sitios web.</p>
+</div>
+<h2 id="creando-el-contenido-web">Creando el contenido web<a class="headerlink" href="#creando-el-contenido-web" title="Permanent link">&para;</a></h2>
+<p>En primer lugar creamos la carpeta donde se alojaran las paginas web del <strong>host virtual</strong> que definiremos. </p>
+<p>Por ejemplo:</p>
+<div class="codehilite"><pre>mkdir /home/usuario/public_html
 </pre></div>
 
 
-<p>Y agregaremos al archivo el contenido:</p>
-<div class="codehilite"><pre><span class="cp">&lt;?php</span>
-<span class="nb">phpinfo</span><span class="p">();</span>
-<span class="cp">?&gt;</span><span class="x"></span>
+<p>El paso siguiente será agregar en el directorio el contenido del sitio web (páginas web, imágenes, archivos de estilo, sripts, etc). Recordar que debe existir necesariamente algún archivo índice index.html o index.php (o con alguna otra extensión, según la configuración del servidor). </p>
+<h2 id="configurando-el-host-virtual">Configurando el Host Virtual<a class="headerlink" href="#configurando-el-host-virtual" title="Permanent link">&para;</a></h2>
+<p>Para iniciar la configuración de nuestro <em>host virtual</em> nos dirigiremos a la siguiente carpeta: </p>
+<div class="codehilite"><pre><span class="nb">cd</span> /etc/apache2/sites-available
 </pre></div>
 
 
-<p>Luego de guardar los cambios al archivo, abrimos un navegador web y visitamos la dirección <code>http://nombreDominioServidor/info.php</code> ó <code>http://direccionIPServidor/ìnfo.php</code> y deberíamos la página de información sobre php:</p>
-<p><img alt="PHPInfo" src="../lamp/lampPhpInfo.png" /></p>
-<h3 id="phpmyadmin">phpMyAdmin<a class="headerlink" href="#phpmyadmin" title="Permanent link">&para;</a></h3>
-<p>Simplemente, abrimos nuestro navegador y nos dirigimos a <code>http://nombreDominioServidor/phpmyadmin</code> ó <code>http://direccionIPServidor/phpmyadmin</code>. Veremos una página similar a ésta: </p>
-<p><img alt="phpMyAdmin" src="../lamp/lampPhpMyAdmin.png" /></p>
+<p>Una vez ubicados en el directorio correspodiente nos disponemos a crear el <strong>archivo de configuracion del Host Virtual</strong> (el archivo en cuestión puede llamarse de cualquier forma, pero debe finalizar necesariamente con la extension <code>.conf</code>)</p>
+<div class="codehilite"><pre>vim misitio.lan.conf
+</pre></div>
+
+
+<p>Y a continuación escribimos la configuración de nuestro Host Virtual. Un ejemplo simple de configuracion para el sitio ficticio <code>misitio.lan</code>:</p>
+<div class="codehilite"><pre><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
+
+ <span class="c"># Correo del administrador del servidor</span>
+ <span class="nb">ServerAdmin</span>    tunombre@mail.com
+
+ <span class="c"># Nombre de dominio del sitio</span>
+ <span class="nb">ServerName</span> www.misitio.lan
+
+ <span class="c"># Alias del nombre de dominio del sitio</span>
+ <span class="nb">ServerAlias</span>    misitio.lan http:_misitio.lan
+
+ <span class="c"># Carpeta raíz donde se alojarán las páginas web </span>
+ <span class="nb">DocumentRoot</span>   <span class="sx">/home/usuario/public_html</span>   
+
+ <span class="c"># Ruta en la que Apache escribirá el registor de errores</span>
+ <span class="nb">ErrorLog</span>   <span class="sx">/home/usuario/errores_misitio.lan</span>
+
+ <span class="c"># Ruta en la que Apache escribirá el registor accesos</span>
+ <span class="nb">CustomLog</span>  <span class="sx">/home/usuario/accessos_misitio.lan</span> combined
+
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Los archivos de <em>log</em> son archivos en los que el sistema guarda información sobre el funcionamiento de algún servicio determinado indicando errores, advertencias, accesos, etc. En distribuciones GNU/Linux, se encuentran alojados bajo la ruta <code>/var/log/</code>. En el ejemplo, se ha optado por guardar dichos archivos en la carpeta home del usuario. </p>
+</div>
+<h2 id="habilitando-el-sitio-creado">Habilitando el sitio creado<a class="headerlink" href="#habilitando-el-sitio-creado" title="Permanent link">&para;</a></h2>
+<p>Para que Apache ponga el sitio en modo <strong>habilitado</strong> (hasta ahora lo definimos, pero no lo habilitamos), ejecutamos en la terminal:</p>
+<div class="codehilite"><pre>sudo a2ensite misitio.lan.conf
+</pre></div>
+
+
+<p>Este comando creará un [[https:_es.wikipedia.org/wiki/Enlace_simb%C3%B3lico|enlace simbólico]] del archivo <code>misitio.lan.conf</code> desde la carpeta <code>/etc/apache2/sites-available</code> hacia la carpeta <code>/etc/apache2/sites-enabled</code>. </p>
+<p>Por último, para que Apache haga efectivo todos los cambios, lo reiniciamos: </p>
+<div class="codehilite"><pre>sudo systemctl restart apache2
+</pre></div>
+
+
+<h2 id="accediendo-al-sitio-web">Accediendo al sitio web<a class="headerlink" href="#accediendo-al-sitio-web" title="Permanent link">&para;</a></h2>
+<p>El último paso que tendremos que dar para acceder a nuestro sitio web será definir el <a href="../resolucionNombresHosts/">método de resolución de su nombre de dominio</a>. </p>
                 
                   
                 
@@ -487,7 +548,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../lampConfiguracionInicial/" title="Configuración inicial" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../lampUserdir/" title="Web de usuario" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -496,19 +557,19 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                Configuración inicial
+                Web de usuario
               </span>
             </div>
           </a>
         
         
-          <a href="../lampModulosApache/" title="Módulos de Apache" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../lampEjercicios/" title="Ejercicios prácticos" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                Módulos de Apache
+                Ejercicios prácticos
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

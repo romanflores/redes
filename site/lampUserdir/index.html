@@ -9,7 +9,7 @@
         <meta name="description" content="Redes de datos con software libre">
       
       
-        <link rel="canonical" href="http://www.redes.rauljesus.com/lampVerificandoInstalacion/">
+        <link rel="canonical" href="http://www.redes.rauljesus.com/lampUserdir/">
       
       
         <meta name="author" content="Raul Jesus Lopez">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Verificando instalación - Redes con software libre</title>
+        <title>Web de usuario - Redes con software libre</title>
       
     
     
@@ -86,7 +86,7 @@
                 </span>
               
             
-            Verificando instalación
+            Web de usuario
           
         </span>
       </div>
@@ -284,57 +284,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Verificando instalación
-      </label>
-    
-    <a href="./" title="Verificando instalación" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../lampVerificandoInstalacion/" title="Verificando instalación" class="md-nav__link">
       Verificando instalación
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -354,11 +308,50 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../lampUserdir/" title="Web de usuario" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Web de usuario
+      </label>
+    
+    <a href="./" title="Web de usuario" class="md-nav__link md-nav__link--active">
       Web de usuario
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creando-el-contenido-del-sitio-web" title="Creando el contenido del sitio web" class="md-nav__link">
+    Creando el contenido del sitio web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#habilitando-el-modulo-userdir" title="Habilitando el módulo userdir" class="md-nav__link">
+    Habilitando el módulo userdir
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -410,22 +403,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
+  <a href="#creando-el-contenido-del-sitio-web" title="Creando el contenido del sitio web" class="md-nav__link">
+    Creando el contenido del sitio web
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
+  <a href="#habilitando-el-modulo-userdir" title="Habilitando el módulo userdir" class="md-nav__link">
+    Habilitando el módulo userdir
   </a>
   
 </li>
@@ -445,30 +431,25 @@
               
                 
                 
-                  <h1>Verificando instalación</h1>
+                  <h1>Web de usuario</h1>
                 
-                <p>Para verificar el correcto funcionamiento del servidor, seguiremos los siguientes pasos:</p>
-<h3 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h3>
-<p>Abrimos el navegador web y nos dirigimos a la siguiente dirección: <code>http://nombreDominioServidor</code> o <code>http://direccionIPServidor</code>. En cualquier caso deberíamos visualizar la página de bienvenida del servidor web:</p>
-<p><img alt="Apache" src="../lamp/lampWorks.png" /></p>
-<h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
-<p>Dentro de la carpeta raíz por defecto del servidor web <code>/var/www/html</code>, creamos un archivo con el nombre <code>info.php</code> (en realidad, se puede llamar como prefieras):</p>
-<div class="codehilite"><pre>sudo vim /var/www/html/info.php
+                <p>Es posible crear un <strong>espacio web para cada usuario del sistema</strong>, donde éstos pueden alojar su propio contenido web. Para hacerlo, seguimos las siguientes instrucciones: </p>
+<h2 id="creando-el-contenido-del-sitio-web">Creando el contenido del sitio web<a class="headerlink" href="#creando-el-contenido-del-sitio-web" title="Permanent link">&para;</a></h2>
+<p>En primer lugar, creamos el directorio en el cual se agregarán las páginas webs del usuario:</p>
+<div class="codehilite"><pre>mkdir /home/tuUsuario/public_html
 </pre></div>
 
 
-<p>Y agregaremos al archivo el contenido:</p>
-<div class="codehilite"><pre><span class="cp">&lt;?php</span>
-<span class="nb">phpinfo</span><span class="p">();</span>
-<span class="cp">?&gt;</span><span class="x"></span>
+<p>Solo resta agregar <strong>"las páginas webs"</strong> dentro de la carpeta <code>public_html</code> que acabamos de crear (debe existir necesariamente un archivo llamado index.html o index.php) </p>
+<h2 id="habilitando-el-modulo-userdir">Habilitando el módulo userdir<a class="headerlink" href="#habilitando-el-modulo-userdir" title="Permanent link">&para;</a></h2>
+<p>Para permitir que los usuarios posean su propio sitio web aún resta un paso: la habilitación del módulo de Apache correspondiente. Entre los distintos módulos de Apache, quien cumple con nuestro cometido es el módulo llamado <code>userdir</code>. Para habilitar dicho módulo, ejecutamos en la terminal: </p>
+<div class="codehilite"><pre>sudo a2enmod userdir
 </pre></div>
 
 
-<p>Luego de guardar los cambios al archivo, abrimos un navegador web y visitamos la dirección <code>http://nombreDominioServidor/info.php</code> ó <code>http://direccionIPServidor/ìnfo.php</code> y deberíamos la página de información sobre php:</p>
-<p><img alt="PHPInfo" src="../lamp/lampPhpInfo.png" /></p>
-<h3 id="phpmyadmin">phpMyAdmin<a class="headerlink" href="#phpmyadmin" title="Permanent link">&para;</a></h3>
-<p>Simplemente, abrimos nuestro navegador y nos dirigimos a <code>http://nombreDominioServidor/phpmyadmin</code> ó <code>http://direccionIPServidor/phpmyadmin</code>. Veremos una página similar a ésta: </p>
-<p><img alt="phpMyAdmin" src="../lamp/lampPhpMyAdmin.png" /></p>
+<p>Luego, reiniciamos el servidor para que incorpore los cambios:</p>
+<div class="codehilite"><pre>sudo service apache2 restart
+</pre></div>
                 
                   
                 
@@ -487,7 +468,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../lampConfiguracionInicial/" title="Configuración inicial" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../lampModulosApache/" title="Módulos de Apache" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -496,19 +477,19 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                Configuración inicial
+                Módulos de Apache
               </span>
             </div>
           </a>
         
         
-          <a href="../lampModulosApache/" title="Módulos de Apache" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../lampVirtualHosts/" title="Hosts virtuales" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                Módulos de Apache
+                Hosts virtuales
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

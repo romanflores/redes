@@ -12,6 +12,16 @@
     
         
     <url>
+     <loc>http://www.redes.rauljesus.com/resolucionNombresHosts/</loc>
+     <lastmod>2017-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>http://www.redes.rauljesus.com/lampInstalacion/</loc>
      <lastmod>2017-04-26</lastmod>
      <changefreq>daily</changefreq>
@@ -25,6 +35,30 @@
         
     <url>
      <loc>http://www.redes.rauljesus.com/lampVerificandoInstalacion/</loc>
+     <lastmod>2017-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/lampModulosApache/</loc>
+     <lastmod>2017-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/lampUserdir/</loc>
+     <lastmod>2017-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/lampVirtualHosts/</loc>
+     <lastmod>2017-04-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/lampEjercicios/</loc>
      <lastmod>2017-04-26</lastmod>
      <changefreq>daily</changefreq>
     </url>

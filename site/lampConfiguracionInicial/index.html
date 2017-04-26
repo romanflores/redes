@@ -203,18 +203,54 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Resolución de nombres
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Resolución de nombres
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../resolucionNombresHosts/" title="El archivo hosts" class="md-nav__link">
+      El archivo hosts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
-    <label class="md-nav__link" for="nav-2">
+    <label class="md-nav__link" for="nav-3">
       LAMP
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
+      <label class="md-nav__title" for="nav-3">
         LAMP
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -288,6 +324,54 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lampModulosApache/" title="Módulos de Apache" class="md-nav__link">
+      Módulos de Apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lampUserdir/" title="Web de usuario" class="md-nav__link">
+      Web de usuario
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lampVirtualHosts/" title="Hosts virtuales" class="md-nav__link">
+      Hosts virtuales
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lampEjercicios/" title="Ejercicios prácticos" class="md-nav__link">
+      Ejercicios prácticos
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -335,7 +419,38 @@
                 
                   <h1>Configuración inicial</h1>
                 
-                <p>Una vez finalizada la instalación, el servidor web Apache se iniciará automáticamente. Podemos verificarlo, ejecutando el siguiente comando: </p>
+                <p>Una vez instalado el servidor web Apache se crea una estructura archivos y directorios, entre los que se destacan: </p>
+<table>
+<thead>
+<tr>
+<th>Directorio o archivo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/etc/apache2/apache.conf</code></td>
+<td>Archivo de configuración general de Apache</td>
+</tr>
+<tr>
+<td><code>/etc/apache2/sites-available</code></td>
+<td>Directorio donde se alojan los archivos de configuración de los sitios  definidos pero aún no activos (es decir, no habilitados</td>
+</tr>
+<tr>
+<td><code>/etc/apache2/sites-enabled</code></td>
+<td>Directorio donde se alojan los archivos de configuración de los sitios  activos o habilitados</td>
+</tr>
+<tr>
+<td><code>/var/www/html</code></td>
+<td>Directorio por del sitio web por defecto, donde Apache aloja las páginas web</td>
+</tr>
+<tr>
+<td><code>/home/usuario/public_html</code></td>
+<td>Directorio donde se aloja el sitio web personal de cada usuario del sistema</td>
+</tr>
+</tbody>
+</table>
+<p>Una vez finalizada la instalación, el servidor web Apache se iniciará automáticamente. Podemos verificarlo, ejecutando el siguiente comando: </p>
 <div class="codehilite"><pre>sudo systemctl status apache2
 </pre></div>
 
@@ -377,7 +492,7 @@ Syntax OK
 </pre></div>
 
 
-<h3 id="inicio-y-parada-del-servidor">Inicio y parada del servidor<a class="headerlink" href="#inicio-y-parada-del-servidor" title="Permanent link">&para;</a></h3>
+<h2 id="inicio-y-parada-del-servidor">Inicio y parada del servidor<a class="headerlink" href="#inicio-y-parada-del-servidor" title="Permanent link">&para;</a></h2>
 <p>Existen diversos comandos para gestionar el servidor web Apache. </p>
 <p><strong>Detener el servidor</strong></p>
 <div class="codehilite"><pre>sudo systemctl stop apache2

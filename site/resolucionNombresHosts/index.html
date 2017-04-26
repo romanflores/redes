@@ -9,7 +9,7 @@
         <meta name="description" content="Redes de datos con software libre">
       
       
-        <link rel="canonical" href="http://www.redes.rauljesus.com/lampVerificandoInstalacion/">
+        <link rel="canonical" href="http://www.redes.rauljesus.com/resolucionNombresHosts/">
       
       
         <meta name="author" content="Raul Jesus Lopez">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Verificando instalación - Redes con software libre</title>
+        <title>El archivo hosts - Redes con software libre</title>
       
     
     
@@ -82,11 +82,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  LAMP
+                  Resolución de nombres
                 </span>
               
             
-            Verificando instalación
+            El archivo hosts
           
         </span>
       </div>
@@ -203,10 +203,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Resolución de nombres
@@ -222,11 +224,50 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../resolucionNombresHosts/" title="El archivo hosts" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        El archivo hosts
+      </label>
+    
+    <a href="./" title="El archivo hosts" class="md-nav__link md-nav__link--active">
       El archivo hosts
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ubicacion-del-archivo-hosts" title="Ubicación del archivo hosts" class="md-nav__link">
+    Ubicación del archivo hosts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificando-el-archivo-hosts" title="Modificando el archivo hosts" class="md-nav__link">
+    Modificando el archivo hosts
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -239,12 +280,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       LAMP
@@ -284,57 +323,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Verificando instalación
-      </label>
-    
-    <a href="./" title="Verificando instalación" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../lampVerificandoInstalacion/" title="Verificando instalación" class="md-nav__link">
       Verificando instalación
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -410,22 +403,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
+  <a href="#ubicacion-del-archivo-hosts" title="Ubicación del archivo hosts" class="md-nav__link">
+    Ubicación del archivo hosts
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
+  <a href="#modificando-el-archivo-hosts" title="Modificando el archivo hosts" class="md-nav__link">
+    Modificando el archivo hosts
   </a>
   
 </li>
@@ -445,30 +431,65 @@
               
                 
                 
-                  <h1>Verificando instalación</h1>
+                  <h1>El archivo hosts</h1>
                 
-                <p>Para verificar el correcto funcionamiento del servidor, seguiremos los siguientes pasos:</p>
-<h3 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h3>
-<p>Abrimos el navegador web y nos dirigimos a la siguiente dirección: <code>http://nombreDominioServidor</code> o <code>http://direccionIPServidor</code>. En cualquier caso deberíamos visualizar la página de bienvenida del servidor web:</p>
-<p><img alt="Apache" src="../lamp/lampWorks.png" /></p>
-<h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
-<p>Dentro de la carpeta raíz por defecto del servidor web <code>/var/www/html</code>, creamos un archivo con el nombre <code>info.php</code> (en realidad, se puede llamar como prefieras):</p>
-<div class="codehilite"><pre>sudo vim /var/www/html/info.php
+                <p>El archivo <em>hosts</em> existe en todos los sistemas operativos. Si bien se puede emplear para la resolución de nombres de dominio en una red local, en redes medianas actualmente es reemplazado por el servicio de DNS. </p>
+<div class="admonition quote">
+<p class="admonition-title">Wikipedia</p>
+<p>El archivo <strong>hosts</strong> de un ordenador es usado por el sistema operativo para guardar la <strong>correspondencia entre dominios de Internet y direcciones IP</strong>. Este es uno de los diferentes métodos que usa el sistema operativo para resolver nombres de dominios. </p>
+<p>Antiguamente cuando no había servidores DNS que resolvieran los dominios, el archivo hosts era el único encargado de hacerlo, pero dejó de utilizarse cuando Internet empezó a crecer en nombres de dominio, pasando a usar servidores de resolución de DNS. </p>
+<p>En muchos sistemas operativos este método es usado preferentemente respecto a otros como el DNS. En la actualidad también es usado para bloquear contenidos de Internet como la publicidad web.</p>
+</div>
+<h2 id="ubicacion-del-archivo-hosts">Ubicación del archivo <em>hosts</em><a class="headerlink" href="#ubicacion-del-archivo-hosts" title="Permanent link">&para;</a></h2>
+<p>El archivo <strong>hosts</strong> es un archivo de texto plano que puede ser editado por el administrador del equipo y su ubicación depende del sistema operativo:</p>
+<table>
+<thead>
+<tr>
+<th>Sistema operativo</th>
+<th>Ubicación del archivo <em>hosts</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft Windows</td>
+<td><code>C:\Windows\System32\drivers\etc\hosts</code></td>
+</tr>
+<tr>
+<td>Unix - GNU/Linux - BSD</td>
+<td><code>/etc/hosts</code></td>
+</tr>
+<tr>
+<td>Mac OS - iPhone OS</td>
+<td><code>/private/etc/hosts</code></td>
+</tr>
+<tr>
+<td>Android</td>
+<td><code>/system/etc/hosts</code></td>
+</tr>
+</tbody>
+</table>
+<p>Entonces, si deseamos abrir el archivo en <strong>GNU/Linux</strong>, ejecutamos:</p>
+<div class="codehilite"><pre>sudo vim /etc/hosts
 </pre></div>
 
 
-<p>Y agregaremos al archivo el contenido:</p>
-<div class="codehilite"><pre><span class="cp">&lt;?php</span>
-<span class="nb">phpinfo</span><span class="p">();</span>
-<span class="cp">?&gt;</span><span class="x"></span>
+<p>Si en cambio, deseamos abrir el archivo en <strong>Microsoft Windows</strong>, haremos clic derecho sobre el archivo <strong>hosts</strong> (ver ubicación en la tabla) y seleccionamos del menú contextual la opción "Abrir como Administrador". </p>
+<h2 id="modificando-el-archivo-hosts">Modificando el archivo <em>hosts</em><a class="headerlink" href="#modificando-el-archivo-hosts" title="Permanent link">&para;</a></h2>
+<div class="admonition done">
+<p class="admonition-title">Contenido del archivo <em>hosts</em></p>
+<p>Si importar el sistema operativo, la sintaxis del archivo <em>hosts</em> será la siguiente: </p>
+<p><code>ip.del.equipo  nombre_De_Dominio</code>  </p>
+</div>
+<p>Si tomamos como ejemplo el dominio ficticio <code>misitio.lan</code> y suponiendo que la dirección IP del equipo servidor es <code>192.168.0.33</code>:</p>
+<div class="codehilite"><pre>192.168.0.33  www.miisito.lan  misitio.lan  http://misitio.lan
 </pre></div>
 
 
-<p>Luego de guardar los cambios al archivo, abrimos un navegador web y visitamos la dirección <code>http://nombreDominioServidor/info.php</code> ó <code>http://direccionIPServidor/ìnfo.php</code> y deberíamos la página de información sobre php:</p>
-<p><img alt="PHPInfo" src="../lamp/lampPhpInfo.png" /></p>
-<h3 id="phpmyadmin">phpMyAdmin<a class="headerlink" href="#phpmyadmin" title="Permanent link">&para;</a></h3>
-<p>Simplemente, abrimos nuestro navegador y nos dirigimos a <code>http://nombreDominioServidor/phpmyadmin</code> ó <code>http://direccionIPServidor/phpmyadmin</code>. Veremos una página similar a ésta: </p>
-<p><img alt="phpMyAdmin" src="../lamp/lampPhpMyAdmin.png" /></p>
+<p>Si configuramos correctamente el archivo <em>hosts</em> de nuestro sistema, podremos acceder al/los dominio/s especificados. </p>
+<div class="admonition done">
+<p class="admonition-title">Resolución de dominios empleando el archivo <em>hosts</em></p>
+<p>Si en una red local, decidimos resolver los nombres de dominio valiéndonos del archivo <em>hosts</em> tendremos que copiar el mismo archivo <em>hosts</em> en cada uno de los equipos que compongan la red.</p>
+</div>
                 
                   
                 
@@ -487,7 +508,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../lampConfiguracionInicial/" title="Configuración inicial" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." title="Inicio" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -496,19 +517,19 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                Configuración inicial
+                Inicio
               </span>
             </div>
           </a>
         
         
-          <a href="../lampModulosApache/" title="Módulos de Apache" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../lampInstalacion/" title="Instalación" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                Módulos de Apache
+                Instalación
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
