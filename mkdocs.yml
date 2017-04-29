@@ -59,11 +59,10 @@ pages:
 - Resolución de nombres: 
     - El archivo hosts: 'resolucionNombresHosts.md'
 - LAMP:
-    - ¿Qué es?: 'lampQueEs.md'
-    - Instalación: 'lampInstalacion.md'
-    - Gestión básica: 'lampGestionBasica.md'
-    - Módulos de Apache: 'lampModulosApache.md'
-    - Web de usuario: 'lampUserdir.md'
-    - Hosts virtuales: 'lampVirtualHosts.md'
-    - Ejercicios prácticos: 'lampEjercicios.md'
+    - ¿Qué es?: 'lamp/queEs.md'
+    - Instalación: 'lamp/instalacion.md'
+    - Gestión básica: 'lamp/gestionBasica.md'
+    - Web de usuario: 'lamp/userdir.md'
+    - Hosts virtuales: 'lamp/virtualHosts.md'
+    - Ejercicios prácticos: 'lamp/ejercicios.md'
 

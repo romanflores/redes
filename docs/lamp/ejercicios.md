@@ -41,7 +41,7 @@ Dentro de los **directorios raíz** creados en el punto anterior (necesariamente
 2. Para **patagon.penguin.net**, un archivo "index.php" con el siguiente contenido: 
 
 ```html
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Penguin S.A.</title>
@@ -67,11 +67,11 @@ Se debe realizar a través del método del archivo hosts.
 	Tal vez sería más practico realizar todas las acciones anteriores valiendose de un script. ¿Te animás a escribirlo? 
 
 
-### Error 403
+### Posibles errores
 
 !!! error "Error"
 
-	Es posible que con la configuración por defecto de Apache, obtengamos un ''error 403''. En ese caso, realizar los pasos que se describen a continuación
+	Es posible que con la configuración por defecto de Apache, obtengamos un **error 403**. En ese caso, realizar los pasos que se describen a continuación
 
 Para corregir dicho error, qbrimos el archivo de configuración general de Apache: 
 

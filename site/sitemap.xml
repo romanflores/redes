@@ -22,43 +22,37 @@
     
         
     <url>
-     <loc>http://www.redes.rauljesus.com/lampQueEs/</loc>
+     <loc>http://www.redes.rauljesus.com/lamp/queEs/</loc>
      <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://www.redes.rauljesus.com/lampInstalacion/</loc>
+     <loc>http://www.redes.rauljesus.com/lamp/instalacion/</loc>
      <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://www.redes.rauljesus.com/lampGestionBasica/</loc>
+     <loc>http://www.redes.rauljesus.com/lamp/gestionBasica/</loc>
      <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://www.redes.rauljesus.com/lampModulosApache/</loc>
+     <loc>http://www.redes.rauljesus.com/lamp/userdir/</loc>
      <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://www.redes.rauljesus.com/lampUserdir/</loc>
+     <loc>http://www.redes.rauljesus.com/lamp/virtualHosts/</loc>
      <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://www.redes.rauljesus.com/lampVirtualHosts/</loc>
-     <lastmod>2017-04-29</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://www.redes.rauljesus.com/lampEjercicios/</loc>
+     <loc>http://www.redes.rauljesus.com/lamp/ejercicios/</loc>
      <lastmod>2017-04-29</lastmod>
      <changefreq>daily</changefreq>
     </url>

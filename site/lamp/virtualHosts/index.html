@@ -9,28 +9,28 @@
         <meta name="description" content="Redes de datos con software libre">
       
       
-        <link rel="canonical" href="http://www.redes.rauljesus.com/lampModulosApache/">
+        <link rel="canonical" href="http://www.redes.rauljesus.com/lamp/virtualHosts/">
       
       
         <meta name="author" content="Raul Jesus Lopez">
       
       
-        <link rel="shortcut icon" href="../assets/images/favicon.png">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
       <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.0">
     
     
       
-        <title>Módulos de Apache - Redes con software libre</title>
+        <title>Hosts virtuales - Redes con software libre</title>
       
     
     
-      <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application-72266791c5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-72266791c5.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-f78e5cb881.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-f78e5cb881.palette.css">
       
     
     
@@ -86,7 +86,7 @@
                 </span>
               
             
-            Módulos de Apache
+            Hosts virtuales
           
         </span>
       </div>
@@ -193,7 +193,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Inicio" class="md-nav__link">
+    <a href="../.." title="Inicio" class="md-nav__link">
       Inicio
     </a>
   </li>
@@ -224,7 +224,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../resolucionNombresHosts/" title="El archivo hosts" class="md-nav__link">
+    <a href="../../resolucionNombresHosts/" title="El archivo hosts" class="md-nav__link">
       El archivo hosts
     </a>
   </li>
@@ -262,7 +262,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../lampQueEs/" title="¿Qué es?" class="md-nav__link">
+    <a href="../queEs/" title="¿Qué es?" class="md-nav__link">
       ¿Qué es?
     </a>
   </li>
@@ -274,7 +274,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../lampInstalacion/" title="Instalación" class="md-nav__link">
+    <a href="../instalacion/" title="Instalación" class="md-nav__link">
       Instalación
     </a>
   </li>
@@ -286,8 +286,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../lampGestionBasica/" title="Gestión básica" class="md-nav__link">
+    <a href="../gestionBasica/" title="Gestión básica" class="md-nav__link">
       Gestión básica
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../userdir/" title="Web de usuario" class="md-nav__link">
+      Web de usuario
     </a>
   </li>
 
@@ -305,11 +317,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Módulos de Apache
+        Hosts virtuales
       </label>
     
-    <a href="./" title="Módulos de Apache" class="md-nav__link md-nav__link--active">
-      Módulos de Apache
+    <a href="./" title="Hosts virtuales" class="md-nav__link md-nav__link--active">
+      Hosts virtuales
     </a>
     
       
@@ -321,8 +333,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gestionando-modulos" title="Gestionando módulos" class="md-nav__link">
-    Gestionando módulos
+  <a href="#creando-el-contenido-web" title="Creando el contenido web" class="md-nav__link">
+    Creando el contenido web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-el-host-virtual" title="Configurando el Host Virtual" class="md-nav__link">
+    Configurando el Host Virtual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#habilitando-el-sitio-creado" title="Habilitando el sitio creado" class="md-nav__link">
+    Habilitando el sitio creado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accediendo-al-sitio-web" title="Accediendo al sitio web" class="md-nav__link">
+    Accediendo al sitio web
   </a>
   
 </li>
@@ -342,31 +375,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../lampUserdir/" title="Web de usuario" class="md-nav__link">
-      Web de usuario
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lampVirtualHosts/" title="Hosts virtuales" class="md-nav__link">
-      Hosts virtuales
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lampEjercicios/" title="Ejercicios prácticos" class="md-nav__link">
+    <a href="../ejercicios/" title="Ejercicios prácticos" class="md-nav__link">
       Ejercicios prácticos
     </a>
   </li>
@@ -396,8 +405,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gestionando-modulos" title="Gestionando módulos" class="md-nav__link">
-    Gestionando módulos
+  <a href="#creando-el-contenido-web" title="Creando el contenido web" class="md-nav__link">
+    Creando el contenido web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-el-host-virtual" title="Configurando el Host Virtual" class="md-nav__link">
+    Configurando el Host Virtual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#habilitando-el-sitio-creado" title="Habilitando el sitio creado" class="md-nav__link">
+    Habilitando el sitio creado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accediendo-al-sitio-web" title="Accediendo al sitio web" class="md-nav__link">
+    Accediendo al sitio web
   </a>
   
 </li>
@@ -417,52 +447,77 @@
               
                 
                 
-                  <h1>Módulos de Apache</h1>
+                  <h1>Hosts virtuales</h1>
                 
-                <p>El servidor web Apache contiene diversos módulos que proveen al servidor de funcionalidades extra. La mayoría de ellos están deshabilitados por defecto. </p>
-<h2 id="gestionando-modulos">Gestionando módulos<a class="headerlink" href="#gestionando-modulos" title="Permanent link">&para;</a></h2>
-<p>La sintáxis básica para tabajar con módulos es la siguiente: </p>
-<div class="codehilite"><pre>sudo a2<span class="o">[</span>en<span class="p">|</span>dis<span class="o">]</span>mod nombreDelModulo
+                <p>Una de las aplicaciones de la característica de Apache llamada <em>VirtualHosts</em> consiste en la posibilidad de crear <strong>diferentes sitios web</strong> cada uno con su <strong>nombre de dominio propio</strong> aunque éstos se encuentren alojados en un mismo servidor y, por lo tanto, tengan <strong>la misma dirección IP</strong>. </p>
+<div class="admonition blockquote">
+<p class="admonition-title">Documentación oficial de Apache</p>
+<p>El término <strong>Hosting Virtual</strong> se refiere a hacer funcionar más de un sitio web tales como <code>www.company1.com</code> y <code>www.company2.com</code> en una sola máquina. </p>
+<p>Los sitios web virtuales pueden estar <strong>"basados en direcciones IP"</strong>, lo que significa que cada sitio web tiene una dirección IP diferente, o <strong>"basados en nombres diferentes"</strong>, lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres (de dominio). </p>
+<p>El hecho de que estén funcionando en la misma máquina física pasa completamente desapercibido para el usuario que visita esos sitios web.</p>
+</div>
+<h2 id="creando-el-contenido-web">Creando el contenido web<a class="headerlink" href="#creando-el-contenido-web" title="Permanent link">&para;</a></h2>
+<p>En primer lugar creamos la carpeta donde se alojaran las paginas web del <strong>host virtual</strong> que definiremos. </p>
+<p>Por ejemplo:</p>
+<div class="codehilite"><pre>mkdir /home/usuario/public_html
 </pre></div>
 
 
-<p>Donde: </p>
-<table>
-<thead>
-<tr>
-<th>Sistema operativo</th>
-<th>Ubicación del archivo <em>hosts</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>a2</code></td>
-<td>Inicio del comando de Apache2</td>
-</tr>
-<tr>
-<td><code>en</code></td>
-<td><em>Enable</em> es decir, habilitar el sitio web</td>
-</tr>
-<tr>
-<td><code>dis</code></td>
-<td><em>Disable</em>, es decir, deshabilitar el sitio web</td>
-</tr>
-<tr>
-<td><code>mod</code></td>
-<td>Simboliza el concepto de <em>módulo</em></td>
-</tr>
-<tr>
-<td><code>nombreDelModulo</code></td>
-<td>Nombre del modulo que deseamos habilitar o deshabilitar</td>
-</tr>
-</tbody>
-</table>
-<p>Por ejemplo, la siguiente acción habilitará el módulo <code>userdir</code>:</p>
-<div class="codehilite"><pre>sudo a2enmod userdir
+<p>El paso siguiente será agregar en el directorio el contenido del sitio web (páginas web, imágenes, archivos de estilo, sripts, etc). Recordar que debe existir necesariamente algún archivo índice index.html o index.php (o con alguna otra extensión, según la configuración del servidor). </p>
+<h2 id="configurando-el-host-virtual">Configurando el Host Virtual<a class="headerlink" href="#configurando-el-host-virtual" title="Permanent link">&para;</a></h2>
+<p>Para iniciar la configuración de nuestro <em>host virtual</em> nos dirigiremos a la siguiente carpeta: </p>
+<div class="codehilite"><pre><span class="nb">cd</span> /etc/apache2/sites-available
 </pre></div>
 
 
-<p>En otras palabras, creará un <a href="https://es.wikipedia.org/wiki/Enlace_simb%C3%B3lico">enlace simbólico</a> del módulo <code>userdir</code> desde la carpeta  <code>/etc/apache2/mods-available</code> hacia la carpeta <code>/etc/apache2/mods-enabled</code>.</p>
+<p>Una vez ubicados en el directorio correspodiente nos disponemos a crear el <strong>archivo de configuracion del Host Virtual</strong> (el archivo en cuestión puede llamarse de cualquier forma, pero debe finalizar necesariamente con la extension <code>.conf</code>)</p>
+<div class="codehilite"><pre>vim misitio.lan.conf
+</pre></div>
+
+
+<p>Y a continuación escribimos la configuración de nuestro Host Virtual. Un ejemplo simple de configuracion para el sitio ficticio <code>misitio.lan</code>:</p>
+<div class="codehilite"><pre><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
+
+ <span class="c"># Correo del administrador del servidor</span>
+ <span class="nb">ServerAdmin</span>    tunombre@mail.com
+
+ <span class="c"># Nombre de dominio del sitio</span>
+ <span class="nb">ServerName</span> www.misitio.lan
+
+ <span class="c"># Alias del nombre de dominio del sitio</span>
+ <span class="nb">ServerAlias</span>    misitio.lan http:_misitio.lan
+
+ <span class="c"># Carpeta raíz donde se alojarán las páginas web </span>
+ <span class="nb">DocumentRoot</span>   <span class="sx">/home/usuario/public_html</span>   
+
+ <span class="c"># Ruta en la que Apache escribirá el registor de errores</span>
+ <span class="nb">ErrorLog</span>   <span class="sx">/home/usuario/errores_misitio.lan</span>
+
+ <span class="c"># Ruta en la que Apache escribirá el registor accesos</span>
+ <span class="nb">CustomLog</span>  <span class="sx">/home/usuario/accessos_misitio.lan</span> combined
+
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Los archivos de <em>log</em> son archivos en los que el sistema guarda información sobre el funcionamiento de algún servicio determinado indicando errores, advertencias, accesos, etc. En distribuciones GNU/Linux, se encuentran alojados bajo la ruta <code>/var/log/</code>. En el ejemplo, se ha optado por guardar dichos archivos en la carpeta home del usuario. </p>
+</div>
+<h2 id="habilitando-el-sitio-creado">Habilitando el sitio creado<a class="headerlink" href="#habilitando-el-sitio-creado" title="Permanent link">&para;</a></h2>
+<p>Para que Apache ponga el sitio en modo <strong>habilitado</strong> (hasta ahora lo definimos, pero no lo habilitamos), ejecutamos en la terminal:</p>
+<div class="codehilite"><pre>sudo a2ensite misitio.lan.conf
+</pre></div>
+
+
+<p>Este comando creará un [[https:_es.wikipedia.org/wiki/Enlace_simb%C3%B3lico|enlace simbólico]] del archivo <code>misitio.lan.conf</code> desde la carpeta <code>/etc/apache2/sites-available</code> hacia la carpeta <code>/etc/apache2/sites-enabled</code>. </p>
+<p>Por último, para que Apache haga efectivo todos los cambios, lo reiniciamos: </p>
+<div class="codehilite"><pre>sudo systemctl restart apache2
+</pre></div>
+
+
+<h2 id="accediendo-al-sitio-web">Accediendo al sitio web<a class="headerlink" href="#accediendo-al-sitio-web" title="Permanent link">&para;</a></h2>
+<p>El último paso que tendremos que dar para acceder a nuestro sitio web será definir el <a href="resolucionNombresHosts.md">método de resolución de su nombre de dominio</a>. </p>
                 
                   
                 
@@ -481,7 +536,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../lampGestionBasica/" title="Gestión básica" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../userdir/" title="Web de usuario" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -490,19 +545,19 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                Gestión básica
+                Web de usuario
               </span>
             </div>
           </a>
         
         
-          <a href="../lampUserdir/" title="Web de usuario" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ejercicios/" title="Ejercicios prácticos" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                Web de usuario
+                Ejercicios prácticos
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -539,8 +594,8 @@
       
     </div>
     
-      <script src="../assets/javascripts/application-7018102a8b.js"></script>
-      <script>app.initialize({url:{base:".."}})</script>
+      <script src="../../assets/javascripts/application-7018102a8b.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

@@ -9,13 +9,13 @@
         <meta name="description" content="Redes de datos con software libre">
       
       
-        <link rel="canonical" href="http://www.redes.rauljesus.com/lampGestionBasica/">
+        <link rel="canonical" href="http://www.redes.rauljesus.com/lamp/gestionBasica/">
       
       
         <meta name="author" content="Raul Jesus Lopez">
       
       
-        <link rel="shortcut icon" href="../assets/images/favicon.png">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
       <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.0">
     
@@ -25,12 +25,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application-72266791c5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-72266791c5.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-f78e5cb881.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-f78e5cb881.palette.css">
       
     
     
@@ -193,7 +193,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Inicio" class="md-nav__link">
+    <a href="../.." title="Inicio" class="md-nav__link">
       Inicio
     </a>
   </li>
@@ -224,7 +224,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../resolucionNombresHosts/" title="El archivo hosts" class="md-nav__link">
+    <a href="../../resolucionNombresHosts/" title="El archivo hosts" class="md-nav__link">
       El archivo hosts
     </a>
   </li>
@@ -262,7 +262,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../lampQueEs/" title="¿Qué es?" class="md-nav__link">
+    <a href="../queEs/" title="¿Qué es?" class="md-nav__link">
       ¿Qué es?
     </a>
   </li>
@@ -274,7 +274,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../lampInstalacion/" title="Instalación" class="md-nav__link">
+    <a href="../instalacion/" title="Instalación" class="md-nav__link">
       Instalación
     </a>
   </li>
@@ -369,6 +369,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#base-de-datos" title="Base de datos" class="md-nav__link">
+    Base de datos
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -384,19 +391,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../lampModulosApache/" title="Módulos de Apache" class="md-nav__link">
-      Módulos de Apache
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../lampUserdir/" title="Web de usuario" class="md-nav__link">
+    <a href="../userdir/" title="Web de usuario" class="md-nav__link">
       Web de usuario
     </a>
   </li>
@@ -408,7 +403,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../lampVirtualHosts/" title="Hosts virtuales" class="md-nav__link">
+    <a href="../virtualHosts/" title="Hosts virtuales" class="md-nav__link">
       Hosts virtuales
     </a>
   </li>
@@ -420,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../lampEjercicios/" title="Ejercicios prácticos" class="md-nav__link">
+    <a href="../ejercicios/" title="Ejercicios prácticos" class="md-nav__link">
       Ejercicios prácticos
     </a>
   </li>
@@ -510,6 +505,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#base-de-datos" title="Base de datos" class="md-nav__link">
+    Base de datos
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -527,12 +529,13 @@
                 
                   <h1>Gestión básica</h1>
                 
-                <p>El <strong>servidor HTTP Apache</strong> se gestiona a través de comandos que ejecutaremos en la terminal. De momento, no exsite una interfaz gráfica nativa para hacerlo, aunque podemos encontrar en este sentido algunos desarrollos de terceros como <a href="http://www.webmin.com/">Webmin</a> o <a href="http://ajenti.org/">Ajenti</a>, entre otros. </p>
-<p>Por otro lado, <strong>PHP</strong> debe gestionarse instalando algún que otro módulo (según nuestras necesidades) y modificando sus archivos de configuración.</p>
-<p>Finalmente, la base de datos <strong>MySQL</strong> o <strong>MariaDB</strong> puede gestionarse a través de la terminal de comandos, o bien, a través de aplicaciones como <a href="https://www.phpmyadmin.net/">phpMyAdmin</a> o <a href="http://dbeaver.jkiss.org/">DBeaver</a> entre otras.</p>
+                <p>El <strong>servidor HTTP Apache</strong> se gestiona a través de comandos que ejecutaremos en la terminal. De momento, no exsite una interfaz gráfica nativa para hacerlo. </p>
+<p>Por otro lado, <strong>PHP</strong> debe gestionarse modificando sus archivos de configuración, realizando acciones e instalando módulos a través de la línea de comandos. </p>
+<p>Por último, las tanto <strong>MySQL</strong> como <strong>MariaDB</strong> pueden gestionarse a través de la terminal de comandos, pero existen aplicaciones desarrolladas exclusivamente para la gestión éstas y otras base de datos. </p>
 <div class="admonition tip">
-<p class="admonition-title">Archivos y directorio de configuración</p>
-<p>Para gestionar efectivamente un servidor LAMP es imprescindible conocer la ubicación de los archivos y carpetas de configuración, ya que facilitará enormente nuestro trabajo. </p>
+<p class="admonition-title">Aplicaciones de administración</p>
+<p>Existen algunos desarrollos de terceros como <a href="http://www.webmin.com/">Webmin</a> o <a href="http://ajenti.org/">Ajenti</a>, que nos permiten gestionar la configuración del servidor Web <strong>Apache</strong>, de <strong>PHP</strong> y las <strong>bases de datos</strong>. Existen, además, herramientas exclusivas para la gestión de estas últimas como <a href="https://www.phpmyadmin.net/">phpMyAdmin</a> o <a href="http://dbeaver.jkiss.org/">DBeaver</a> entre otras.</p>
+<p>Sin embargo, para gestionar efectivamente un servidor LAMP es <strong>imprescindible conocer la ubicación de los archivos y carpetas de configuración</strong>, ya que dicho conocimiento facilitará enormente nuestro trabajo. </p>
 </div>
 <h2 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h2>
 <p>A continuación se listan directorios y archivos de configuración así como los comandos para gestionarlo desde la terminal. </p>
@@ -708,6 +711,36 @@ Syntax OK
 
 
 <h2 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h2>
+<p>El arcivo de configuración de PHP se llama <code>php.ini</code>. No existe un único archivo <code>php.ini</code>, más bien, existe un archivo <code>php.ini</code> para cada aplicación que lo utilice. </p>
+<table>
+<thead>
+<tr>
+<th>Ubicación de <code>php.ini</code></th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/etc/php/7.0/apache2/php.ini</code></td>
+<td>Plugin PHP utilizado por el servidor web Apache</td>
+</tr>
+<tr>
+<td><code>/etc/php/7.0/fpm/php.ini</code></td>
+<td>Plugin PHP utilizado por el servidor web NGINX</td>
+</tr>
+<tr>
+<td><code>/etc/php/7.0/cli/php.ini</code></td>
+<td>Ejecución de PHP desde la terminal de comandos</td>
+</tr>
+<tr>
+<td><code>/etc/php/7.0/cgi/php.ini</code></td>
+<td>Plugin PHP para CGI</td>
+</tr>
+</tbody>
+</table>
+<p>Donde <code>7.0</code> corresponde a la versión de PHP instalada. Luego, el archivo que tendremos que editar cuando querramos modificar el comportamiento de <strong>PHP en un entorno LAMP</strong> será el que aparece en la primer fila de la tabla. </p>
+<h2 id="base-de-datos">Base de datos<a class="headerlink" href="#base-de-datos" title="Permanent link">&para;</a></h2>
+<p>Las bases de datos soportan administración a través de la línea de comandos: en los desarrollos de la presente guía se empleará <a href="https://dev.mysql.com/doc/refman/5.7/en/mysql-commands.html">MySQL</a> ó <a href="https://mariadb.com/kb/en/mariadb/mysql-command-line-client/">MariaDB</a>. No obstante, una de las opciones más elegidas a la hora de gestionar base de datos es <a href="../instalacion#phpmyadmin">phpMyAdmin</a></p>
                 
                   
                 
@@ -726,7 +759,7 @@ Syntax OK
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../lampInstalacion/" title="Instalación" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../instalacion/" title="Instalación" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -741,13 +774,13 @@ Syntax OK
           </a>
         
         
-          <a href="../lampModulosApache/" title="Módulos de Apache" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../userdir/" title="Web de usuario" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                Módulos de Apache
+                Web de usuario
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -784,8 +817,8 @@ Syntax OK
       
     </div>
     
-      <script src="../assets/javascripts/application-7018102a8b.js"></script>
-      <script>app.initialize({url:{base:".."}})</script>
+      <script src="../../assets/javascripts/application-7018102a8b.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

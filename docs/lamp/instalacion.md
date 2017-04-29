@@ -3,14 +3,24 @@
 
 Para disponer de un servidor web **LAMP** ejecutaremos los comandos que se indican a continuación. 
 
+### Instalación de LAMP
+
 ```bash
 sudo apt install lamp-server^
 ```
+
 O bien: 
+
+```bash
+sudo tasksel
+```
+Debiendo seleccionar la opción **LAMP Server** del menú exhibido en pantalla. En caso de no tener instalada la herramienta `tasksel` la instalamos: 
 
 ```bash
 sudo apt install tasksel
 ```
+
+### Instalación de phpMyAdmin
 Adicionalmente podemos instalar un gestor para nuestra base de datos, llamado **phpmyadmin** (junto a algunas librerías extra), ejecutando el siguiente comando: 
 
 ```bash
@@ -19,7 +29,7 @@ sudo apt install phpmyadmin php-gettext php-mbstring
 
 ##Verificando la instalación
 
-Para verificar el correcto funcionamiento del servidor, seguiremos los siguientes pasos:
+Para verificar el correcto funcionamiento del servidor, seguiremos los pasos que se detallan a continuación.
 
 ### Apache
 
@@ -51,3 +61,7 @@ Abrimos nuestro navegador y nos dirigimos a `http://nombreDominioServidor/phpmya
 
 ![phpMyAdmin](imgLamp/lampPhpMyAdmin.png)
 
+E iniciamos sesión con las siguientes credenciales: 
+
+* **Usuario**: root
+* **Contraseña**: la definida durante el proceso de instalación
