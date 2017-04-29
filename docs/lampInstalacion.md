@@ -1,7 +1,7 @@
-Para disponer de un servidor web **LAMP** ejecutaremos los comandos que se indican a continuación. 
-
 !!! warning "Ingreso de datos"
 	Durante la instalación se solicitará en varias ocasiones el ingreso de información por parte del usuario. Por ejemplo, la contraseña del usuario root de la base de datos, o el tipo de servicio a instalar si usamos `tasksel`. Conviene prestar atención en cada paso para evitar errores de configuración. 
+
+Para disponer de un servidor web **LAMP** ejecutaremos los comandos que se indican a continuación. 
 
 ```bash
 sudo apt install lamp-server^
@@ -11,7 +11,7 @@ O bien:
 ```bash
 sudo apt install tasksel
 ```
-Adicionalmente podemos instalar un gestor para nuestra base de datos, llamado **phpmyadmin**, ejecutando el siguiente comando: 
+Adicionalmente podemos instalar un gestor para nuestra base de datos, llamado **phpmyadmin** (junto a algunas librerías extra), ejecutando el siguiente comando: 
 
 ```bash
 sudo apt install phpmyadmin php-gettext php-mbstring

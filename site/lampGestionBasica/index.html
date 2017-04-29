@@ -9,7 +9,7 @@
         <meta name="description" content="Redes de datos con software libre">
       
       
-        <link rel="canonical" href="http://www.redes.rauljesus.com/lampConfiguracionInicial/">
+        <link rel="canonical" href="http://www.redes.rauljesus.com/lampGestionBasica/">
       
       
         <meta name="author" content="Raul Jesus Lopez">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Configuración inicial - Redes con software libre</title>
+        <title>Gestión básica - Redes con software libre</title>
       
     
     
@@ -86,7 +86,7 @@
                 </span>
               
             
-            Configuración inicial
+            Gestión básica
           
         </span>
       </div>
@@ -293,11 +293,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Configuración inicial
+        Gestión básica
       </label>
     
-    <a href="./" title="Configuración inicial" class="md-nav__link md-nav__link--active">
-      Configuración inicial
+    <a href="./" title="Gestión básica" class="md-nav__link md-nav__link--active">
+      Gestión básica
     </a>
     
       
@@ -307,6 +307,13 @@
   
     <label class="md-nav__title" for="toc">Tabla de contenidos</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-y-carpetas-importantes-de-apache" title="Archivos y carpetas importantes de Apache" class="md-nav__link">
+    Archivos y carpetas importantes de Apache
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#inicio-y-parada-del-servidor" title="Inicio y parada del servidor" class="md-nav__link">
@@ -396,6 +403,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#archivos-y-carpetas-importantes-de-apache" title="Archivos y carpetas importantes de Apache" class="md-nav__link">
+    Archivos y carpetas importantes de Apache
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#inicio-y-parada-del-servidor" title="Inicio y parada del servidor" class="md-nav__link">
     Inicio y parada del servidor
   </a>
@@ -417,9 +431,17 @@
               
                 
                 
-                  <h1>Configuración inicial</h1>
+                  <h1>Gestión básica</h1>
                 
-                <p>Una vez instalado el servidor web Apache se crea una estructura archivos y directorios, entre los que se destacan: </p>
+                <p>El <strong>servidor HTTP Apache</strong> se gestiona a través de comandos que ejecutaremos en la terminal. De momento, no exsite una interfaz gráfica nativa para hacerlo, aunque podemos encontrar en este sentido algunos desarrollos de terceros como <a href="http://www.webmin.com/">Webmin</a> o <a href="http://ajenti.org/">Ajenti</a>, entre otros. </p>
+<p>Por otro lado, <strong>PHP</strong> debe gestionarse instalando algún que otro módulo (según nuestras necesidades) y modificando sus archivos de configuración.</p>
+<p>Finalmente, la base de datos <strong>MySQL</strong> o <strong>MariaDB</strong> puede gestionarse a través de la terminal de comandos, o bien, a través de aplicaciones como <a href="https://www.phpmyadmin.net/">phpMyAdmin</a> o <a href="http://dbeaver.jkiss.org/">DBeaver</a> entre otras.</p>
+<div class="admonition done">
+<p class="admonition-title">Archivos y directorio de configuración</p>
+<p>Para gestionar efectivamente un servidor LAMP es imprescindible conocer la ubicación de los archivos y carpetas de configuración, ya que facilitará enormente nuestro trabajo. </p>
+</div>
+<h2 id="archivos-y-carpetas-importantes-de-apache">Archivos y carpetas importantes de Apache<a class="headerlink" href="#archivos-y-carpetas-importantes-de-apache" title="Permanent link">&para;</a></h2>
+<p>Una vez instalado el servidor web Apache se crea una estructura archivos y directorios, entre los que se destacan: </p>
 <table>
 <thead>
 <tr>
@@ -458,6 +480,20 @@
 </tr>
 </tbody>
 </table>
+<p><code>/etc/apache2/apache.conf</code>
+Archivo de configuración general de Apache</p>
+<p><code>/etc/apache2/sites-available</code>
+Directorio donde se alojan los archivos de configuración de los sitios  definidos pero aún no activos (es decir, no habilitados</p>
+<p><code>/etc/apache2/sites-enabled</code>
+Directorio donde se alojan los archivos de configuración de los sitios  activos o habilitados|</p>
+<p><code>/etc/apache2/mods-available</code>
+Directorio donde se alojan los módulos de Apache aún no activos (es decir, no habilitados</p>
+<p><code>/etc/apache2/mods-enabled</code>
+Directorio donde se alojan los módulos de Apache activos o habilitados</p>
+<p><code>/var/www/html</code>
+Directorio por del sitio web por defecto, donde Apache aloja las páginas web</p>
+<p><code>/home/usuario/public_html</code>
+Directorio donde se aloja el sitio web personal de cada usuario del sistema</p>
 <p>Una vez finalizada la instalación, el servidor web Apache se iniciará automáticamente. Podemos verificarlo, ejecutando el siguiente comando: </p>
 <div class="codehilite"><pre>sudo systemctl status apache2
 </pre></div>

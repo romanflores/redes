@@ -1,3 +1,14 @@
+El **servidor HTTP Apache** se gestiona a través de comandos que ejecutaremos en la terminal. De momento, no exsite una interfaz gráfica nativa para hacerlo, aunque podemos encontrar en este sentido algunos desarrollos de terceros como [Webmin](http://www.webmin.com/) o [Ajenti](http://ajenti.org/), entre otros. 
+
+Por otro lado, **PHP** debe gestionarse instalando algún que otro módulo (según nuestras necesidades) y modificando sus archivos de configuración.
+
+Finalmente, la base de datos **MySQL** o **MariaDB** puede gestionarse a través de la terminal de comandos, o bien, a través de aplicaciones como [phpMyAdmin](https://www.phpmyadmin.net/) o [DBeaver](http://dbeaver.jkiss.org/) entre otras.
+
+!!!done "Archivos y directorio de configuración"
+	Para gestionar efectivamente un servidor LAMP es imprescindible conocer la ubicación de los archivos y carpetas de configuración, ya que facilitará enormente nuestro trabajo. 
+
+## Archivos y carpetas importantes de Apache
+
 Una vez instalado el servidor web Apache se crea una estructura archivos y directorios, entre los que se destacan: 
 
 | Directorio o archivo     | Descripción          |
@@ -9,6 +20,28 @@ Una vez instalado el servidor web Apache se crea una estructura archivos y direc
 | `/etc/apache2/mods-enabled`     | Directorio donde se alojan los módulos de Apache activos o habilitados|
 | `/var/www/html`| Directorio por del sitio web por defecto, donde Apache aloja las páginas web|
 | `/home/usuario/public_html`| Directorio donde se aloja el sitio web personal de cada usuario del sistema|
+
+
+`/etc/apache2/apache.conf`
+Archivo de configuración general de Apache
+
+`/etc/apache2/sites-available`
+Directorio donde se alojan los archivos de configuración de los sitios  definidos pero aún no activos (es decir, no habilitados
+
+`/etc/apache2/sites-enabled`
+Directorio donde se alojan los archivos de configuración de los sitios  activos o habilitados|
+
+`/etc/apache2/mods-available`
+Directorio donde se alojan los módulos de Apache aún no activos (es decir, no habilitados
+
+`/etc/apache2/mods-enabled`
+Directorio donde se alojan los módulos de Apache activos o habilitados
+
+`/var/www/html`
+Directorio por del sitio web por defecto, donde Apache aloja las páginas web
+
+`/home/usuario/public_html`
+Directorio donde se aloja el sitio web personal de cada usuario del sistema
 
 
 Una vez finalizada la instalación, el servidor web Apache se iniciará automáticamente. Podemos verificarlo, ejecutando el siguiente comando: 

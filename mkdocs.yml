@@ -61,7 +61,7 @@ pages:
 - LAMP:
     - ¿Qué es?: 'lampQueEs.md'
     - Instalación: 'lampInstalacion.md'
-    - Configuración inicial: 'lampConfiguracionInicial.md'
+    - Gestión básica: 'lampGestionBasica.md'
     - Módulos de Apache: 'lampModulosApache.md'
     - Web de usuario: 'lampUserdir.md'
     - Hosts virtuales: 'lampVirtualHosts.md'

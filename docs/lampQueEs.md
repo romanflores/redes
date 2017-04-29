@@ -11,7 +11,10 @@ El servidor HTTP Apache es un servidor web HTTP de código abierto, para platafo
 
 El servidor Apache es desarrollado y mantenido por una comunidad de usuarios bajo la supervisión de la [Apache Software Foundation](https://www.apache.org/) dentro del proyecto HTTP Server (httpd).
 
-Apache tiene amplia aceptación en la red: desde 1996, Apache, es el servidor HTTP más usado. Jugó un papel fundamental en el desarrollo fundamental de la World Wide Web y alcanzó su máxima cuota de mercado en 2005 siendo el servidor empleado en el 70% de los sitios web en el mundo, sin embargo ha sufrido un descenso en su cuota de mercado en los últimos años. En 2009 se convirtió en el primer servidor web que alojó más de 100 millones de sitios web.
+!!!quote ""
+	Apache tiene amplia aceptación en la red: desde 1996, Apache, es el servidor HTTP más usado. 
+
+Jugó un papel fundamental en el desarrollo fundamental de la World Wide Web y alcanzó su máxima cuota de mercado en 2005 siendo el servidor empleado en el 70% de los sitios web en el mundo, sin embargo ha sufrido un descenso en su cuota de mercado en los últimos años. En 2009 se convirtió en el primer servidor web que alojó más de 100 millones de sitios web.
 
 ![Estadísticas de Netcraft para abril de 2017](imgLamp/netcraft_2017_04.png)
 
