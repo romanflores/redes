@@ -608,7 +608,7 @@
 </tbody>
 </table>
 <h4 id="instalacion-de-paquetes">Instalación de paquetes<a class="headerlink" href="#instalacion-de-paquetes" title="Permanent link">&para;</a></h4>
-<p>Deberá <a href="lampInstalacion.md">instalarse un entorno LAMP</a> necesario para el despliegue de los sitios web. </p>
+<p>Deberá <a href="../instalacion/">instalarse un entorno LAMP</a> necesario para el despliegue de los sitios web. </p>
 <h4 id="creacion-de-usuarios">Creación de usuarios<a class="headerlink" href="#creacion-de-usuarios" title="Permanent link">&para;</a></h4>
 <p>Deberá crearse un usuario llamado <strong>penguin</strong>.</p>
 <h4 id="creacion-los-directorios-raiz">Creación los directorios raíz<a class="headerlink" href="#creacion-los-directorios-raiz" title="Permanent link">&para;</a></h4>
@@ -616,8 +616,8 @@
 <h4 id="creacion-de-contenido-web">Creación de contenido web<a class="headerlink" href="#creacion-de-contenido-web" title="Permanent link">&para;</a></h4>
 <p>Dentro de los <strong>directorios raíz</strong> creados en el punto anterior (necesariamente deberá existir una página llamada index.html o index.php) y a modo de ejemplo, deberán crearse las siguientes páginas: </p>
 <ol>
-<li>Para <strong>penguin.net</strong>: un archivo "index.html" con la frase "Penguin.net - Sitio Oficial"</li>
-<li>Para <strong>patagon.penguin.net</strong>, un archivo "index.php" con el siguiente contenido: </li>
+<li>Para <strong>penguin.net</strong>: un archivo <code>index.html</code> con la frase "Penguin.net - Sitio Oficial"</li>
+<li>Para <strong>patagon.penguin.net</strong>, un archivo <code>index.php</code> con el siguiente contenido: </li>
 </ol>
 <div class="codehilite"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
@@ -648,7 +648,7 @@
 <p>Es posible que con la configuración por defecto de Apache, obtengamos un <strong>error 403</strong>. En ese caso, realizar los pasos que se describen a continuación</p>
 </div>
 <p>Para corregir dicho error, qbrimos el archivo de configuración general de Apache: </p>
-<div class="codehilite"><pre><span class="nb">sudo</span> vim etc/apache2/apache2.conf
+<div class="codehilite"><pre><span class="nb">sudo</span> nano etc/apache2/apache2.conf
 </pre></div>
 
 
@@ -671,7 +671,7 @@
 
 
 <h2 id="ejercicio-2">Ejercicio 2<a class="headerlink" href="#ejercicio-2" title="Permanent link">&para;</a></h2>
-<p>Una vez que hayamos <a href="lampInstalacion.md">instalado correctamente el entorno LAMP</a> podremos instalar en el servidor web distintas aplicaciones webs que funcionen con dicha tecnología (PHP y MySQL). </p>
+<p>Una vez que hayamos <a href="../instalacion/">instalado correctamente el entorno LAMP</a> podremos instalar en el servidor web distintas aplicaciones webs que funcionen con dicha tecnología (PHP y MySQL). </p>
 <p>A continuación se ofrecen distintas aplicaciones para su descarga junto con las indicaciones de instalación. </p>
 <h4 id="descargando-las-aplicaciones">Descargando las aplicaciones<a class="headerlink" href="#descargando-las-aplicaciones" title="Permanent link">&para;</a></h4>
 <p>La siguiente lista de aplicaciones se encuentra alojada en el servidor local. Son ejemplos de aplicaciones populares en internet:</p>

@@ -160,4 +160,4 @@ Donde `7.0` corresponde a la versión de PHP instalada. Luego, el archivo que te
 
 
 ## Base de datos
-Las bases de datos soportan administración a través de la línea de comandos: en los desarrollos de la presente guía se empleará [MySQL](https://dev.mysql.com/doc/refman/5.7/en/mysql-commands.html) ó [MariaDB](https://mariadb.com/kb/en/mariadb/mysql-command-line-client/). No obstante, una de las opciones más elegidas a la hora de gestionar base de datos es [phpMyAdmin](instalacion#phpmyadmin)
+Las bases de datos soportan administración a través de la línea de comandos, como podemos leer en la documentación oficial de [MySQL](https://dev.mysql.com/doc/refman/5.7/en/mysql-commands.html) y [MariaDB](https://mariadb.com/kb/en/mariadb/mysql-command-line-client/). No obstante, una de las opciones más elegidas a la hora de gestionar base de datos es [phpMyAdmin](instalacion#instalacion-de-phpmyadmin)

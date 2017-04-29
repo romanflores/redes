@@ -1,10 +1,10 @@
 Una de las aplicaciones de la característica de Apache llamada _VirtualHosts_ consiste en la posibilidad de crear **diferentes sitios web** cada uno con su **nombre de dominio propio** aunque éstos se encuentren alojados en un mismo servidor y, por lo tanto, tengan **la misma dirección IP**. 
 
-!!! blockquote "Documentación oficial de Apache"
+!!! blockquote "¿Qué es Virtual Host?"
 
 	El término **Hosting Virtual** se refiere a hacer funcionar más de un sitio web tales como `www.company1.com` y `www.company2.com` en una sola máquina. 
 
-	Los sitios web virtuales pueden estar **"basados en direcciones IP"**, lo que significa que cada sitio web tiene una dirección IP diferente, o **"basados en nombres diferentes"**, lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres (de dominio). 
+	Los sitios web virtuales pueden estar **basados en direcciones IP**, lo que significa que cada sitio web tiene una dirección IP diferente, o **basados en nombres diferentes**, lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres (de dominio). 
 
 	El hecho de que estén funcionando en la misma máquina física pasa completamente desapercibido para el usuario que visita esos sitios web.
 
@@ -75,7 +75,7 @@ Para que Apache ponga el sitio en modo **habilitado** (hasta ahora lo definimos,
 sudo a2ensite misitio.lan.conf
 ```
 
-Este comando creará un [[https:_es.wikipedia.org/wiki/Enlace_simb%C3%B3lico|enlace simbólico]] del archivo `misitio.lan.conf` desde la carpeta `/etc/apache2/sites-available` hacia la carpeta `/etc/apache2/sites-enabled`. 
+Este comando creará un [enlace simbólico](https:_es.wikipedia.org/wiki/Enlace_simb%C3%B3lico) del archivo `misitio.lan.conf` desde la carpeta `/etc/apache2/sites-available` hacia la carpeta `/etc/apache2/sites-enabled`. 
 
 Por último, para que Apache haga efectivo todos los cambios, lo reiniciamos: 
 
@@ -84,5 +84,5 @@ sudo systemctl restart apache2
 ```
 
 ##Accediendo al sitio web
-El último paso que tendremos que dar para acceder a nuestro sitio web será definir el [método de resolución de su nombre de dominio](resolucionNombresHosts.md). 
+El último paso que tendremos que dar para acceder a nuestro sitio web será definir el [método de resolución de su nombre de dominio](../resolucionNombresHosts.md). 
  

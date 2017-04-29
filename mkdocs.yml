@@ -42,6 +42,7 @@ extra:
 markdown_extensions:
   - pymdownx.arithmatex
   - admonition
+#  - codehilite(guess_lang=false,linenums=true)
   - codehilite(guess_lang=false)
   - toc(permalink=true)
   - footnotes
