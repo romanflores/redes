@@ -309,9 +309,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#archivos-y-carpetas-importantes-de-apache" title="Archivos y carpetas importantes de Apache" class="md-nav__link">
-    Archivos y carpetas importantes de Apache
+  <a href="#apache" title="Apache" class="md-nav__link">
+    Apache
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivos-y-carpetas-importantes" title="Archivos y carpetas importantes" class="md-nav__link">
+    Archivos y carpetas importantes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -403,9 +416,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#archivos-y-carpetas-importantes-de-apache" title="Archivos y carpetas importantes de Apache" class="md-nav__link">
-    Archivos y carpetas importantes de Apache
+  <a href="#apache" title="Apache" class="md-nav__link">
+    Apache
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivos-y-carpetas-importantes" title="Archivos y carpetas importantes" class="md-nav__link">
+    Archivos y carpetas importantes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -440,7 +466,9 @@
 <p class="admonition-title">Archivos y directorio de configuración</p>
 <p>Para gestionar efectivamente un servidor LAMP es imprescindible conocer la ubicación de los archivos y carpetas de configuración, ya que facilitará enormente nuestro trabajo. </p>
 </div>
-<h2 id="archivos-y-carpetas-importantes-de-apache">Archivos y carpetas importantes de Apache<a class="headerlink" href="#archivos-y-carpetas-importantes-de-apache" title="Permanent link">&para;</a></h2>
+<h2 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h2>
+<p>A continuación se listan directorios y archivos de configuración así como los comandos para gestionarlo desde la terminal. </p>
+<h3 id="archivos-y-carpetas-importantes">Archivos y carpetas importantes<a class="headerlink" href="#archivos-y-carpetas-importantes" title="Permanent link">&para;</a></h3>
 <p>Una vez instalado el servidor web Apache se crea una estructura archivos y directorios, entre los que se destacan: </p>
 <table>
 <thead>
@@ -480,20 +508,6 @@
 </tr>
 </tbody>
 </table>
-<p><code>/etc/apache2/apache.conf</code>
-Archivo de configuración general de Apache</p>
-<p><code>/etc/apache2/sites-available</code>
-Directorio donde se alojan los archivos de configuración de los sitios  definidos pero aún no activos (es decir, no habilitados</p>
-<p><code>/etc/apache2/sites-enabled</code>
-Directorio donde se alojan los archivos de configuración de los sitios  activos o habilitados|</p>
-<p><code>/etc/apache2/mods-available</code>
-Directorio donde se alojan los módulos de Apache aún no activos (es decir, no habilitados</p>
-<p><code>/etc/apache2/mods-enabled</code>
-Directorio donde se alojan los módulos de Apache activos o habilitados</p>
-<p><code>/var/www/html</code>
-Directorio por del sitio web por defecto, donde Apache aloja las páginas web</p>
-<p><code>/home/usuario/public_html</code>
-Directorio donde se aloja el sitio web personal de cada usuario del sistema</p>
 <p>Una vez finalizada la instalación, el servidor web Apache se iniciará automáticamente. Podemos verificarlo, ejecutando el siguiente comando: </p>
 <div class="codehilite"><pre>sudo systemctl status apache2
 </pre></div>
