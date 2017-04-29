@@ -5,6 +5,8 @@ Una vez instalado el servidor web Apache se crea una estructura archivos y direc
 | `/etc/apache2/apache.conf`     | Archivo de configuración general de Apache|
 | `/etc/apache2/sites-available` | Directorio donde se alojan los archivos de configuración de los sitios  definidos pero aún no activos (es decir, no habilitados|
 | `/etc/apache2/sites-enabled`     | Directorio donde se alojan los archivos de configuración de los sitios  activos o habilitados|
+| `/etc/apache2/mods-available` | Directorio donde se alojan los módulos de Apache aún no activos (es decir, no habilitados|
+| `/etc/apache2/mods-enabled`     | Directorio donde se alojan los módulos de Apache activos o habilitados|
 | `/var/www/html`| Directorio por del sitio web por defecto, donde Apache aloja las páginas web|
 | `/home/usuario/public_html`| Directorio donde se aloja el sitio web personal de cada usuario del sistema|
 
