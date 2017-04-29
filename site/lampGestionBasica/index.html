@@ -323,14 +323,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#gestion-de-modulos" title="Gestión de módulos" class="md-nav__link">
+    Gestión de módulos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicio-y-parada-del-servidor" title="Inicio y parada del servidor" class="md-nav__link">
+    Inicio y parada del servidor
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compatibilidad-con-versiones-anteriores" title="Compatibilidad con versiones anteriores" class="md-nav__link">
+    Compatibilidad con versiones anteriores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurando-el-nombre-del-servidor" title="Configurando el nombre del servidor" class="md-nav__link">
+    Configurando el nombre del servidor
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#inicio-y-parada-del-servidor" title="Inicio y parada del servidor" class="md-nav__link">
-    Inicio y parada del servidor
+  <a href="#php" title="PHP" class="md-nav__link">
+    PHP
   </a>
   
 </li>
@@ -430,14 +464,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#gestion-de-modulos" title="Gestión de módulos" class="md-nav__link">
+    Gestión de módulos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inicio-y-parada-del-servidor" title="Inicio y parada del servidor" class="md-nav__link">
+    Inicio y parada del servidor
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compatibilidad-con-versiones-anteriores" title="Compatibilidad con versiones anteriores" class="md-nav__link">
+    Compatibilidad con versiones anteriores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurando-el-nombre-del-servidor" title="Configurando el nombre del servidor" class="md-nav__link">
+    Configurando el nombre del servidor
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#inicio-y-parada-del-servidor" title="Inicio y parada del servidor" class="md-nav__link">
-    Inicio y parada del servidor
+  <a href="#php" title="PHP" class="md-nav__link">
+    PHP
   </a>
   
 </li>
@@ -462,7 +530,7 @@
                 <p>El <strong>servidor HTTP Apache</strong> se gestiona a través de comandos que ejecutaremos en la terminal. De momento, no exsite una interfaz gráfica nativa para hacerlo, aunque podemos encontrar en este sentido algunos desarrollos de terceros como <a href="http://www.webmin.com/">Webmin</a> o <a href="http://ajenti.org/">Ajenti</a>, entre otros. </p>
 <p>Por otro lado, <strong>PHP</strong> debe gestionarse instalando algún que otro módulo (según nuestras necesidades) y modificando sus archivos de configuración.</p>
 <p>Finalmente, la base de datos <strong>MySQL</strong> o <strong>MariaDB</strong> puede gestionarse a través de la terminal de comandos, o bien, a través de aplicaciones como <a href="https://www.phpmyadmin.net/">phpMyAdmin</a> o <a href="http://dbeaver.jkiss.org/">DBeaver</a> entre otras.</p>
-<div class="admonition done">
+<div class="admonition tip">
 <p class="admonition-title">Archivos y directorio de configuración</p>
 <p>Para gestionar efectivamente un servidor LAMP es imprescindible conocer la ubicación de los archivos y carpetas de configuración, ya que facilitará enormente nuestro trabajo. </p>
 </div>
@@ -508,17 +576,106 @@
 </tr>
 </tbody>
 </table>
-<p>Una vez finalizada la instalación, el servidor web Apache se iniciará automáticamente. Podemos verificarlo, ejecutando el siguiente comando: </p>
+<h3 id="gestion-de-modulos">Gestión de módulos<a class="headerlink" href="#gestion-de-modulos" title="Permanent link">&para;</a></h3>
+<p>El servidor web Apache contiene diversos módulos que proveen al servidor de funcionalidades extra. La mayoría de ellos están deshabilitados por defecto. </p>
+<p>La sintáxis básica para tabajar con módulos es la siguiente: </p>
+<div class="codehilite"><pre>sudo a2<span class="o">[</span>en<span class="p">|</span>dis<span class="o">]</span>mod nombreDelModulo
+</pre></div>
+
+
+<p>Donde: </p>
+<table>
+<thead>
+<tr>
+<th>Sistema operativo</th>
+<th>Ubicación del archivo <em>hosts</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a2</code></td>
+<td>Inicio del comando de Apache2</td>
+</tr>
+<tr>
+<td><code>en</code></td>
+<td><em>Enable</em> es decir, habilitar el sitio web</td>
+</tr>
+<tr>
+<td><code>dis</code></td>
+<td><em>Disable</em>, es decir, deshabilitar el sitio web</td>
+</tr>
+<tr>
+<td><code>mod</code></td>
+<td>Simboliza el concepto de <em>módulo</em></td>
+</tr>
+<tr>
+<td><code>nombreDelModulo</code></td>
+<td>Nombre del modulo que deseamos habilitar o deshabilitar</td>
+</tr>
+</tbody>
+</table>
+<p>Por ejemplo, la siguiente acción habilitará el módulo <code>userdir</code>:</p>
+<div class="codehilite"><pre>sudo a2enmod userdir
+</pre></div>
+
+
+<p>En otras palabras, creará un <a href="https://es.wikipedia.org/wiki/Enlace_simb%C3%B3lico">enlace simbólico</a> del módulo <code>userdir</code> desde la carpeta  <code>/etc/apache2/mods-available</code> hacia la carpeta <code>/etc/apache2/mods-enabled</code>.</p>
+<h3 id="inicio-y-parada-del-servidor">Inicio y parada del servidor<a class="headerlink" href="#inicio-y-parada-del-servidor" title="Permanent link">&para;</a></h3>
+<p>Existen diversos comandos para gestionar el servidor web Apache. </p>
+<p><strong>Detener el servidor</strong></p>
+<div class="codehilite"><pre>sudo systemctl stop apache2
+</pre></div>
+
+
+<p><strong>Iniciar el servidor</strong></p>
+<div class="codehilite"><pre>sudo systemctl start apache2
+</pre></div>
+
+
+<p><strong>Reiniciar el servidor</strong></p>
+<div class="codehilite"><pre>sudo systemctl restart apache2
+</pre></div>
+
+
+<p><strong>Recargar la configuración del servidor (sin reiniciar)</strong></p>
+<div class="codehilite"><pre>sudo systemctl reload apache2
+</pre></div>
+
+
+<p><strong>Estado del servidor</strong></p>
 <div class="codehilite"><pre>sudo systemctl status apache2
 </pre></div>
 
 
-<p>Podemos comprobar la configuración de Apache para verificar si existen errores en su configuración:</p>
+<p><strong>Verificar la configuración del servidor</strong></p>
 <div class="codehilite"><pre>sudo apache2ctl configtest
 </pre></div>
 
 
-<p>Donde obtendremos un error similar a:</p>
+<h4 id="compatibilidad-con-versiones-anteriores">Compatibilidad con versiones anteriores<a class="headerlink" href="#compatibilidad-con-versiones-anteriores" title="Permanent link">&para;</a></h4>
+<p>Las versiones más recientes del kernel de GNU/Linux adoptan el uso de <a href="https://es.wikipedia.org/wiki/Systemd">SystemD</a>. No obstante, versiones basadas en Debian anteriores a 2016, emplean el legendario <a href="https://es.wikipedia.org/wiki/System_V">SystemV</a>. Al momento de escribir esta documentación, en líneas generales, los sistemas basados en <strong>systemd</strong> conservan compatibilidad con <strong>systemV</strong>. Para el caso del servidor web Apache tenemos que: </p>
+<p><strong>Detener el servidor</strong></p>
+<div class="codehilite"><pre>sudo service apache2 stop
+</pre></div>
+
+
+<p><strong>Iniciar el servidor</strong></p>
+<div class="codehilite"><pre>sudo service apache2 start
+</pre></div>
+
+
+<p><strong>Reiniciar el servidor</strong></p>
+<div class="codehilite"><pre>sudo service apache2 restart
+</pre></div>
+
+
+<p><strong>Recargar la configuración del servidor (sin reiniciar)</strong></p>
+<div class="codehilite"><pre>sudo service apache2 reload
+</pre></div>
+
+
+<h3 id="configurando-el-nombre-del-servidor">Configurando el <em>nombre</em> del servidor<a class="headerlink" href="#configurando-el-nombre-del-servidor" title="Permanent link">&para;</a></h3>
+<p>Al comprobar la configuración de Apache obtenemos el siguiente error:</p>
 <div class="codehilite"><pre>Set the <span class="s1">&#39;ServerName&#39;</span> directive globally to suppress this message 
 Syntax OK
 </pre></div>
@@ -550,26 +707,7 @@ Syntax OK
 </pre></div>
 
 
-<h2 id="inicio-y-parada-del-servidor">Inicio y parada del servidor<a class="headerlink" href="#inicio-y-parada-del-servidor" title="Permanent link">&para;</a></h2>
-<p>Existen diversos comandos para gestionar el servidor web Apache. </p>
-<p><strong>Detener el servidor</strong></p>
-<div class="codehilite"><pre>sudo systemctl stop apache2
-</pre></div>
-
-
-<p><strong>Iniciar el servidor</strong></p>
-<div class="codehilite"><pre>sudo systemctl start apache2
-</pre></div>
-
-
-<p><strong>Reiniciar el servidor</strong></p>
-<div class="codehilite"><pre>sudo systemctl restart apache2
-</pre></div>
-
-
-<p><strong>Recargar la configuración del servidor (sin reiniciar)</strong></p>
-<div class="codehilite"><pre>sudo systemctl reload apache2
-</pre></div>
+<h2 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h2>
                 
                   
                 

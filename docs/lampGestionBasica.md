@@ -4,7 +4,7 @@ Por otro lado, **PHP** debe gestionarse instalando algún que otro módulo (seg�
 
 Finalmente, la base de datos **MySQL** o **MariaDB** puede gestionarse a través de la terminal de comandos, o bien, a través de aplicaciones como [phpMyAdmin](https://www.phpmyadmin.net/) o [DBeaver](http://dbeaver.jkiss.org/) entre otras.
 
-!!!done "Archivos y directorio de configuración"
+!!!tip "Archivos y directorio de configuración"
 	Para gestionar efectivamente un servidor LAMP es imprescindible conocer la ubicación de los archivos y carpetas de configuración, ya que facilitará enormente nuestro trabajo. 
 
 ## Apache
@@ -25,19 +25,92 @@ Una vez instalado el servidor web Apache se crea una estructura archivos y direc
 | `/home/usuario/public_html`| Directorio donde se aloja el sitio web personal de cada usuario del sistema|
 
 
-Una vez finalizada la instalación, el servidor web Apache se iniciará automáticamente. Podemos verificarlo, ejecutando el siguiente comando: 
+### Gestión de módulos
+El servidor web Apache contiene diversos módulos que proveen al servidor de funcionalidades extra. La mayoría de ellos están deshabilitados por defecto. 
 
+La sintáxis básica para tabajar con módulos es la siguiente: 
+
+```bash
+sudo a2[en|dis]mod nombreDelModulo
+```
+
+Donde: 
+
+| Sistema operativo      | Ubicación del archivo _hosts_           |
+| ---------------------- | --------------------------------------- |
+|`a2`                    | Inicio del comando de Apache2           |
+|`en` 					 | _Enable_ es decir, habilitar el sitio web|
+|`dis`     				 | _Disable_, es decir, deshabilitar el sitio web|
+| `mod`                	 | Simboliza el concepto de _módulo_       |
+| `nombreDelModulo`   	 | Nombre del modulo que deseamos habilitar o deshabilitar|
+
+
+Por ejemplo, la siguiente acción habilitará el módulo `userdir`:
+
+```bash
+sudo a2enmod userdir
+```
+
+En otras palabras, creará un [enlace simbólico](https://es.wikipedia.org/wiki/Enlace_simb%C3%B3lico) del módulo `userdir` desde la carpeta  `/etc/apache2/mods-available` hacia la carpeta `/etc/apache2/mods-enabled`.
+
+### Inicio y parada del servidor
+
+Existen diversos comandos para gestionar el servidor web Apache. 
+
+**Detener el servidor**
+```bash
+sudo systemctl stop apache2
+```
+
+**Iniciar el servidor**
+```bash
+sudo systemctl start apache2
+```
+
+**Reiniciar el servidor**
+```bash
+sudo systemctl restart apache2
+```
+
+**Recargar la configuración del servidor (sin reiniciar)**
+```bash
+sudo systemctl reload apache2
+```
+
+**Estado del servidor**
 ```bash
 sudo systemctl status apache2
 ```
 
-Podemos comprobar la configuración de Apache para verificar si existen errores en su configuración:
-
+**Verificar la configuración del servidor**
 ```bash
 sudo apache2ctl configtest
 ```
 
-Donde obtendremos un error similar a:
+#### Compatibilidad con versiones anteriores
+Las versiones más recientes del kernel de GNU/Linux adoptan el uso de [SystemD](https://es.wikipedia.org/wiki/Systemd). No obstante, versiones basadas en Debian anteriores a 2016, emplean el legendario [SystemV](https://es.wikipedia.org/wiki/System_V). Al momento de escribir esta documentación, en líneas generales, los sistemas basados en **systemd** conservan compatibilidad con **systemV**. Para el caso del servidor web Apache tenemos que: 
+
+**Detener el servidor**
+```bash
+sudo service apache2 stop
+```
+**Iniciar el servidor**
+```bash
+sudo service apache2 start
+```
+**Reiniciar el servidor**
+```bash
+sudo service apache2 restart
+```
+**Recargar la configuración del servidor (sin reiniciar)**
+```bash
+sudo service apache2 reload
+```
+
+
+### Configurando el _nombre_ del servidor
+Al comprobar la configuración de Apache obtenemos el siguiente error:
+
 ```bash
 Set the 'ServerName' directive globally to suppress this message 
 Syntax OK
@@ -69,27 +142,5 @@ Por último, reiniciamos Apache para implementar los cambios:
 sudo systemctl restart apache2
 ```
 
+## PHP
 
-##Inicio y parada del servidor
-
-Existen diversos comandos para gestionar el servidor web Apache. 
-
-**Detener el servidor**
-```bash
-sudo systemctl stop apache2
-```
-
-**Iniciar el servidor**
-```bash
-sudo systemctl start apache2
-```
-
-**Reiniciar el servidor**
-```bash
-sudo systemctl restart apache2
-```
-
-**Recargar la configuración del servidor (sin reiniciar)**
-```bash
-sudo systemctl reload apache2
-```

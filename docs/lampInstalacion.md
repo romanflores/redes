@@ -33,7 +33,7 @@ Abrimos el navegador web y nos dirigimos a la siguiente dirección: `http://nomb
 Dentro de la carpeta raíz por defecto del servidor web `/var/www/html`, creamos un archivo con el nombre `info.php` (en realidad, se puede llamar como prefieras):
 
 ```bash
-sudo vim /var/www/html/info.php
+sudo nano /var/www/html/info.php
 ```
 Y agregaremos al archivo el contenido:
 
