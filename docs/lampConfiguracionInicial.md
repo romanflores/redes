@@ -108,6 +108,12 @@ Luego de guardar los cambios al archivo, abrimos un navegador web y visitamos la
 ![PHPInfo](lamp/lampPhpInfo.png)
 
 ### phpMyAdmin
-Simplemente, abrimos nuestro navegador y nos dirigimos a `http://nombreDominioServidor/phpmyadmin` ó `http://direccionIPServidor/phpmyadmin`. Veremos una página similar a ésta: 
+Instalamos **phpmyadmin** (junto a algunas librerías necesarias) a través del siguiente comando:
+
+```bash
+sudo apt install phpmyadmin php-gettext php-mbstring
+```
+
+Luego abrimos nuestro navegador y nos dirigimos a `http://nombreDominioServidor/phpmyadmin` ó `http://direccionIPServidor/phpmyadmin`. Veremos una página similar a ésta: 
 
 ![phpMyAdmin](lamp/lampPhpMyAdmin.png)

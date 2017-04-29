@@ -24,7 +24,7 @@ Y luego seleccionar la opción **LAMP Server** del menú que nos aparecerá en p
 Adicionalmente podemos instalar un gestor para nuestra base de datos: **phpmyadmin**, ejecutando el siguiente comando: 
 
 ```bash
-sudo apt-get install phpmyadmin
+sudo apt install phpmyadmin php-gettext php-mbstring
 ```
 Donde se nos pedirá la contraseña del usuario root de MySQL, definida con anterioridad al instalar el metapaquete LAMP: 
 
