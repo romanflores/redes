@@ -59,6 +59,7 @@ pages:
 - Resolución de nombres: 
     - El archivo hosts: 'resolucionNombresHosts.md'
 - LAMP:
+    - ¿Qué es?: 'lampQueEs.md'
     - Instalación: 'lampInstalacion.md'
     - Configuración inicial: 'lampConfiguracionInicial.md'
     - Módulos de Apache: 'lampModulosApache.md'

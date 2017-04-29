@@ -262,6 +262,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../lampQueEs/" title="¿Qué es?" class="md-nav__link">
+      ¿Qué es?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../lampInstalacion/" title="Instalación" class="md-nav__link">
       Instalación
     </a>
@@ -300,40 +312,6 @@
   <a href="#inicio-y-parada-del-servidor" title="Inicio y parada del servidor" class="md-nav__link">
     Inicio y parada del servidor
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verificando-instalacion" title="Verificando instalación" class="md-nav__link">
-    Verificando instalación
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -421,40 +399,6 @@
   <a href="#inicio-y-parada-del-servidor" title="Inicio y parada del servidor" class="md-nav__link">
     Inicio y parada del servidor
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verificando-instalacion" title="Verificando instalación" class="md-nav__link">
-    Verificando instalación
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -568,36 +512,6 @@ Syntax OK
 <p><strong>Recargar la configuración del servidor (sin reiniciar)</strong></p>
 <div class="codehilite"><pre>sudo systemctl reload apache2
 </pre></div>
-
-
-<h2 id="verificando-instalacion">Verificando instalación<a class="headerlink" href="#verificando-instalacion" title="Permanent link">&para;</a></h2>
-<p>Para verificar el correcto funcionamiento del servidor, seguiremos los siguientes pasos:</p>
-<h3 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h3>
-<p>Abrimos el navegador web y nos dirigimos a la siguiente dirección: <code>http://nombreDominioServidor</code> o <code>http://direccionIPServidor</code>. En cualquier caso deberíamos visualizar la página de bienvenida del servidor web:</p>
-<p><img alt="Apache" src="../lamp/lampWorks.png" /></p>
-<h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
-<p>Dentro de la carpeta raíz por defecto del servidor web <code>/var/www/html</code>, creamos un archivo con el nombre <code>info.php</code> (en realidad, se puede llamar como prefieras):</p>
-<div class="codehilite"><pre>sudo vim /var/www/html/info.php
-</pre></div>
-
-
-<p>Y agregaremos al archivo el contenido:</p>
-<div class="codehilite"><pre><span class="cp">&lt;?php</span>
-<span class="nb">phpinfo</span><span class="p">();</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</pre></div>
-
-
-<p>Luego de guardar los cambios al archivo, abrimos un navegador web y visitamos la dirección <code>http://nombreDominioServidor/info.php</code> ó <code>http://direccionIPServidor/ìnfo.php</code> y deberíamos la página de información sobre php:</p>
-<p><img alt="PHPInfo" src="../lamp/lampPhpInfo.png" /></p>
-<h3 id="phpmyadmin">phpMyAdmin<a class="headerlink" href="#phpmyadmin" title="Permanent link">&para;</a></h3>
-<p>Instalamos <strong>phpmyadmin</strong> (junto a algunas librerías necesarias) a través del siguiente comando:</p>
-<div class="codehilite"><pre>sudo apt install phpmyadmin php-gettext php-mbstring
-</pre></div>
-
-
-<p>Luego abrimos nuestro navegador y nos dirigimos a <code>http://nombreDominioServidor/phpmyadmin</code> ó <code>http://direccionIPServidor/phpmyadmin</code>. Veremos una página similar a ésta: </p>
-<p><img alt="phpMyAdmin" src="../lamp/lampPhpMyAdmin.png" /></p>
                 
                   
                 

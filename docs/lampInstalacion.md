@@ -1,36 +1,53 @@
-Se denomina **LAMP** a un grupo de software de código libre que se instala normalmente en conjunto para habilitar un servidor para alojar sitios y aplicaciones web dinámicas. Este término en realidad es un acrónimo que representa un sistema operativo **GNU/Linux** con un servidor web **[Apache](https://httpd.apache.org/)**, donde los datos del sitio son almacenados en base de datos **[MySQL](https://www.mysql.com/)** o **[MariaDB](https://mariadb.org/)** y el contenido dinámico es procesado con **[PHP](https://secure.php.net/)**.
+Para disponer de un servidor web **LAMP** ejecutaremos los comandos que se indican a continuación. 
 
-
-Para disponer de un servidor web **LAMP** ejecutaremos el siguiente comando:
+!!! warning "Ingreso de datos"
+	Durante la instalación se solicitará en varias ocasiones el ingreso de información por parte del usuario. Por ejemplo, la contraseña del usuario root de la base de datos, o el tipo de servicio a instalar si usamos `tasksel`. Conviene prestar atención en cada paso para evitar errores de configuración. 
 
 ```bash
 sudo apt install lamp-server^
 ```
-![LAMP Server](lamp/lampServer.gif)
-
 O bien: 
 
 ```bash
 sudo apt install tasksel
 ```
-
-Y luego seleccionar la opción **LAMP Server** del menú que nos aparecerá en pantalla:
-
-![LAMPTasksel](lamp/lampTasksel.gif)
-
-!!! done "Instalación"
-	En ambos casos realizamos la instalación del servidor web a través de 	  un _metapaquete_ que se encarga de instalar los paquetes necesarios 	  para el correcto funcionamiento del servidor. Sin embargo, podemos realizar una instalación manual, seleccionando los paquetes que deseamos instalar de manera individual. 
-
-Adicionalmente podemos instalar un gestor para nuestra base de datos: **phpmyadmin**, ejecutando el siguiente comando: 
+Adicionalmente podemos instalar un gestor para nuestra base de datos, llamado **phpmyadmin**, ejecutando el siguiente comando: 
 
 ```bash
 sudo apt install phpmyadmin php-gettext php-mbstring
 ```
-Donde se nos pedirá la contraseña del usuario root de MySQL, definida con anterioridad al instalar el metapaquete LAMP: 
 
-![PhpMyAdmin](lamp/lampPhpMyAdmin.gif)
+##Verificando la instalación
 
-!!! note "Instalación de phpMyAmin"
-	Durante la instalación se solicitará la intervención del usuario. En cualquier caso, nos desplazaremos por las opciones con la tecla TAB, seleccionando nuestra elección presionando la tecla ESPACIO. 
+Para verificar el correcto funcionamiento del servidor, seguiremos los siguientes pasos:
 
+### Apache
+
+Abrimos el navegador web y nos dirigimos a la siguiente dirección: `http://nombreDominioServidor` o `http://direccionIPServidor`. En cualquier caso deberíamos visualizar la página de bienvenida del servidor web:
+
+![Apache](imgLamp/lampWorks.png)
+
+
+### PHP
+
+Dentro de la carpeta raíz por defecto del servidor web `/var/www/html`, creamos un archivo con el nombre `info.php` (en realidad, se puede llamar como prefieras):
+
+```bash
+sudo vim /var/www/html/info.php
+```
+Y agregaremos al archivo el contenido:
+
+```php
+<?php
+phpinfo();
+?>
+```
+Luego de guardar los cambios al archivo, abrimos un navegador web y visitamos la dirección `http://nombreDominioServidor/info.php` ó `http://direccionIPServidor/ìnfo.php` y deberíamos la página de información sobre php:
+
+![PHPInfo](imgLamp/lampPhpInfo.png)
+
+### phpMyAdmin
+Abrimos nuestro navegador y nos dirigimos a `http://nombreDominioServidor/phpmyadmin` ó `http://direccionIPServidor/phpmyadmin`. Veremos una página similar a ésta: 
+
+![phpMyAdmin](imgLamp/lampPhpMyAdmin.png)
 

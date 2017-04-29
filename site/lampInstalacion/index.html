@@ -260,6 +260,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../lampQueEs/" title="¿Qué es?" class="md-nav__link">
+      ¿Qué es?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -268,9 +280,61 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Instalación
+      </label>
+    
     <a href="./" title="Instalación" class="md-nav__link md-nav__link--active">
       Instalación
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#verificando-la-instalacion" title="Verificando la instalación" class="md-nav__link">
+    Verificando la instalación
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apache" title="Apache" class="md-nav__link">
+    Apache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php" title="PHP" class="md-nav__link">
+    PHP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
+    phpMyAdmin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -355,6 +419,47 @@
   
   
   
+    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#verificando-la-instalacion" title="Verificando la instalación" class="md-nav__link">
+    Verificando la instalación
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apache" title="Apache" class="md-nav__link">
+    Apache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php" title="PHP" class="md-nav__link">
+    PHP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
+    phpMyAdmin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -368,35 +473,48 @@
                 
                   <h1>Instalación</h1>
                 
-                <p>Se denomina <strong>LAMP</strong> a un grupo de software de código libre que se instala normalmente en conjunto para habilitar un servidor para alojar sitios y aplicaciones web dinámicas. Este término en realidad es un acrónimo que representa un sistema operativo <strong>GNU/Linux</strong> con un servidor web <strong><a href="https://httpd.apache.org/">Apache</a></strong>, donde los datos del sitio son almacenados en base de datos <strong><a href="https://www.mysql.com/">MySQL</a></strong> o <strong><a href="https://mariadb.org/">MariaDB</a></strong> y el contenido dinámico es procesado con <strong><a href="https://secure.php.net/">PHP</a></strong>.</p>
-<p>Para disponer de un servidor web <strong>LAMP</strong> ejecutaremos el siguiente comando:</p>
+                <p>Para disponer de un servidor web <strong>LAMP</strong> ejecutaremos los comandos que se indican a continuación. </p>
+<div class="admonition warning">
+<p class="admonition-title">Ingreso de datos</p>
+<p>Durante la instalación se solicitará en varias ocasiones el ingreso de información por parte del usuario. Por ejemplo, la contraseña del usuario root de la base de datos, o el tipo de servicio a instalar si usamos <code>tasksel</code>. Conviene prestar atención en cada paso para evitar errores de configuración. </p>
+</div>
 <div class="codehilite"><pre>sudo apt install lamp-server^
 </pre></div>
 
 
-<p><img alt="LAMP Server" src="../lamp/lampServer.gif" /></p>
 <p>O bien: </p>
 <div class="codehilite"><pre>sudo apt install tasksel
 </pre></div>
 
 
-<p>Y luego seleccionar la opción <strong>LAMP Server</strong> del menú que nos aparecerá en pantalla:</p>
-<p><img alt="LAMPTasksel" src="../lamp/lampTasksel.gif" /></p>
-<div class="admonition done">
-<p class="admonition-title">Instalación</p>
-<p>En ambos casos realizamos la instalación del servidor web a través de     un <em>metapaquete</em> que se encarga de instalar los paquetes necesarios     para el correcto funcionamiento del servidor. Sin embargo, podemos realizar una instalación manual, seleccionando los paquetes que deseamos instalar de manera individual. </p>
-</div>
-<p>Adicionalmente podemos instalar un gestor para nuestra base de datos: <strong>phpmyadmin</strong>, ejecutando el siguiente comando: </p>
+<p>Adicionalmente podemos instalar un gestor para nuestra base de datos, llamado <strong>phpmyadmin</strong>, ejecutando el siguiente comando: </p>
 <div class="codehilite"><pre>sudo apt install phpmyadmin php-gettext php-mbstring
 </pre></div>
 
 
-<p>Donde se nos pedirá la contraseña del usuario root de MySQL, definida con anterioridad al instalar el metapaquete LAMP: </p>
-<p><img alt="PhpMyAdmin" src="../lamp/lampPhpMyAdmin.gif" /></p>
-<div class="admonition note">
-<p class="admonition-title">Instalación de phpMyAmin</p>
-<p>Durante la instalación se solicitará la intervención del usuario. En cualquier caso, nos desplazaremos por las opciones con la tecla TAB, seleccionando nuestra elección presionando la tecla ESPACIO. </p>
-</div>
+<h2 id="verificando-la-instalacion">Verificando la instalación<a class="headerlink" href="#verificando-la-instalacion" title="Permanent link">&para;</a></h2>
+<p>Para verificar el correcto funcionamiento del servidor, seguiremos los siguientes pasos:</p>
+<h3 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h3>
+<p>Abrimos el navegador web y nos dirigimos a la siguiente dirección: <code>http://nombreDominioServidor</code> o <code>http://direccionIPServidor</code>. En cualquier caso deberíamos visualizar la página de bienvenida del servidor web:</p>
+<p><img alt="Apache" src="../imgLamp/lampWorks.png" /></p>
+<h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
+<p>Dentro de la carpeta raíz por defecto del servidor web <code>/var/www/html</code>, creamos un archivo con el nombre <code>info.php</code> (en realidad, se puede llamar como prefieras):</p>
+<div class="codehilite"><pre>sudo vim /var/www/html/info.php
+</pre></div>
+
+
+<p>Y agregaremos al archivo el contenido:</p>
+<div class="codehilite"><pre><span class="cp">&lt;?php</span>
+<span class="nb">phpinfo</span><span class="p">();</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+
+<p>Luego de guardar los cambios al archivo, abrimos un navegador web y visitamos la dirección <code>http://nombreDominioServidor/info.php</code> ó <code>http://direccionIPServidor/ìnfo.php</code> y deberíamos la página de información sobre php:</p>
+<p><img alt="PHPInfo" src="../imgLamp/lampPhpInfo.png" /></p>
+<h3 id="phpmyadmin">phpMyAdmin<a class="headerlink" href="#phpmyadmin" title="Permanent link">&para;</a></h3>
+<p>Abrimos nuestro navegador y nos dirigimos a <code>http://nombreDominioServidor/phpmyadmin</code> ó <code>http://direccionIPServidor/phpmyadmin</code>. Veremos una página similar a ésta: </p>
+<p><img alt="phpMyAdmin" src="../imgLamp/lampPhpMyAdmin.png" /></p>
                 
                   
                 
@@ -415,7 +533,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../resolucionNombresHosts/" title="El archivo hosts" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../lampQueEs/" title="¿Qué es?" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -424,7 +542,7 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                El archivo hosts
+                ¿Qué es?
               </span>
             </div>
           </a>
