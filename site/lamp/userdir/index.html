@@ -466,7 +466,7 @@
 <p>En sistemas GNU/Linux, el contenido del directorio <code>/etc/skel</code> se <em>carga</em> dentro de la carpeta <code>home</code> de cada usuario al momento de que estos son creados. Por tanto, podemos modificar el contenido de <code>/etc/skel</code> incluyendo en dicho directorio el contenido que necesitemos. Por ejemplo, el directorio <code>public_html</code></p>
 </div>
 <h2 id="habilitando-el-modulo-userdir">Habilitando el módulo userdir<a class="headerlink" href="#habilitando-el-modulo-userdir" title="Permanent link">&para;</a></h2>
-<p>Para permitir que los usuarios posean su propio sitio web aún resta un paso: la habilitación del módulo de Apache correspondiente. Entre los distintos módulos de Apache, quien cumple con nuestro cometido es el módulo llamado <code>userdir</code>. Para habilitar dicho módulo, ejecutamos en la terminal: </p>
+<p>Para proveer a los usuarios de un espacio web dentro de su carpeta <code>home</code> todavía tendremos que dar un paso más: habilitar el módulo de Apache llamado <code>userdir</code>. Para ello, ejecutamos en la terminal: </p>
 <div class="codehilite"><pre>sudo a2enmod userdir
 </pre></div>
 

@@ -19,7 +19,7 @@ Solo resta agregar **"las páginas webs"** dentro de la carpeta `public_html` qu
 
 ## Habilitando el módulo userdir
 
-Para permitir que los usuarios posean su propio sitio web aún resta un paso: la habilitación del módulo de Apache correspondiente. Entre los distintos módulos de Apache, quien cumple con nuestro cometido es el módulo llamado `userdir`. Para habilitar dicho módulo, ejecutamos en la terminal: 
+Para proveer a los usuarios de un espacio web dentro de su carpeta `home` todavía tendremos que dar un paso más: habilitar el módulo de Apache llamado `userdir`. Para ello, ejecutamos en la terminal: 
 
 ```bash
 sudo a2enmod userdir

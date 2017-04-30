@@ -49,16 +49,16 @@ Y a continuación escribimos la configuración de nuestro Host Virtual. Un ejemp
  ServerName	www.misitio.lan
  
  # Alias del nombre de dominio del sitio
- ServerAlias	misitio.lan http:_misitio.lan
+ ServerAlias	misitio.lan http://misitio.lan
  
  # Carpeta raíz donde se alojarán las páginas web 
  DocumentRoot	/home/usuario/public_html	
  
  # Ruta en la que Apache escribirá el registor de errores
- ErrorLog	/home/usuario/errores_misitio.lan
+ ErrorLog	/home/usuario/errores_misitio.lan.log
  
  # Ruta en la que Apache escribirá el registor accesos
- CustomLog	/home/usuario/accessos_misitio.lan combined
+ CustomLog	/home/usuario/accessos_misitio.lan.log combined
 
 </VirtualHost>
 
