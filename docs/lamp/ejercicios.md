@@ -40,21 +40,36 @@ Dentro de los **directorios raíz** creados en el punto anterior (necesariamente
 1. Para **penguin.net**: un archivo `index.html` con la frase "Penguin.net - Sitio Oficial"
 2. Para **patagon.penguin.net**, un archivo `index.php` con el siguiente contenido: 
 
-```html
+```php
 <!DOCTYPE html>
+
 <html>
+
 <head>
-<title>Penguin S.A.</title>
+
+	<title>Penguin S.A.</title>
+
 </head>
+
 <body>
-<h1>Penguin.Net Patagon</h1>
-<p>Sitio en construccion</p>
-<? php phpinfo(); ?>
-</body>
+
+	<h1>Penguin.Net Patagon</h1>
+
+	<p>Sitio en construccion</p>
+
+	<?php 
+
+		# Muestra la fecha y hora actual de Buenos Aires
+		ini_set('date.timezone','America/Argentina/Buenos_Aires');
+		echo date("d-m-Y (H:i A)");
+
+	?>
+
+	</body>
+
 </html>
 ```
 
-La instrucción `phpinfo();` mostrará la configuración de PHP instalada en el servidor. Por supuesto, se realiza a modo de ejemplo. No debe realizarse en sitios de producción. 
 
 #### Creación de los archivos de configuración ####
 

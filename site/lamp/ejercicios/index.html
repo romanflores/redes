@@ -619,21 +619,36 @@
 <li>Para <strong>penguin.net</strong>: un archivo <code>index.html</code> con la frase "Penguin.net - Sitio Oficial"</li>
 <li>Para <strong>patagon.penguin.net</strong>, un archivo <code>index.php</code> con el siguiente contenido: </li>
 </ol>
-<div class="codehilite"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Penguin S.A.<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Penguin.Net Patagon<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Sitio en construccion<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="cp">&lt;? php phpinfo(); ?&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span class="x">&lt;!DOCTYPE html&gt;</span>
+
+<span class="x">&lt;html&gt;</span>
+
+<span class="x">&lt;head&gt;</span>
+
+<span class="x">    &lt;title&gt;Penguin S.A.&lt;/title&gt;</span>
+
+<span class="x">&lt;/head&gt;</span>
+
+<span class="x">&lt;body&gt;</span>
+
+<span class="x">    &lt;h1&gt;Penguin.Net Patagon&lt;/h1&gt;</span>
+
+<span class="x">    &lt;p&gt;Sitio en construccion&lt;/p&gt;</span>
+
+<span class="x">    </span><span class="cp">&lt;?php</span> 
+
+        <span class="c1"># Muestra la fecha y hora actual de Buenos Aires</span>
+        <span class="nb">ini_set</span><span class="p">(</span><span class="s1">&#39;date.timezone&#39;</span><span class="p">,</span><span class="s1">&#39;America/Argentina/Buenos_Aires&#39;</span><span class="p">);</span>
+        <span class="k">echo</span> <span class="nb">date</span><span class="p">(</span><span class="s2">&quot;d-m-Y (H:i A)&quot;</span><span class="p">);</span>
+
+    <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="x">    &lt;/body&gt;</span>
+
+<span class="x">&lt;/html&gt;</span>
 </pre></div>
 
 
-<p>La instrucción <code>phpinfo();</code> mostrará la configuración de PHP instalada en el servidor. Por supuesto, se realiza a modo de ejemplo. No debe realizarse en sitios de producción. </p>
 <h4 id="creacion-de-los-archivos-de-configuracion">Creación de los archivos de configuración<a class="headerlink" href="#creacion-de-los-archivos-de-configuracion" title="Permanent link">&para;</a></h4>
 <p>Se deben crear los archivos de configuración de cada <strong>Host Virtual</strong> solicitado por el cliente. Tener en cuenta que para todos los casos, el administrador sera <code>admin@penguin.net</code>.</p>
 <h4 id="resolucion-de-nombres">Resolución de nombres<a class="headerlink" href="#resolucion-de-nombres" title="Permanent link">&para;</a></h4>

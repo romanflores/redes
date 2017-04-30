@@ -19,7 +19,7 @@ Por ejemplo:
 mkdir /home/usuario/public_html
 ```
 
-El paso siguiente será agregar en el directorio el contenido del sitio web (páginas web, imágenes, archivos de estilo, sripts, etc). Recordar que debe existir necesariamente algún archivo índice index.html o index.php (o con alguna otra extensión, según la configuración del servidor). 
+El paso siguiente será agregar en el directorio el contenido del sitio web como páginas web, imágenes, archivos de estilo, sripts, etc. Recordar que debe existir necesariamente algún archivo índice (por ejemplo, `index.html` o `index.php` o con cualquier otra extensión habilitada en la configuración del servidor). 
 
 
 ##Configurando el Host Virtual
@@ -84,5 +84,5 @@ sudo systemctl restart apache2
 ```
 
 ##Accediendo al sitio web
-El último paso que tendremos que dar para acceder a nuestro sitio web será definir el [método de resolución de su nombre de dominio](../resolucionNombresHosts.md). 
+El último paso que tendremos que dar para acceder a nuestro sitio web será definir cuál será el [método de resolución de su nombre de dominio](../resolucionNombresHosts.md). 
  

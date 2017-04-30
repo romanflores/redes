@@ -449,18 +449,22 @@
                 
                   <h1>Web de usuario</h1>
                 
-                <p>Es posible crear un <strong>espacio web para cada usuario del sistema</strong>, donde éstos pueden alojar su propio contenido web. Para hacerlo, seguimos las siguientes instrucciones: </p>
+                <p>Es posible crear un <strong>espacio web para cada usuario del sistema</strong>, donde éstos pueden alojar su propio contenido web. </p>
+<div class="admonition note">
+<p class="admonition-title">Usuarios</p>
+<p>En los ejemplos listados en esta página deberás cambiar <strong>usuario</strong> por el nombre de usuario al que deseemos dotar de un espacio web.</p>
+</div>
 <h2 id="creando-el-contenido-del-sitio-web">Creando el contenido del sitio web<a class="headerlink" href="#creando-el-contenido-del-sitio-web" title="Permanent link">&para;</a></h2>
 <p>En primer lugar, creamos el directorio en el cual se agregarán las páginas webs del usuario:</p>
 <div class="codehilite"><pre>mkdir /home/usuario/public_html
 </pre></div>
 
 
-<div class="admonition note">
-<p class="admonition-title">Usuarios</p>
-<p>En los ejemplos listados en esta página deberás cambiar <strong>usuario</strong> por el nombre de usuario al que deseemos dotar de un espacio web.</p>
+<p>Solo resta agregar <strong>"las páginas webs"</strong> dentro de la carpeta <code>public_html</code> que acabamos de crear. Tené en cuenta debe existir necesariamente al menos un archivo llamado índice. Por ejemplo: <code>index.html</code></p>
+<div class="admonition tip">
+<p class="admonition-title">El directorio <code>/etc/skel</code></p>
+<p>En sistemas GNU/Linux, el contenido del directorio <code>/etc/skel</code> se <em>carga</em> dentro de la carpeta <code>home</code> de cada usuario al momento de que estos son creados. Por tanto, podemos modificar el contenido de <code>/etc/skel</code> incluyendo en dicho directorio el contenido que necesitemos. Por ejemplo, el directorio <code>public_html</code></p>
 </div>
-<p>Solo resta agregar <strong>"las páginas webs"</strong> dentro de la carpeta <code>public_html</code> que acabamos de crear (debe existir necesariamente un archivo llamado index.html o index.php) </p>
 <h2 id="habilitando-el-modulo-userdir">Habilitando el módulo userdir<a class="headerlink" href="#habilitando-el-modulo-userdir" title="Permanent link">&para;</a></h2>
 <p>Para permitir que los usuarios posean su propio sitio web aún resta un paso: la habilitación del módulo de Apache correspondiente. Entre los distintos módulos de Apache, quien cumple con nuestro cometido es el módulo llamado <code>userdir</code>. Para habilitar dicho módulo, ejecutamos en la terminal: </p>
 <div class="codehilite"><pre>sudo a2enmod userdir
@@ -484,11 +488,11 @@
 
 
 <p>Por último, debemos permitir la ejecucción de scripts PHP dentro de directorio <code>home</code> de los usuarios. Para ello, abrimos el archivo:</p>
-<div class="codehilite"><pre>nano /etc/apache2/mods-available/php5.conf
+<div class="codehilite"><pre>nano /etc/apache2/mods-available/php7.0.conf
 </pre></div>
 
 
-<p>Un vez abierto el archivo, tenemos que modificar el siguiente bloque de código (casi al final del archivo):</p>
+<p>Un vez abierto el archivo, tenemos que desplazarnos hasta el final del archivo hasta ubicar el siguiente bloque de código:</p>
 <div class="codehilite"><pre><span class="nt">&lt;IfModule</span> <span class="s">mod_userdir.c</span><span class="nt">&gt;</span>
     <span class="nt">&lt;Directory</span> <span class="s">/home/*/public_html</span><span class="nt">&gt;</span>
         <span class="nb">php_admin_flag</span> engine <span class="k">Off</span>
@@ -497,12 +501,12 @@
 </pre></div>
 
 
-<p>De manera que quede así: </p>
-<div class="codehilite"><pre><span class="nt">&lt;IfModule</span> <span class="s">mod_userdir.c</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;Directory</span> <span class="s">/home/*/public_html</span><span class="nt">&gt;</span>
-        <span class="nb">php_admin_flag</span> engine <span class="k">On</span>
-    <span class="nt">&lt;/Directory&gt;</span>
-<span class="nt">&lt;/IfModule&gt;</span>
+<p>Comentamos el bloque de manera que quede así: </p>
+<div class="codehilite"><pre><span class="c">#&lt;IfModule mod_userdir.c&gt;</span>
+<span class="c">#    &lt;Directory /home/*/public_html&gt;</span>
+<span class="c">#        php_admin_flag engine Off</span>
+<span class="c">#    &lt;/Directory&gt;</span>
+<span class="c">#&lt;/IfModule&gt;</span>
 </pre></div>
 
 
@@ -512,7 +516,11 @@
 
 
 <h2 id="aceso-a-la-web-del-usuario">Aceso a la web del usuario<a class="headerlink" href="#aceso-a-la-web-del-usuario" title="Permanent link">&para;</a></h2>
-<p>Una vez concluidos los pasos anteriores, podemos acceder a la web del usuario escribiendo en el navegador <code>http://nombreDominioServidor/~usuario</code> o <code>http://direccionIPServidor/~usuario</code></p>
+<p>Una vez concluidos los pasos anteriores, podemos acceder a la web del usuario escribiendo en el navegador:</p>
+<ul>
+<li><code>http://nombreDominioServidor/~usuario</code> o <code>http://direccionIPServidor/~usuario</code> si incluimos en la raíz del sitio web contenido estático o</li>
+<li><code>http://nombreDominioServidor/~usuario/archivo.php</code> o <code>http://direccionIPServidor/~usuario/archivo.php</code> si agregamos a la web contenido dinámico (PHP). En el ejemplo, dicho contenido dinámico está representado por <code>archivo.php</code></li>
+</ul>
                 
                   
                 
