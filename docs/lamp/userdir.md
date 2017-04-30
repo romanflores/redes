@@ -11,7 +11,7 @@ En primer lugar, creamos el directorio en el cual se agregarán las páginas web
 ```bash
 mkdir /home/usuario/public_html
 ```
-Solo resta agregar **"las páginas webs"** dentro de la carpeta `public_html` que acabamos de crear. Tené en cuenta debe existir necesariamente al menos un archivo llamado índice. Por ejemplo: `index.html`
+Solo resta agregar el contenido del sitio web dentro de la carpeta `public_html` que acabamos de crear. Tené en cuenta debe existir necesariamente al menos un archivo índice. Por ejemplo: `index.html`
 
 
 !!! tip "El directorio `/etc/skel`"

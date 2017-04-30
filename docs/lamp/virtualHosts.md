@@ -22,7 +22,7 @@ mkdir /home/usuario/public_html
 El paso siguiente será agregar en el directorio el contenido del sitio web como páginas web, imágenes, archivos de estilo, sripts, etc. Recordar que debe existir necesariamente algún archivo índice (por ejemplo, `index.html` o `index.php` o con cualquier otra extensión habilitada en la configuración del servidor). 
 
 
-##Configurando el Host Virtual
+## Configurando el Host Virtual
 
 Para iniciar la configuración de nuestro _host virtual_ nos dirigiremos a la siguiente carpeta: 
 
@@ -33,7 +33,7 @@ cd /etc/apache2/sites-available
 Una vez ubicados en el directorio correspodiente nos disponemos a crear el **archivo de configuracion del Host Virtual** (el archivo en cuestión puede llamarse de cualquier forma, pero debe finalizar necesariamente con la extension `.conf`)
 
 ```bash
-vim misitio.lan.conf
+nano misitio.lan.conf
 ```
 
 Y a continuación escribimos la configuración de nuestro Host Virtual. Un ejemplo simple de configuracion para el sitio ficticio `misitio.lan`:
@@ -67,7 +67,7 @@ Y a continuación escribimos la configuración de nuestro Host Virtual. Un ejemp
 !!! note "Nota"
 	Los archivos de _log_ son archivos en los que el sistema guarda información sobre el funcionamiento de algún servicio determinado indicando errores, advertencias, accesos, etc. En distribuciones GNU/Linux, se encuentran alojados bajo la ruta `/var/log/`. En el ejemplo, se ha optado por guardar dichos archivos en la carpeta home del usuario. 
 
-##Habilitando el sitio creado
+## Habilitando el sitio creado
 
 Para que Apache ponga el sitio en modo **habilitado** (hasta ahora lo definimos, pero no lo habilitamos), ejecutamos en la terminal:
 
@@ -83,6 +83,6 @@ Por último, para que Apache haga efectivo todos los cambios, lo reiniciamos:
 sudo systemctl restart apache2
 ```
 
-##Accediendo al sitio web
+## Accediendo al sitio web
 El último paso que tendremos que dar para acceder a nuestro sitio web será definir cuál será el [método de resolución de su nombre de dominio](../resolucionNombresHosts.md). 
  
