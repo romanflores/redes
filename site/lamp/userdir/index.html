@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.0">
+      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.6.0">
     
     
       
@@ -456,7 +456,7 @@
 </div>
 <h2 id="creando-el-contenido-del-sitio-web">Creando el contenido del sitio web<a class="headerlink" href="#creando-el-contenido-del-sitio-web" title="Permanent link">&para;</a></h2>
 <p>En primer lugar, creamos el directorio en el cual se agregarán las páginas webs del usuario:</p>
-<div class="codehilite"><pre>mkdir /home/usuario/public_html
+<div class="codehilite"><pre><span></span>mkdir /home/usuario/public_html
 </pre></div>
 
 
@@ -467,33 +467,33 @@
 </div>
 <h2 id="habilitando-el-modulo-userdir">Habilitando el módulo userdir<a class="headerlink" href="#habilitando-el-modulo-userdir" title="Permanent link">&para;</a></h2>
 <p>Para proveer a los usuarios de un espacio web dentro de su carpeta <code>home</code> todavía tendremos que dar un paso más: habilitar el módulo de Apache llamado <code>userdir</code>. Para ello, ejecutamos en la terminal: </p>
-<div class="codehilite"><pre>sudo a2enmod userdir
+<div class="codehilite"><pre><span></span>sudo a2enmod userdir
 </pre></div>
 
 
 <p>Luego, reiniciamos el servidor para que incorpore los cambios:</p>
-<div class="codehilite"><pre>sudo systemctl restart apache2
+<div class="codehilite"><pre><span></span>sudo systemctl restart apache2
 </pre></div>
 
 
 <h2 id="habilitando-el-modulo-php70">Habilitando el módulo php7.0<a class="headerlink" href="#habilitando-el-modulo-php70" title="Permanent link">&para;</a></h2>
 <p>En caso de querer ejecutar <strong>PHP</strong> en las webs personales de los usuarios tendremos que instalar el módulo correspondiente:  </p>
-<div class="codehilite"><pre>sudo apt-get install libapache2-mod-php7.0
+<div class="codehilite"><pre><span></span>sudo apt-get install libapache2-mod-php7.0
 </pre></div>
 
 
 <p>Acto seguido, habilitamos el módulo: </p>
-<div class="codehilite"><pre>sudo a2enmod php7.0
+<div class="codehilite"><pre><span></span>sudo a2enmod php7.0
 </pre></div>
 
 
 <p>Por último, debemos permitir la ejecucción de scripts PHP dentro de directorio <code>home</code> de los usuarios. Para ello, abrimos el archivo:</p>
-<div class="codehilite"><pre>nano /etc/apache2/mods-available/php7.0.conf
+<div class="codehilite"><pre><span></span>nano /etc/apache2/mods-available/php7.0.conf
 </pre></div>
 
 
 <p>Un vez abierto el archivo, tenemos que desplazarnos hasta el final del archivo hasta ubicar el siguiente bloque de código:</p>
-<div class="codehilite"><pre><span class="nt">&lt;IfModule</span> <span class="s">mod_userdir.c</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;IfModule</span> <span class="s">mod_userdir.c</span><span class="nt">&gt;</span>
     <span class="nt">&lt;Directory</span> <span class="s">/home/*/public_html</span><span class="nt">&gt;</span>
         <span class="nb">php_admin_flag</span> engine <span class="k">Off</span>
     <span class="nt">&lt;/Directory&gt;</span>
@@ -502,7 +502,7 @@
 
 
 <p>Comentamos el bloque de manera que quede así: </p>
-<div class="codehilite"><pre><span class="c">#&lt;IfModule mod_userdir.c&gt;</span>
+<div class="codehilite"><pre><span></span><span class="c">#&lt;IfModule mod_userdir.c&gt;</span>
 <span class="c">#    &lt;Directory /home/*/public_html&gt;</span>
 <span class="c">#        php_admin_flag engine Off</span>
 <span class="c">#    &lt;/Directory&gt;</span>
@@ -511,7 +511,7 @@
 
 
 <p>Para hacer efectivos los cambios realizados, reiniciamos Apache: </p>
-<div class="codehilite"><pre>sudo systemctl restart apache2
+<div class="codehilite"><pre><span></span>sudo systemctl restart apache2
 </pre></div>
 
 
@@ -604,6 +604,8 @@
       
     
     
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-98408177-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
       
     
   </body>
