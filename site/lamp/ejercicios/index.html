@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.6.0">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.0">
     
     
       
@@ -50,7 +50,7 @@
   
   
   
-    <body data-md-color-primary="deep-purple" data-md-color-accent="purple">
+    <body data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
   
     <svg class="md-svg">
       <defs>
@@ -631,7 +631,7 @@
 <li>Para <strong>penguin.net</strong>: un archivo <code>index.html</code> con la frase "Penguin.net - Sitio Oficial"</li>
 <li>Para <strong>patagon.penguin.net</strong>, un archivo <code>index.php</code> con el siguiente contenido: </li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="x">&lt;!DOCTYPE html&gt;</span>
+<div class="codehilite"><pre><span class="x">&lt;!DOCTYPE html&gt;</span>
 
 <span class="x">&lt;html&gt;</span>
 
@@ -675,12 +675,12 @@
 <p>Es posible que con la configuración por defecto de Apache, obtengamos un <strong>error 403</strong>. En ese caso, realizar los pasos que se describen a continuación</p>
 </div>
 <p>Para corregir dicho error, qbrimos el archivo de configuración general de Apache: </p>
-<div class="codehilite"><pre><span></span><span class="nb">sudo</span> nano etc/apache2/apache2.conf
+<div class="codehilite"><pre><span class="nb">sudo</span> nano etc/apache2/apache2.conf
 </pre></div>
 
 
 <p>Y modificamos el archivo de configuración general de Apache, aproximadamente en la línea 153 y que posee el siguiente aspecto: </p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;Directory</span> <span class="s">/</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span class="nt">&lt;Directory</span> <span class="s">/</span><span class="nt">&gt;</span>
 <span class="nb">Options</span> FollowSymLinks
 <span class="nb">AllowOverride</span> <span class="k">None</span>
 <span class="nb">Require</span> <span class="k">all</span> denied
@@ -689,7 +689,7 @@
 
 
 <p>Tendremos que modificarlo para que quede: </p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;Directory</span> <span class="s">/</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span class="nt">&lt;Directory</span> <span class="s">/</span><span class="nt">&gt;</span>
 <span class="nb">Options</span> FollowSymLinks
 <span class="nb">AllowOverride</span> <span class="k">None</span>
 <span class="c"># Require all denied</span>
@@ -709,7 +709,7 @@
 <li><a href="https://wordpress.org/download/">Wordpress</a></li>
 </ul>
 <p>Podés elegir la que desees y descargarlas en el directorio raíz de tu sitio web de la siguiente manera:  </p>
-<div class="codehilite"><pre><span></span>wget http://url_de_la_aplicacion/aplicacion.zip
+<div class="codehilite"><pre>wget http://url_de_la_aplicacion/aplicacion.zip
 </pre></div>
 
 

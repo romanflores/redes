@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.6.0">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.0">
     
     
       
@@ -50,7 +50,7 @@
   
   
   
-    <body data-md-color-primary="deep-purple" data-md-color-accent="purple">
+    <body data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
   
     <svg class="md-svg">
       <defs>
@@ -471,24 +471,24 @@
 <h2 id="creando-el-contenido-web">Creando el contenido web<a class="headerlink" href="#creando-el-contenido-web" title="Permanent link">&para;</a></h2>
 <p>En primer lugar creamos la carpeta donde se alojaran las paginas web del <strong>host virtual</strong> que definiremos. </p>
 <p>Por ejemplo:</p>
-<div class="codehilite"><pre><span></span>mkdir /home/usuario/public_html
+<div class="codehilite"><pre>mkdir /home/usuario/public_html
 </pre></div>
 
 
 <p>El paso siguiente será agregar en el directorio el contenido del sitio web como páginas web, imágenes, archivos de estilo, sripts, etc. Recordar que debe existir necesariamente algún archivo índice (por ejemplo, <code>index.html</code> o <code>index.php</code> o con cualquier otra extensión habilitada en la configuración del servidor). </p>
 <h2 id="configurando-el-host-virtual">Configurando el Host Virtual<a class="headerlink" href="#configurando-el-host-virtual" title="Permanent link">&para;</a></h2>
 <p>Para iniciar la configuración de nuestro <em>host virtual</em> nos dirigiremos a la siguiente carpeta: </p>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> /etc/apache2/sites-available
+<div class="codehilite"><pre><span class="nb">cd</span> /etc/apache2/sites-available
 </pre></div>
 
 
 <p>Una vez ubicados en el directorio correspodiente nos disponemos a crear el <strong>archivo de configuracion del Host Virtual</strong> (el archivo en cuestión puede llamarse de cualquier forma, pero debe finalizar necesariamente con la extension <code>.conf</code>)</p>
-<div class="codehilite"><pre><span></span>nano misitio.lan.conf
+<div class="codehilite"><pre>nano misitio.lan.conf
 </pre></div>
 
 
 <p>Y a continuación escribimos la configuración de nuestro Host Virtual. Un ejemplo simple de configuracion para el sitio ficticio <code>misitio.lan</code>:</p>
-<div class="codehilite"><pre><span></span><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
+<div class="codehilite"><pre><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
 
  <span class="c"># Correo del administrador del servidor</span>
  <span class="nb">ServerAdmin</span>    tunombre@mail.com
@@ -518,13 +518,13 @@
 </div>
 <h2 id="habilitando-el-sitio-creado">Habilitando el sitio creado<a class="headerlink" href="#habilitando-el-sitio-creado" title="Permanent link">&para;</a></h2>
 <p>Para que Apache ponga el sitio en modo <strong>habilitado</strong> (hasta ahora lo definimos, pero no lo habilitamos), ejecutamos en la terminal:</p>
-<div class="codehilite"><pre><span></span>sudo a2ensite misitio.lan.conf
+<div class="codehilite"><pre>sudo a2ensite misitio.lan.conf
 </pre></div>
 
 
 <p>Este comando creará un <a href="https:_es.wikipedia.org/wiki/Enlace_simb%C3%B3lico">enlace simbólico</a> del archivo <code>misitio.lan.conf</code> desde la carpeta <code>/etc/apache2/sites-available</code> hacia la carpeta <code>/etc/apache2/sites-enabled</code>. </p>
 <p>Por último, para que Apache haga efectivo todos los cambios, lo reiniciamos: </p>
-<div class="codehilite"><pre><span></span>sudo systemctl restart apache2
+<div class="codehilite"><pre>sudo systemctl restart apache2
 </pre></div>
 
 

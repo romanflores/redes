@@ -18,8 +18,8 @@ theme_dir: 'themes/material'
 # Opciones
 extra:
   palette:
-    primary: 'deep purple'
-    accent: 'purple'
+    primary: 'deep orange'
+    accent: 'deep orange'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'

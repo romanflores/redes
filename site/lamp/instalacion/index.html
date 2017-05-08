@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.6.0">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.0">
     
     
       
@@ -50,7 +50,7 @@
   
   
   
-    <body data-md-color-primary="deep-purple" data-md-color-accent="purple">
+    <body data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
   
     <svg class="md-svg">
       <defs>
@@ -507,23 +507,23 @@
 </div>
 <p>Para disponer de un servidor web <strong>LAMP</strong> ejecutaremos los comandos que se indican a continuación. </p>
 <h3 id="instalacion-de-lamp">Instalación de LAMP<a class="headerlink" href="#instalacion-de-lamp" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>sudo apt install lamp-server^
+<div class="codehilite"><pre>sudo apt install lamp-server^
 </pre></div>
 
 
 <p>O bien: </p>
-<div class="codehilite"><pre><span></span>sudo tasksel
+<div class="codehilite"><pre>sudo tasksel
 </pre></div>
 
 
 <p>Debiendo seleccionar la opción <strong>LAMP Server</strong> del menú exhibido en pantalla. En caso de no tener instalada la herramienta <code>tasksel</code> la instalamos: </p>
-<div class="codehilite"><pre><span></span>sudo apt install tasksel
+<div class="codehilite"><pre>sudo apt install tasksel
 </pre></div>
 
 
 <h3 id="instalacion-de-phpmyadmin">Instalación de phpMyAdmin<a class="headerlink" href="#instalacion-de-phpmyadmin" title="Permanent link">&para;</a></h3>
 <p>Adicionalmente podemos instalar un gestor para nuestra base de datos, llamado <strong>phpmyadmin</strong> (junto a algunas librerías extra), ejecutando el siguiente comando: </p>
-<div class="codehilite"><pre><span></span>sudo apt install phpmyadmin php-gettext php-mbstring
+<div class="codehilite"><pre>sudo apt install phpmyadmin php-gettext php-mbstring
 </pre></div>
 
 
@@ -534,12 +534,12 @@
 <p><img alt="Apache" src="../imgLamp/lampWorks.png" /></p>
 <h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
 <p>Dentro de la carpeta raíz por defecto del servidor web <code>/var/www/html</code>, creamos un archivo con el nombre <code>info.php</code> (en realidad, se puede llamar como prefieras):</p>
-<div class="codehilite"><pre><span></span>sudo nano /var/www/html/info.php
+<div class="codehilite"><pre>sudo nano /var/www/html/info.php
 </pre></div>
 
 
 <p>Y agregaremos al archivo el contenido:</p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<div class="codehilite"><pre><span class="cp">&lt;?php</span>
 <span class="nb">phpinfo</span><span class="p">();</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
