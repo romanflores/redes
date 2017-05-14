@@ -58,8 +58,10 @@ extra_javascript:
 # Páginas
 pages: 
 - Inicio: 'index.md'
+- Secure Shell: 
+    - Autenticación de llave pública: 'ssh/authKey.md'
 - Resolución de nombres: 
-    - El archivo hosts: 'resolucionNombresHosts.md'
+    - El archivo hosts: 'dns/archivoHosts.md'
 - LAMP:
     - ¿Qué es?: 'lamp/queEs.md'
     - Instalación: 'lamp/instalacion.md'

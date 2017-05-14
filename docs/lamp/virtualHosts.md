@@ -84,5 +84,5 @@ sudo systemctl restart apache2
 ```
 
 ## Accediendo al sitio web
-El último paso que tendremos que dar para acceder a nuestro sitio web será definir cuál será el [método de resolución de su nombre de dominio](../resolucionNombresHosts.md). 
+El último paso que tendremos que dar para acceder a nuestro sitio web será definir cuál será el [método de resolución de su nombre de dominio](../dns/archivoHosts.md). 
  

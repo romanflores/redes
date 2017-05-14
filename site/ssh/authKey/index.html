@@ -9,7 +9,7 @@
         <meta name="description" content="Redes de datos con software libre">
       
       
-        <link rel="canonical" href="http://www.redes.rauljesus.com/lamp/userdir/">
+        <link rel="canonical" href="http://www.redes.rauljesus.com/ssh/authKey/">
       
       
         <meta name="author" content="Raul Jesus Lopez">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Web de usuario - Redes con software libre</title>
+        <title>Autenticación de llave pública - Redes con software libre</title>
       
     
     
@@ -82,11 +82,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  LAMP
+                  Secure Shell
                 </span>
               
             
-            Web de usuario
+            Autenticación de llave pública
           
         </span>
       </div>
@@ -203,10 +203,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Secure Shell
@@ -222,11 +224,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../ssh/authKey/" title="Autenticación de llave pública" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Autenticación de llave pública
+      </label>
+    
+    <a href="./" title="Autenticación de llave pública" class="md-nav__link md-nav__link--active">
       Autenticación de llave pública
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generando-llaves" title="Generando llaves" class="md-nav__link">
+    Generando llaves
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copiando-la-llave-publica" title="Copiando la llave pública" class="md-nav__link">
+    Copiando la llave pública
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deshabilitando-el-inicio-de-sesion-por-contrasena" title="Deshabilitando el inicio de sesión por contraseña" class="md-nav__link">
+    Deshabilitando el inicio de sesión por contraseña
+  </a>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comentarios" class="md-nav__link md-nav__link--active">
+            Comentarios
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -275,12 +329,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       LAMP
@@ -298,7 +350,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../queEs/" title="¿Qué es?" class="md-nav__link">
+    <a href="../../lamp/queEs/" title="¿Qué es?" class="md-nav__link">
       ¿Qué es?
     </a>
   </li>
@@ -310,7 +362,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instalacion/" title="Instalación" class="md-nav__link">
+    <a href="../../lamp/instalacion/" title="Instalación" class="md-nav__link">
       Instalación
     </a>
   </li>
@@ -322,7 +374,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../gestionBasica/" title="Gestión básica" class="md-nav__link">
+    <a href="../../lamp/gestionBasica/" title="Gestión básica" class="md-nav__link">
       Gestión básica
     </a>
   </li>
@@ -332,70 +384,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Web de usuario
-      </label>
-    
-    <a href="./" title="Web de usuario" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../lamp/userdir/" title="Web de usuario" class="md-nav__link">
       Web de usuario
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#creando-el-contenido-del-sitio-web" title="Creando el contenido del sitio web" class="md-nav__link">
-    Creando el contenido del sitio web
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#habilitando-el-modulo-userdir" title="Habilitando el módulo userdir" class="md-nav__link">
-    Habilitando el módulo userdir
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#habilitando-el-modulo-php70" title="Habilitando el módulo php7.0" class="md-nav__link">
-    Habilitando el módulo php7.0
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aceso-a-la-web-del-usuario" title="Aceso a la web del usuario" class="md-nav__link">
-    Aceso a la web del usuario
-  </a>
-  
-</li>
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" title="Comentarios" class="md-nav__link md-nav__link--active">
-            Comentarios
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -405,7 +398,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../virtualHosts/" title="Hosts virtuales" class="md-nav__link">
+    <a href="../../lamp/virtualHosts/" title="Hosts virtuales" class="md-nav__link">
       Hosts virtuales
     </a>
   </li>
@@ -417,7 +410,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ejercicios/" title="Ejercicios prácticos" class="md-nav__link">
+    <a href="../../lamp/ejercicios/" title="Ejercicios prácticos" class="md-nav__link">
       Ejercicios prácticos
     </a>
   </li>
@@ -447,29 +440,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creando-el-contenido-del-sitio-web" title="Creando el contenido del sitio web" class="md-nav__link">
-    Creando el contenido del sitio web
+  <a href="#generando-llaves" title="Generando llaves" class="md-nav__link">
+    Generando llaves
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#habilitando-el-modulo-userdir" title="Habilitando el módulo userdir" class="md-nav__link">
-    Habilitando el módulo userdir
+  <a href="#copiando-la-llave-publica" title="Copiando la llave pública" class="md-nav__link">
+    Copiando la llave pública
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#habilitando-el-modulo-php70" title="Habilitando el módulo php7.0" class="md-nav__link">
-    Habilitando el módulo php7.0
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aceso-a-la-web-del-usuario" title="Aceso a la web del usuario" class="md-nav__link">
-    Aceso a la web del usuario
+  <a href="#deshabilitando-el-inicio-de-sesion-por-contrasena" title="Deshabilitando el inicio de sesión por contraseña" class="md-nav__link">
+    Deshabilitando el inicio de sesión por contraseña
   </a>
   
 </li>
@@ -495,80 +481,87 @@
               
                 
                 
-                  <h1>Web de usuario</h1>
+                  <h1>Autenticación de llave pública</h1>
                 
-                <p>Es posible crear un <strong>espacio web para cada usuario del sistema</strong>, donde éstos pueden alojar su propio contenido web. </p>
-<div class="admonition note">
-<p class="admonition-title">Usuarios</p>
-<p>En los ejemplos listados en esta página deberás cambiar <strong>usuario</strong> por el nombre de usuario al que deseemos dotar de un espacio web.</p>
-</div>
-<h2 id="creando-el-contenido-del-sitio-web">Creando el contenido del sitio web<a class="headerlink" href="#creando-el-contenido-del-sitio-web" title="Permanent link">&para;</a></h2>
-<p>En primer lugar, creamos el directorio en el cual se agregarán las páginas webs del usuario:</p>
-<div class="codehilite"><pre>mkdir /home/usuario/public_html
-</pre></div>
-
-
-<p>Solo resta agregar el contenido del sitio web dentro de la carpeta <code>public_html</code> que acabamos de crear. Tené en cuenta debe existir necesariamente al menos un archivo índice. Por ejemplo: <code>index.html</code></p>
+                <p>La autenticación de llave pública permite el inicio de sesión de un usuario en el servidor remoto mediante el empleo de archivos de clave, lo que aumente considerablemente la seguridad del servidor. </p>
+<p>A continuacipon se describen una serie de pasos que nos permitirán iniciar sesión en un servidor remoto sin utilizar contraseña. En su lugar emplearemos uno par de archivos encriptados conocidos como llave (o clave) privada y llave (o clave) pública. </p>
 <div class="admonition tip">
-<p class="admonition-title">El directorio <code>/etc/skel</code></p>
-<p>En sistemas GNU/Linux, el contenido del directorio <code>/etc/skel</code> se <em>carga</em> dentro de la carpeta <code>home</code> de cada usuario al momento de que estos son creados. Por tanto, podemos modificar el contenido de <code>/etc/skel</code> incluyendo en dicho directorio el contenido que necesitemos. Por ejemplo, el directorio <code>public_html</code></p>
+<p class="admonition-title">Glosario</p>
+<p>En el presente tutorial, <strong>máquina local</strong> hace referencia a nuestra computadora y <strong>servidor</strong> al <strong>servidor remoto</strong>. </p>
 </div>
-<h2 id="habilitando-el-modulo-userdir">Habilitando el módulo userdir<a class="headerlink" href="#habilitando-el-modulo-userdir" title="Permanent link">&para;</a></h2>
-<p>Para proveer a los usuarios de un espacio web dentro de su carpeta <code>home</code> todavía tendremos que dar un paso más: habilitar el módulo de Apache llamado <code>userdir</code>. Para ello, ejecutamos en la terminal: </p>
-<div class="codehilite"><pre>sudo a2enmod userdir
+<h2 id="generando-llaves">Generando llaves<a class="headerlink" href="#generando-llaves" title="Permanent link">&para;</a></h2>
+<p><em>Logueados</em> con nuestro usuario normal en la <strong>máquina local</strong>, ejecutamos: </p>
+<div class="codehilite"><pre><span class="err">ssh-</span><span class="nb">keygen</span>
 </pre></div>
 
 
-<p>Luego, reiniciamos el servidor para que incorpore los cambios:</p>
-<div class="codehilite"><pre>sudo systemctl restart apache2
+<p>Aunque podemos ingresar otros valores, si presionamos la tecla <em>Enter</em> estaremos aceptando los valores por defecto para los nombres de llaves y su ubicación, a saber: </p>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/home/usuario/.ssh</code></td>
+<td>Directorio (oculto)</td>
+<td>Ubicación por defecto de los archivos de clave</td>
+</tr>
+<tr>
+<td><code>id_rsa</code></td>
+<td>Archivo</td>
+<td>Llave privada</td>
+</tr>
+<tr>
+<td><code>id_rsa.pub</code></td>
+<td>Archivo</td>
+<td>Llave pública</td>
+</tr>
+</tbody>
+</table>
+<p>A continuación, se nos pedirá el <strong>ingreso de una frase de contraseña o <em>passphrase</em></strong> para asegurar las llaves. Podemos ingresar la contraseña o dejarla en blanco presionando la tecla <em>Enter</em>. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Si dejamos la contraseña en blanco podremos usar la llave sin introducir contraseña. Si ingresamos una contraseña necesitaremos ambas (la llave privada y la contraseña) para iniciar sesión. Asegurar las llaves con contraseña es más seguro, pero ambos métodos tienen sus usos y son más seguros que la autenticación de contraseña básica.</p>
+</div>
+<h2 id="copiando-la-llave-publica">Copiando la llave pública<a class="headerlink" href="#copiando-la-llave-publica" title="Permanent link">&para;</a></h2>
+<p>Para que podamos iniciar sesión en el servidor remoto, ejecutamos en la <strong>máquina local</strong>: </p>
+<div class="codehilite"><pre><span class="err">ssh-copy-</span><span class="nb">id</span> usuario_remoto@ip_del_servidor_remoto
 </pre></div>
 
 
-<h2 id="habilitando-el-modulo-php70">Habilitando el módulo php7.0<a class="headerlink" href="#habilitando-el-modulo-php70" title="Permanent link">&para;</a></h2>
-<p>En caso de querer ejecutar <strong>PHP</strong> en las webs personales de los usuarios tendremos que instalar el módulo correspondiente:  </p>
-<div class="codehilite"><pre>sudo apt-get install libapache2-mod-php7.0
+<p>Se nos pedirá la contraseña del usuario remoto. Seguidamente, la llave pública se agregará al archivo <code>/home/usuario/.ssh/authorized_keys</code> del usuario remoto. Ahora se puede usar la llave privada correspondiente para iniciar sesión en el servidor.</p>
+<h2 id="deshabilitando-el-inicio-de-sesion-por-contrasena">Deshabilitando el inicio de sesión por contraseña<a class="headerlink" href="#deshabilitando-el-inicio-de-sesion-por-contrasena" title="Permanent link">&para;</a></h2>
+<p>Ahora que nuestro usuario puede usar las llaves SSH para iniciar sesión en el servidor remoto, podemos aumentar la seguridad del mismo desactivando la autenticación por contraseña.</p>
+<div class="admonition warning">
+<p class="admonition-title">Importante</p>
+<p>Al desactivar la autenticación por contraseña tendremos que esta seguros que previamente hemos configurado la llave pública para nuestro usuario, de lo contrario, bloquearemos el ingreso de nuestro usuario al servidor.</p>
+</div>
+<p>Al desactivar el uso de la contraseña estaremos restringiendo el acceso SSH al servidor remoto únicamente a la autenticación de llave pública. Es decir, la única manera de iniciar sesión en el servidor remoto sera teniendo la llave privada en combinación con llave pública que se instaló.</p>
+<p>Para ello, abrimos el archivo de configuración de SSH: </p>
+<div class="codehilite"><pre><span class="nb">sudo</span> nano <span class="sx">/etc/ssh/sshd_config</span>
 </pre></div>
 
 
-<p>Acto seguido, habilitamos el módulo: </p>
-<div class="codehilite"><pre>sudo a2enmod php7.0
+<p>Buscamos la línea que contiene la palabra <code>PasswordAuthentication</code> y, descomentamos la línea en caso que esté comentada (borrando el caracter # al comienzo de la línea). Luego cambiamos su valor a "no". Debería verse así después de haber realizado el cambio:</p>
+<div class="codehilite"><pre><span class="nb">PasswordAuthentication</span> no
 </pre></div>
 
 
-<p>Por último, debemos permitir la ejecucción de scripts PHP dentro de directorio <code>home</code> de los usuarios. Para ello, abrimos el archivo:</p>
-<div class="codehilite"><pre>nano /etc/apache2/mods-available/php7.0.conf
+<p>Para hacer efectivos los cambios, reiniciamos el servidor SSH: </p>
+<div class="codehilite"><pre>sudo systemctl reload sshd
 </pre></div>
 
 
-<p>Un vez abierto el archivo, tenemos que desplazarnos hasta el final del archivo hasta ubicar el siguiente bloque de código:</p>
-<div class="codehilite"><pre><span class="nt">&lt;IfModule</span> <span class="s">mod_userdir.c</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;Directory</span> <span class="s">/home/*/public_html</span><span class="nt">&gt;</span>
-        <span class="nb">php_admin_flag</span> engine <span class="k">Off</span>
-    <span class="nt">&lt;/Directory&gt;</span>
-<span class="nt">&lt;/IfModule&gt;</span>
+<p>O bien: </p>
+<div class="codehilite"><pre>sudo service sshd reload
 </pre></div>
 
 
-<p>Comentamos el bloque de manera que quede así: </p>
-<div class="codehilite"><pre><span class="c">#&lt;IfModule mod_userdir.c&gt;</span>
-<span class="c">#    &lt;Directory /home/*/public_html&gt;</span>
-<span class="c">#        php_admin_flag engine Off</span>
-<span class="c">#    &lt;/Directory&gt;</span>
-<span class="c">#&lt;/IfModule&gt;</span>
-</pre></div>
-
-
-<p>Para hacer efectivos los cambios realizados, reiniciamos Apache: </p>
-<div class="codehilite"><pre>sudo systemctl restart apache2
-</pre></div>
-
-
-<h2 id="aceso-a-la-web-del-usuario">Aceso a la web del usuario<a class="headerlink" href="#aceso-a-la-web-del-usuario" title="Permanent link">&para;</a></h2>
-<p>Una vez concluidos los pasos anteriores, podemos acceder a la web del usuario escribiendo en el navegador:</p>
-<ul>
-<li><code>http://nombreDominioServidor/~usuario</code> o <code>http://direccionIPServidor/~usuario</code> si incluimos en la raíz del sitio web contenido estático o</li>
-<li><code>http://nombreDominioServidor/~usuario/archivo.php</code> o <code>http://direccionIPServidor/~usuario/archivo.php</code> si agregamos a la web contenido dinámico (PHP). En el ejemplo, dicho contenido dinámico está representado por <code>archivo.php</code></li>
-</ul>
+<p>El inicio de sesión empleando contraseña está deshabilitado. A partir de ahora, el servidor sólo es accesible mediante la autenticación de llave SSH.</p>
                 
                   
                 
@@ -579,9 +572,9 @@
                   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = "http://www.redes.rauljesus.com/lamp/userdir/";
+    this.page.url = "http://www.redes.rauljesus.com/ssh/authKey/";
     this.page.identifier =
-      "/lamp/userdir/";
+      "/ssh/authKey/";
   };
   (function() {
     var d = document, s = d.createElement("script");
@@ -603,7 +596,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../gestionBasica/" title="Gestión básica" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Inicio" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -612,19 +605,19 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                Gestión básica
+                Inicio
               </span>
             </div>
           </a>
         
         
-          <a href="../virtualHosts/" title="Hosts virtuales" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../dns/archivoHosts/" title="El archivo hosts" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                Hosts virtuales
+                El archivo hosts
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://www.redes.rauljesus.com/</loc>
-     <lastmod>2017-05-07</lastmod>
+     <lastmod>2017-05-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,8 +12,18 @@
     
         
     <url>
-     <loc>http://www.redes.rauljesus.com/resolucionNombresHosts/</loc>
-     <lastmod>2017-05-07</lastmod>
+     <loc>http://www.redes.rauljesus.com/ssh/authKey/</loc>
+     <lastmod>2017-05-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/dns/archivoHosts/</loc>
+     <lastmod>2017-05-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -23,37 +33,37 @@
         
     <url>
      <loc>http://www.redes.rauljesus.com/lamp/queEs/</loc>
-     <lastmod>2017-05-07</lastmod>
+     <lastmod>2017-05-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.redes.rauljesus.com/lamp/instalacion/</loc>
-     <lastmod>2017-05-07</lastmod>
+     <lastmod>2017-05-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.redes.rauljesus.com/lamp/gestionBasica/</loc>
-     <lastmod>2017-05-07</lastmod>
+     <lastmod>2017-05-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.redes.rauljesus.com/lamp/userdir/</loc>
-     <lastmod>2017-05-07</lastmod>
+     <lastmod>2017-05-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.redes.rauljesus.com/lamp/virtualHosts/</loc>
-     <lastmod>2017-05-07</lastmod>
+     <lastmod>2017-05-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.redes.rauljesus.com/lamp/ejercicios/</loc>
-     <lastmod>2017-05-07</lastmod>
+     <lastmod>2017-05-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
