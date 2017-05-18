@@ -10,11 +10,7 @@ Las clases se dictarán en un laboratorio virtual local ubicado en el instituto.
 * [Ubuntu Server 16.04 LTS - 32 bits](http://releases.ubuntu.com/16.04/ubuntu-16.04.2-server-i386.iso)
 * [Ubuntu Server 16.04 LTS - 64 bits](http://releases.ubuntu.com/16.04/ubuntu-16.04.2-server-amd64.iso)
 
-## Temas
 
-* [Networking](#)
-* [Servicios de red](#)
-* [Monitoreo de redes](#)
-* [Troubleshooting](#)
 
-Sitio en construcción...
+!!! warning "Atención"
+	Sitio en construcción

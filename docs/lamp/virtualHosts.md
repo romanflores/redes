@@ -46,10 +46,10 @@ Y a continuación escribimos la configuración de nuestro Host Virtual. Un ejemp
  ServerAdmin	tunombre@mail.com
  
  # Nombre de dominio del sitio
- ServerName	www.misitio.lan
+ ServerName	misitio.lan
  
  # Alias del nombre de dominio del sitio
- ServerAlias	misitio.lan http://misitio.lan
+ ServerAlias	www.misitio.lan http://misitio.lan
  
  # Carpeta raíz donde se alojarán las páginas web 
  DocumentRoot	/home/usuario/public_html	
@@ -80,7 +80,7 @@ Este comando creará un [enlace simbólico](https:_es.wikipedia.org/wiki/Enlace_
 Por último, para que Apache haga efectivo todos los cambios, lo reiniciamos: 
 
 ```bash
-sudo systemctl restart apache2
+sudo service apache2 restart
 ```
 
 ## Accediendo al sitio web

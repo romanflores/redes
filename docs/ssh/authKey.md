@@ -4,7 +4,7 @@ A continuacipon se describen una serie de pasos que nos permitirán iniciar sesi
 
 
 !!! tip "Glosario"
-	En el presente tutorial, **máquina local** hace referencia a nuestra computadora y **servidor** al **servidor remoto**. 
+	En el presente tutorial, **máquina local** hace referencia a nuestra computadora y **servidor** al servidor remoto. 
 
 
 ## Generando llaves
@@ -14,7 +14,7 @@ _Logueados_ con nuestro usuario normal en la **máquina local**, ejecutamos:
 ```apache
 ssh-keygen
 ```
-Aunque podemos ingresar otros valores, si presionamos la tecla _Enter_ estaremos aceptando los valores por defecto para los nombres de llaves y su ubicación, a saber: 
+Aunque podemos ingresar otros valores, si presionamos la tecla _Enter_ estaremos aceptando los valores por defecto para los nombres de las llaves y su ubicación, a saber: 
 
 
 | Recurso              | Tipo                | Descripción                              |
@@ -69,4 +69,5 @@ O bien:
 sudo service sshd reload
 ```
 
-El inicio de sesión empleando contraseña está deshabilitado. A partir de ahora, el servidor sólo es accesible mediante la autenticación de llave SSH.
+!!! done "¡Listo!"
+	El inicio de sesión empleando contraseña está deshabilitado. A partir de ahora, el servidor sólo es accesible mediante la autenticación de llave SSH.

@@ -209,11 +209,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Secure Shell
+      SSH
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Secure Shell
+        SSH
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -530,10 +530,10 @@
  <span class="nb">ServerAdmin</span>    tunombre@mail.com
 
  <span class="c"># Nombre de dominio del sitio</span>
- <span class="nb">ServerName</span> www.misitio.lan
+ <span class="nb">ServerName</span> misitio.lan
 
  <span class="c"># Alias del nombre de dominio del sitio</span>
- <span class="nb">ServerAlias</span>    misitio.lan http://misitio.lan
+ <span class="nb">ServerAlias</span>    www.misitio.lan http://misitio.lan
 
  <span class="c"># Carpeta raíz donde se alojarán las páginas web </span>
  <span class="nb">DocumentRoot</span>   <span class="sx">/home/usuario/public_html</span>   
@@ -560,7 +560,7 @@
 
 <p>Este comando creará un <a href="https:_es.wikipedia.org/wiki/Enlace_simb%C3%B3lico">enlace simbólico</a> del archivo <code>misitio.lan.conf</code> desde la carpeta <code>/etc/apache2/sites-available</code> hacia la carpeta <code>/etc/apache2/sites-enabled</code>. </p>
 <p>Por último, para que Apache haga efectivo todos los cambios, lo reiniciamos: </p>
-<div class="codehilite"><pre>sudo systemctl restart apache2
+<div class="codehilite"><pre>sudo service apache2 restart
 </pre></div>
 
 

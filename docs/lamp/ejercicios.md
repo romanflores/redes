@@ -16,9 +16,10 @@ En la siguiente tabla se indican además las respectivas rutas donde deberán al
 
 | #    | Dominio                | Directorio raíz (DocumentRoot)           |
 | ---- | ---------------------- | ---------------------------------------- |
-| 1    | penguin.net            | `/home/penguin/public_html/penguin.net`    |
-| 2    | patagon.penguin.net    | `/home/penguin/public_html/patagon.penguin.net` |
+| 1    | penguin.net            | `/home/penguin/public_html`    |
+| 2    | patagon.penguin.net    | `/home/patagon/public_html` |
 | 3    | phpmyadmin.penguin.net | `/usr/share/phpmyadmin`              |
+
 
 
 #### Instalación de paquetes
@@ -26,8 +27,8 @@ En la siguiente tabla se indican además las respectivas rutas donde deberán al
 Deberá [instalarse un entorno LAMP](instalacion.md) necesario para el despliegue de los sitios web. 
 
 #### Creación de usuarios
+Para poder realizar el ejercicio deberás crear previamente los usuarios **penguin** y **patagon**. 
 
-Deberá crearse un usuario llamado **penguin**.
 
 #### Creación los directorios raíz
 

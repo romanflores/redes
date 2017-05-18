@@ -58,7 +58,7 @@ extra_javascript:
 # Páginas
 pages: 
 - Inicio: 'index.md'
-- Secure Shell: 
+- SSH: 
     - Autenticación de llave pública: 'ssh/authKey.md'
 - Resolución de nombres: 
     - El archivo hosts: 'dns/archivoHosts.md'
@@ -68,5 +68,6 @@ pages:
     - Gestión básica: 'lamp/gestionBasica.md'
     - Web de usuario: 'lamp/userdir.md'
     - Hosts virtuales: 'lamp/virtualHosts.md'
+#    - WebDav: 'lamp/webDav.md'
     - Ejercicios prácticos: 'lamp/ejercicios.md'
 
