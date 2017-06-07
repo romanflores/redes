@@ -9,7 +9,7 @@
         <meta name="description" content="Redes de datos con software libre">
       
       
-        <link rel="canonical" href="http://www.redes.rauljesus.com/lamp/instalacion/">
+        <link rel="canonical" href="http://www.redes.rauljesus.com/samba/configuracionGeneral/">
       
       
         <meta name="author" content="Raul Jesus Lopez">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Instalación - Redes con software libre</title>
+        <title>Configuración general - Redes con software libre</title>
       
     
     
@@ -82,11 +82,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  LAMP
+                  Samba
                 </span>
               
             
-            Instalación
+            Configuración general
           
         </span>
       </div>
@@ -275,12 +275,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       LAMP
@@ -298,8 +296,118 @@
 
 
   <li class="md-nav__item">
-    <a href="../queEs/" title="¿Qué es?" class="md-nav__link">
+    <a href="../../lamp/queEs/" title="¿Qué es?" class="md-nav__link">
       ¿Qué es?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lamp/instalacion/" title="Instalación" class="md-nav__link">
+      Instalación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lamp/gestionBasica/" title="Gestión básica" class="md-nav__link">
+      Gestión básica
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lamp/userdir/" title="Web de usuario" class="md-nav__link">
+      Web de usuario
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lamp/virtualHosts/" title="Hosts virtuales" class="md-nav__link">
+      Hosts virtuales
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lamp/ejercicios/" title="Ejercicios prácticos" class="md-nav__link">
+      Ejercicios prácticos
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Samba
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Samba
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="¿Qué es?" class="md-nav__link">
+      ¿Qué es?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../instalacion/" title="Instalación" class="md-nav__link">
+      Instalación
     </a>
   </li>
 
@@ -317,11 +425,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Instalación
+        Configuración general
       </label>
     
-    <a href="./" title="Instalación" class="md-nav__link md-nav__link--active">
-      Instalación
+    <a href="./" title="Configuración general" class="md-nav__link md-nav__link--active">
+      Configuración general
     </a>
     
       
@@ -333,50 +441,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacion-de-lamp" title="Instalación de LAMP" class="md-nav__link">
-    Instalación de LAMP
+  <a href="#modificando-el-archivo-de-configuracion-de-samba" title="Modificando el archivo de configuración de Samba" class="md-nav__link">
+    Modificando el archivo de configuración de Samba
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-de-phpmyadmin" title="Instalación de phpMyAdmin" class="md-nav__link">
-    Instalación de phpMyAdmin
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verificando-la-instalacion" title="Verificando la instalación" class="md-nav__link">
-    Verificando la instalación
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -401,115 +468,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../gestionBasica/" title="Gestión básica" class="md-nav__link">
-      Gestión básica
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../userdir/" title="Web de usuario" class="md-nav__link">
-      Web de usuario
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../virtualHosts/" title="Hosts virtuales" class="md-nav__link">
-      Hosts virtuales
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../ejercicios/" title="Ejercicios prácticos" class="md-nav__link">
-      Ejercicios prácticos
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Samba
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Samba
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../samba/" title="¿Qué es?" class="md-nav__link">
-      ¿Qué es?
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../samba/instalacion/" title="Instalación" class="md-nav__link">
-      Instalación
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../samba/configuracionGeneral/" title="Configuración general" class="md-nav__link">
-      Configuración general
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../samba/gestionUsuarios/" title="Gestión de usuarios" class="md-nav__link">
+    <a href="../gestionUsuarios/" title="Gestión de usuarios" class="md-nav__link">
       Gestión de usuarios
     </a>
   </li>
@@ -521,7 +480,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../samba/comparticionUsuario/" title="Carpeta de usuario" class="md-nav__link">
+    <a href="../comparticionUsuario/" title="Carpeta de usuario" class="md-nav__link">
       Carpeta de usuario
     </a>
   </li>
@@ -533,7 +492,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../samba/comparticionGrupo/" title="Carpeta de grupo" class="md-nav__link">
+    <a href="../comparticionGrupo/" title="Carpeta de grupo" class="md-nav__link">
       Carpeta de grupo
     </a>
   </li>
@@ -545,7 +504,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../samba/comparticionInvitados/" title="Carpeta de invitados" class="md-nav__link">
+    <a href="../comparticionInvitados/" title="Carpeta de invitados" class="md-nav__link">
       Carpeta de invitados
     </a>
   </li>
@@ -557,7 +516,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../samba/clientesWindows/" title="Clientes Windows" class="md-nav__link">
+    <a href="../clientesWindows/" title="Clientes Windows" class="md-nav__link">
       Clientes Windows
     </a>
   </li>
@@ -587,50 +546,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacion-de-lamp" title="Instalación de LAMP" class="md-nav__link">
-    Instalación de LAMP
+  <a href="#modificando-el-archivo-de-configuracion-de-samba" title="Modificando el archivo de configuración de Samba" class="md-nav__link">
+    Modificando el archivo de configuración de Samba
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instalacion-de-phpmyadmin" title="Instalación de phpMyAdmin" class="md-nav__link">
-    Instalación de phpMyAdmin
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verificando-la-instalacion" title="Verificando la instalación" class="md-nav__link">
-    Verificando la instalación
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -655,62 +573,50 @@
               
                 
                 
-                  <h1>Instalación</h1>
+                  <h1>Configuración general</h1>
                 
-                <div class="admonition warning">
-<p class="admonition-title">Ingreso de datos</p>
-<p>Durante la instalación se solicitará en varias ocasiones el ingreso de información por parte del usuario. Por ejemplo, la contraseña del usuario root de la base de datos, o el tipo de servicio a instalar si usamos <code>tasksel</code>. Conviene prestar atención en cada paso para evitar errores de configuración. </p>
-</div>
-<p>Para disponer de un servidor web <strong>LAMP</strong> ejecutaremos los comandos que se indican a continuación. </p>
-<h3 id="instalacion-de-lamp">Instalación de LAMP<a class="headerlink" href="#instalacion-de-lamp" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre>sudo apt install lamp-server^
-</pre></div>
-
-
-<p>O bien: </p>
-<div class="codehilite"><pre>sudo tasksel
-</pre></div>
-
-
-<p>Debiendo seleccionar la opción <strong>LAMP Server</strong> del menú exhibido en pantalla. En caso de no tener instalada la herramienta <code>tasksel</code> la instalamos: </p>
-<div class="codehilite"><pre>sudo apt install tasksel
-</pre></div>
-
-
-<h3 id="instalacion-de-phpmyadmin">Instalación de phpMyAdmin<a class="headerlink" href="#instalacion-de-phpmyadmin" title="Permanent link">&para;</a></h3>
-<p>Adicionalmente podemos instalar un gestor para nuestra base de datos, llamado <strong>phpmyadmin</strong> (junto a algunas librerías extra), ejecutando el siguiente comando: </p>
-<div class="codehilite"><pre>sudo apt install phpmyadmin php-gettext php-mbstring
-</pre></div>
-
-
-<h2 id="verificando-la-instalacion">Verificando la instalación<a class="headerlink" href="#verificando-la-instalacion" title="Permanent link">&para;</a></h2>
-<p>Para verificar el correcto funcionamiento del servidor, seguiremos los pasos que se detallan a continuación.</p>
-<h3 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h3>
-<p>Abrimos el navegador web y nos dirigimos a la siguiente dirección: <code>http://nombreDominioServidor</code> o <code>http://direccionIPServidor</code>. En cualquier caso deberíamos visualizar la página de bienvenida del servidor web:</p>
-<p><img alt="Apache" src="../imgLamp/lampWorks.png" /></p>
-<h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
-<p>Dentro de la carpeta raíz por defecto del servidor web <code>/var/www/html</code>, creamos un archivo con el nombre <code>info.php</code> (en realidad, se puede llamar como prefieras):</p>
-<div class="codehilite"><pre>sudo nano /var/www/html/info.php
-</pre></div>
-
-
-<p>Y agregaremos al archivo el contenido:</p>
-<div class="codehilite"><pre><span class="cp">&lt;?php</span>
-<span class="nb">phpinfo</span><span class="p">();</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</pre></div>
-
-
-<p>Luego de guardar los cambios al archivo, abrimos un navegador web y visitamos la dirección <code>http://nombreDominioServidor/info.php</code> ó <code>http://direccionIPServidor/ìnfo.php</code> y deberíamos la página de información sobre php:</p>
-<p><img alt="PHPInfo" src="../imgLamp/lampPhpInfo.png" /></p>
-<h3 id="phpmyadmin">phpMyAdmin<a class="headerlink" href="#phpmyadmin" title="Permanent link">&para;</a></h3>
-<p>Abrimos nuestro navegador y nos dirigimos a <code>http://nombreDominioServidor/phpmyadmin</code> ó <code>http://direccionIPServidor/phpmyadmin</code>. Veremos una página similar a ésta: </p>
-<p><img alt="phpMyAdmin" src="../imgLamp/lampPhpMyAdmin.png" /></p>
-<p>E iniciamos sesión con las siguientes credenciales: </p>
+                <p>Antes que nada hay que decir que <strong>las opciones de configuración de Samba exceden ampliamente los alcances de esta guía</strong>. En los ejemplos dados a continuación se explica como: </p>
 <ul>
-<li><strong>Usuario</strong>: root</li>
-<li><strong>Contraseña</strong>: la definida durante el proceso de instalación</li>
+<li>Dotar a cada usuario del sistema de su propia carpeta almacenada en el servidor</li>
+<li>Compartir una carpeta entre los usuarios del sistema</li>
+<li>Compartir una carpeta de manera anónima en la red</li>
 </ul>
+<h2 id="modificando-el-archivo-de-configuracion-de-samba">Modificando el archivo de configuración de Samba<a class="headerlink" href="#modificando-el-archivo-de-configuracion-de-samba" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span class="nb">sudo</span> nano <span class="sx">/etc/samba/smb.conf</span>
+</pre></div>
+
+
+<p>Y procedemos al incluir los datos de configuración del servidor:</p>
+<div class="codehilite"><pre><span class="err">[global]</span>
+    <span class="c"># Grupo de trabajo</span>
+    <span class="nb">workgroup</span> = WORKGROUP
+
+    <span class="c"># Nombre visible del servidor en la red</span>
+    <span class="nb">server</span> string = Servidor Samba %v en %L
+
+    <span class="c"># Nombre corto del servidor en la red NetBIOS</span>
+    <span class="nb">netbios</span> name = debian
+
+    <span class="c"># Un usuario válido deberá iniciar sesión para </span>
+    <span class="c"># poder acceder a los recursos compartidos.</span>
+    <span class="nb">security</span> = <span class="k">user</span>
+
+    <span class="c"># Comportamiento del servidor en caso del ingreso de no usuarios. </span>
+    <span class="c"># En este caso, será anónimo.</span>
+    <span class="nb">map</span> to guest = bad <span class="k">user</span>
+
+    <span class="c"># Descativar servidor de nombres. </span>
+    <span class="c"># Sólo útil si Samba actúa como servidor Wins.  </span>
+    <span class="nb">dns</span> proxy = no
+</pre></div>
+
+
+<div class="admonition done">
+<p class="admonition-title">Grupo de trabajo<p>Reemplazar <strong>WORKGROUP</strong> por el nombre de <strong>grupo de trabajo</strong> de los clientes <strong>Windows</strong>. Si no conocés el nombre de trabajo en el que se encuentra un cliente, ejecutá en la terminal de Windows (cmd):</p>
+<p><code>apache
+net config workstation</code></p>
+</p>
+</div>
                 
                   
                 
@@ -721,9 +627,9 @@
                   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = "http://www.redes.rauljesus.com/lamp/instalacion/";
+    this.page.url = "http://www.redes.rauljesus.com/samba/configuracionGeneral/";
     this.page.identifier =
-      "/lamp/instalacion/";
+      "/samba/configuracionGeneral/";
   };
   (function() {
     var d = document, s = d.createElement("script");
@@ -745,7 +651,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../queEs/" title="¿Qué es?" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../instalacion/" title="Instalación" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -754,19 +660,19 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                ¿Qué es?
+                Instalación
               </span>
             </div>
           </a>
         
         
-          <a href="../gestionBasica/" title="Gestión básica" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../gestionUsuarios/" title="Gestión de usuarios" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                Gestión básica
+                Gestión de usuarios
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

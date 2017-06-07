@@ -69,4 +69,56 @@
         
     
 
+    
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/samba/</loc>
+     <lastmod>2017-06-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/samba/instalacion/</loc>
+     <lastmod>2017-06-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/samba/configuracionGeneral/</loc>
+     <lastmod>2017-06-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/samba/gestionUsuarios/</loc>
+     <lastmod>2017-06-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/samba/comparticionUsuario/</loc>
+     <lastmod>2017-06-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/samba/comparticionGrupo/</loc>
+     <lastmod>2017-06-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/samba/comparticionInvitados/</loc>
+     <lastmod>2017-06-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.redes.rauljesus.com/samba/clientesWindows/</loc>
+     <lastmod>2017-06-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
 </urlset>

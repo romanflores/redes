@@ -9,7 +9,7 @@
         <meta name="description" content="Redes de datos con software libre">
       
       
-        <link rel="canonical" href="http://www.redes.rauljesus.com/lamp/instalacion/">
+        <link rel="canonical" href="http://www.redes.rauljesus.com/samba/gestionUsuarios/">
       
       
         <meta name="author" content="Raul Jesus Lopez">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Instalación - Redes con software libre</title>
+        <title>Gestión de usuarios - Redes con software libre</title>
       
     
     
@@ -82,11 +82,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  LAMP
+                  Samba
                 </span>
               
             
-            Instalación
+            Gestión de usuarios
           
         </span>
       </div>
@@ -275,12 +275,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       LAMP
@@ -298,8 +296,130 @@
 
 
   <li class="md-nav__item">
-    <a href="../queEs/" title="¿Qué es?" class="md-nav__link">
+    <a href="../../lamp/queEs/" title="¿Qué es?" class="md-nav__link">
       ¿Qué es?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lamp/instalacion/" title="Instalación" class="md-nav__link">
+      Instalación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lamp/gestionBasica/" title="Gestión básica" class="md-nav__link">
+      Gestión básica
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lamp/userdir/" title="Web de usuario" class="md-nav__link">
+      Web de usuario
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lamp/virtualHosts/" title="Hosts virtuales" class="md-nav__link">
+      Hosts virtuales
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lamp/ejercicios/" title="Ejercicios prácticos" class="md-nav__link">
+      Ejercicios prácticos
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Samba
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Samba
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="¿Qué es?" class="md-nav__link">
+      ¿Qué es?
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../instalacion/" title="Instalación" class="md-nav__link">
+      Instalación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configuracionGeneral/" title="Configuración general" class="md-nav__link">
+      Configuración general
     </a>
   </li>
 
@@ -315,62 +435,115 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Instalación
+        Gestión de usuarios
       </label>
     
-    <a href="./" title="Instalación" class="md-nav__link md-nav__link--active">
-      Instalación
+    <a href="./" title="Gestión de usuarios" class="md-nav__link md-nav__link--active">
+      Gestión de usuarios
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Tabla de contenidos</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacion-de-lamp" title="Instalación de LAMP" class="md-nav__link">
-    Instalación de LAMP
+  <a href="#creacion-de-usuarios-en-gnulinux" title="Creación de usuarios en GNU/Linux" class="md-nav__link">
+    Creación de usuarios en GNU/Linux
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-de-phpmyadmin" title="Instalación de phpMyAdmin" class="md-nav__link">
-    Instalación de phpMyAdmin
+  <a href="#creacion-de-grupos-en-gnulinux" title="Creación de grupos en GNU/Linux" class="md-nav__link">
+    Creación de grupos en GNU/Linux
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verificando-la-instalacion" title="Verificando la instalación" class="md-nav__link">
-    Verificando la instalación
+  <a href="#agregando-usuarios-a-un-grupo-en-gnulinux" title="Agregando usuarios a un grupo en GNU/Linux" class="md-nav__link">
+    Agregando usuarios a un grupo en GNU/Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificando-a-que-grupos-pertenece-un-usuario-en-gnulinux" title="Verificando a que grupos pertenece un usuario en GNU/Linux" class="md-nav__link">
+    Verificando a que grupos pertenece un usuario en GNU/Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agregando-usuarios-al-servidor-samba" title="Agregando usuarios al servidor SAMBA" class="md-nav__link">
+    Agregando usuarios al servidor SAMBA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-usuario-en-windows-7" title="Creación de usuario en Windows 7" class="md-nav__link">
+    Creación de usuario en Windows 7
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
+  <a href="#paso-0" title="Paso 0" class="md-nav__link">
+    Paso 0
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
+  <a href="#paso-1" title="Paso 1" class="md-nav__link">
+    Paso 1
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
+  <a href="#paso-2" title="Paso 2" class="md-nav__link">
+    Paso 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3" title="Paso 3" class="md-nav__link">
+    Paso 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4" title="Paso 4" class="md-nav__link">
+    Paso 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5" title="Paso 5" class="md-nav__link">
+    Paso 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6" title="Paso 6" class="md-nav__link">
+    Paso 6
   </a>
   
 </li>
@@ -401,127 +574,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../gestionBasica/" title="Gestión básica" class="md-nav__link">
-      Gestión básica
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../userdir/" title="Web de usuario" class="md-nav__link">
-      Web de usuario
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../virtualHosts/" title="Hosts virtuales" class="md-nav__link">
-      Hosts virtuales
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../ejercicios/" title="Ejercicios prácticos" class="md-nav__link">
-      Ejercicios prácticos
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Samba
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Samba
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../samba/" title="¿Qué es?" class="md-nav__link">
-      ¿Qué es?
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../samba/instalacion/" title="Instalación" class="md-nav__link">
-      Instalación
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../samba/configuracionGeneral/" title="Configuración general" class="md-nav__link">
-      Configuración general
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../samba/gestionUsuarios/" title="Gestión de usuarios" class="md-nav__link">
-      Gestión de usuarios
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../samba/comparticionUsuario/" title="Carpeta de usuario" class="md-nav__link">
+    <a href="../comparticionUsuario/" title="Carpeta de usuario" class="md-nav__link">
       Carpeta de usuario
     </a>
   </li>
@@ -533,7 +586,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../samba/comparticionGrupo/" title="Carpeta de grupo" class="md-nav__link">
+    <a href="../comparticionGrupo/" title="Carpeta de grupo" class="md-nav__link">
       Carpeta de grupo
     </a>
   </li>
@@ -545,7 +598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../samba/comparticionInvitados/" title="Carpeta de invitados" class="md-nav__link">
+    <a href="../comparticionInvitados/" title="Carpeta de invitados" class="md-nav__link">
       Carpeta de invitados
     </a>
   </li>
@@ -557,7 +610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../samba/clientesWindows/" title="Clientes Windows" class="md-nav__link">
+    <a href="../clientesWindows/" title="Clientes Windows" class="md-nav__link">
       Clientes Windows
     </a>
   </li>
@@ -582,49 +635,100 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Tabla de contenidos</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacion-de-lamp" title="Instalación de LAMP" class="md-nav__link">
-    Instalación de LAMP
+  <a href="#creacion-de-usuarios-en-gnulinux" title="Creación de usuarios en GNU/Linux" class="md-nav__link">
+    Creación de usuarios en GNU/Linux
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-de-phpmyadmin" title="Instalación de phpMyAdmin" class="md-nav__link">
-    Instalación de phpMyAdmin
+  <a href="#creacion-de-grupos-en-gnulinux" title="Creación de grupos en GNU/Linux" class="md-nav__link">
+    Creación de grupos en GNU/Linux
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verificando-la-instalacion" title="Verificando la instalación" class="md-nav__link">
-    Verificando la instalación
+  <a href="#agregando-usuarios-a-un-grupo-en-gnulinux" title="Agregando usuarios a un grupo en GNU/Linux" class="md-nav__link">
+    Agregando usuarios a un grupo en GNU/Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificando-a-que-grupos-pertenece-un-usuario-en-gnulinux" title="Verificando a que grupos pertenece un usuario en GNU/Linux" class="md-nav__link">
+    Verificando a que grupos pertenece un usuario en GNU/Linux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agregando-usuarios-al-servidor-samba" title="Agregando usuarios al servidor SAMBA" class="md-nav__link">
+    Agregando usuarios al servidor SAMBA
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-usuario-en-windows-7" title="Creación de usuario en Windows 7" class="md-nav__link">
+    Creación de usuario en Windows 7
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
+  <a href="#paso-0" title="Paso 0" class="md-nav__link">
+    Paso 0
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#php" title="PHP" class="md-nav__link">
-    PHP
+  <a href="#paso-1" title="Paso 1" class="md-nav__link">
+    Paso 1
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#phpmyadmin" title="phpMyAdmin" class="md-nav__link">
-    phpMyAdmin
+  <a href="#paso-2" title="Paso 2" class="md-nav__link">
+    Paso 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3" title="Paso 3" class="md-nav__link">
+    Paso 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4" title="Paso 4" class="md-nav__link">
+    Paso 4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5" title="Paso 5" class="md-nav__link">
+    Paso 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6" title="Paso 6" class="md-nav__link">
+    Paso 6
   </a>
   
 </li>
@@ -655,62 +759,72 @@
               
                 
                 
-                  <h1>Instalación</h1>
-                
-                <div class="admonition warning">
-<p class="admonition-title">Ingreso de datos</p>
-<p>Durante la instalación se solicitará en varias ocasiones el ingreso de información por parte del usuario. Por ejemplo, la contraseña del usuario root de la base de datos, o el tipo de servicio a instalar si usamos <code>tasksel</code>. Conviene prestar atención en cada paso para evitar errores de configuración. </p>
+                <h1 id="gestion-de-usuarios">Gestión de usuarios<a class="headerlink" href="#gestion-de-usuarios" title="Permanent link">&para;</a></h1>
+<p>Para compartir carpetas entre equipos con <strong>Windows</strong> y <strong>GNU/Linux</strong>, tendremos que configurar usuarios en ambos sistemas.  </p>
+<div class="admonition done">
+<p class="admonition-title">Sobre los usuarios<p>Es recomendable, aunque no excluyendete,  disponer de <strong>los mismos usuarios</strong> tanto en el servidor <strong>SAMBA</strong>, como en <strong>Windows</strong> para un correcto funcionamiento del servicio.</p>
+</p>
 </div>
-<p>Para disponer de un servidor web <strong>LAMP</strong> ejecutaremos los comandos que se indican a continuación. </p>
-<h3 id="instalacion-de-lamp">Instalación de LAMP<a class="headerlink" href="#instalacion-de-lamp" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre>sudo apt install lamp-server^
+<h2 id="creacion-de-usuarios-en-gnulinux">Creación de usuarios en GNU/Linux<a class="headerlink" href="#creacion-de-usuarios-en-gnulinux" title="Permanent link">&para;</a></h2>
+<p>A continuación, repasaremos el modo de creación de usuarios en GNU/Linux:</p>
+<div class="codehilite"><pre>sudo adduser usuario
 </pre></div>
 
 
-<p>O bien: </p>
-<div class="codehilite"><pre>sudo tasksel
+<p>Donde <code>usuario</code> es el nombre de usuario que deseamos crear. El mismo nombre de usuario debe existir en Windows. Recordar que en GNU/Linux, los nombres de usuario son sensibles a letras mayúsculas y minúsculas. </p>
+<h2 id="creacion-de-grupos-en-gnulinux">Creación de grupos en GNU/Linux<a class="headerlink" href="#creacion-de-grupos-en-gnulinux" title="Permanent link">&para;</a></h2>
+<p>Cuando creamos un usuario en GNU/Linux, automáticamente <strong>el sistema crea un grupo con el mismo nombre que el usuario</strong>. Sin embargo, podemos agregar los grupos que querramos de la siguiente manera: </p>
+<div class="codehilite"><pre>sudo addgroup nuevo_grupo
 </pre></div>
 
 
-<p>Debiendo seleccionar la opción <strong>LAMP Server</strong> del menú exhibido en pantalla. En caso de no tener instalada la herramienta <code>tasksel</code> la instalamos: </p>
-<div class="codehilite"><pre>sudo apt install tasksel
+<p>Donde <code>nuevo_grupo</code> es el nombre de grupo que deseamos crear. </p>
+<h2 id="agregando-usuarios-a-un-grupo-en-gnulinux">Agregando usuarios a un grupo en GNU/Linux<a class="headerlink" href="#agregando-usuarios-a-un-grupo-en-gnulinux" title="Permanent link">&para;</a></h2>
+<p>Podemos modificar o agregar los grupos a los que pertenece el usuario de la siguiente manera: </p>
+<div class="codehilite"><pre>sudo usermod -G grupo1,grupo2 usuario
 </pre></div>
 
 
-<h3 id="instalacion-de-phpmyadmin">Instalación de phpMyAdmin<a class="headerlink" href="#instalacion-de-phpmyadmin" title="Permanent link">&para;</a></h3>
-<p>Adicionalmente podemos instalar un gestor para nuestra base de datos, llamado <strong>phpmyadmin</strong> (junto a algunas librerías extra), ejecutando el siguiente comando: </p>
-<div class="codehilite"><pre>sudo apt install phpmyadmin php-gettext php-mbstring
+<p>Donde <code>usermod</code> es el comando para agregar al usuario llamado <code>usuario</code> a los grupos <code>grupo1</code> y <code>grupo2</code>  </p>
+<div class="admonition tip">
+<p class="admonition-title">Gestionando usuarios y grupos de manera simultánea<p>Es posible crear un <strong>usuario</strong> y <strong>agregarlo a un grupo</strong> determinado por nosotros, <strong>de manera simultánea</strong>:</p>
+<p><code>apache
+sudo useradd usuario -m -G users</code></p>
+<p>Pero si usamos este método, deberemos configurar la contraseña del usuario en un segundo paso: </p>
+<p><code>apache
+sudo passwd usuario</code></p>
+</p>
+</div>
+<h2 id="verificando-a-que-grupos-pertenece-un-usuario-en-gnulinux">Verificando a que grupos pertenece un usuario en GNU/Linux<a class="headerlink" href="#verificando-a-que-grupos-pertenece-un-usuario-en-gnulinux" title="Permanent link">&para;</a></h2>
+<p>Para verificar el/los grupo/s a los que pertenece el usuario, ejecutamos: </p>
+<div class="codehilite"><pre><span class="nb">sudo</span> id usuario
 </pre></div>
 
 
-<h2 id="verificando-la-instalacion">Verificando la instalación<a class="headerlink" href="#verificando-la-instalacion" title="Permanent link">&para;</a></h2>
-<p>Para verificar el correcto funcionamiento del servidor, seguiremos los pasos que se detallan a continuación.</p>
-<h3 id="apache">Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h3>
-<p>Abrimos el navegador web y nos dirigimos a la siguiente dirección: <code>http://nombreDominioServidor</code> o <code>http://direccionIPServidor</code>. En cualquier caso deberíamos visualizar la página de bienvenida del servidor web:</p>
-<p><img alt="Apache" src="../imgLamp/lampWorks.png" /></p>
-<h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
-<p>Dentro de la carpeta raíz por defecto del servidor web <code>/var/www/html</code>, creamos un archivo con el nombre <code>info.php</code> (en realidad, se puede llamar como prefieras):</p>
-<div class="codehilite"><pre>sudo nano /var/www/html/info.php
+<p>Donde <code>usuario</code>, es el usuario que deseamos investigar. </p>
+<h2 id="agregando-usuarios-al-servidor-samba">Agregando usuarios al servidor SAMBA<a class="headerlink" href="#agregando-usuarios-al-servidor-samba" title="Permanent link">&para;</a></h2>
+<p>Los usuarios ya fueron creados en GNU/Linux. Sólo resta agregarlos al servidor SAMBA de la siguiente manera: </p>
+<div class="codehilite"><pre><span class="nb">sudo</span> smbpasswd -a usuario
 </pre></div>
 
 
-<p>Y agregaremos al archivo el contenido:</p>
-<div class="codehilite"><pre><span class="cp">&lt;?php</span>
-<span class="nb">phpinfo</span><span class="p">();</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</pre></div>
-
-
-<p>Luego de guardar los cambios al archivo, abrimos un navegador web y visitamos la dirección <code>http://nombreDominioServidor/info.php</code> ó <code>http://direccionIPServidor/ìnfo.php</code> y deberíamos la página de información sobre php:</p>
-<p><img alt="PHPInfo" src="../imgLamp/lampPhpInfo.png" /></p>
-<h3 id="phpmyadmin">phpMyAdmin<a class="headerlink" href="#phpmyadmin" title="Permanent link">&para;</a></h3>
-<p>Abrimos nuestro navegador y nos dirigimos a <code>http://nombreDominioServidor/phpmyadmin</code> ó <code>http://direccionIPServidor/phpmyadmin</code>. Veremos una página similar a ésta: </p>
-<p><img alt="phpMyAdmin" src="../imgLamp/lampPhpMyAdmin.png" /></p>
-<p>E iniciamos sesión con las siguientes credenciales: </p>
-<ul>
-<li><strong>Usuario</strong>: root</li>
-<li><strong>Contraseña</strong>: la definida durante el proceso de instalación</li>
-</ul>
+<p>Donde <code>usuario</code> es el usuario al que deseamos agregar a SAMBA. El sistema nos solicitará la contraseña del usuario en SAMBA que deberá ser la misma que en Windows.</p>
+<h2 id="creacion-de-usuario-en-windows-7">Creación de usuario en Windows 7<a class="headerlink" href="#creacion-de-usuario-en-windows-7" title="Permanent link">&para;</a></h2>
+<p>Para el correcto funcionamiento de SAMBA es recomendable que existan en Windows los mismos usuarios que en el servidor de compartición. En otro tutorial se explica como crear y gestionar los usuarios en GNU/Linux. A continuación, se detallan los pasos para la creación de usuarios en Windows 7. </p>
+<h3 id="paso-0">Paso 0<a class="headerlink" href="#paso-0" title="Permanent link">&para;</a></h3>
+<p><img alt="Samba Windows - Paso 0" src="../imgSamba/usuariowin0.png" /></p>
+<h3 id="paso-1">Paso 1<a class="headerlink" href="#paso-1" title="Permanent link">&para;</a></h3>
+<p><img alt="Samba Windows - Paso 1" src="../imgSamba/usuariowin1.png" /></p>
+<h3 id="paso-2">Paso 2<a class="headerlink" href="#paso-2" title="Permanent link">&para;</a></h3>
+<p><img alt="Samba Windows - Paso 2" src="../imgSamba/usuariowin2.png" /></p>
+<h3 id="paso-3">Paso 3<a class="headerlink" href="#paso-3" title="Permanent link">&para;</a></h3>
+<p><img alt="Samba Windows - Paso 3" src="../imgSamba/usuariowin3.png" /></p>
+<h3 id="paso-4">Paso 4<a class="headerlink" href="#paso-4" title="Permanent link">&para;</a></h3>
+<p><img alt="Samba Windows - Paso 4" src="../imgSamba/usuariowin4.png" /></p>
+<h3 id="paso-5">Paso 5<a class="headerlink" href="#paso-5" title="Permanent link">&para;</a></h3>
+<p><img alt="Samba Windows - Paso 5" src="../imgSamba/usuariowin5.png" /></p>
+<h3 id="paso-6">Paso 6<a class="headerlink" href="#paso-6" title="Permanent link">&para;</a></h3>
+<p><img alt="Samba Windows - Paso 6" src="../imgSamba/usuariowin6.png" /></p>
                 
                   
                 
@@ -721,9 +835,9 @@
                   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = "http://www.redes.rauljesus.com/lamp/instalacion/";
+    this.page.url = "http://www.redes.rauljesus.com/samba/gestionUsuarios/";
     this.page.identifier =
-      "/lamp/instalacion/";
+      "/samba/gestionUsuarios/";
   };
   (function() {
     var d = document, s = d.createElement("script");
@@ -745,7 +859,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../queEs/" title="¿Qué es?" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../configuracionGeneral/" title="Configuración general" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -754,19 +868,19 @@
                 <span class="md-footer-nav__direction">
                   Anterior
                 </span>
-                ¿Qué es?
+                Configuración general
               </span>
             </div>
           </a>
         
         
-          <a href="../gestionBasica/" title="Gestión básica" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../comparticionUsuario/" title="Carpeta de usuario" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                Gestión básica
+                Carpeta de usuario
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

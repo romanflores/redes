@@ -264,6 +264,136 @@
             "location": "/lamp/ejercicios/#instalando-la-aplicacion", 
             "text": "Tendremos que  descomprimir la aplicaci\u00f3n descargada en el directorio ra\u00edz de nuestro sitio . Luego, abriremos nuestro navegador web y visitaremos la direcci\u00f3n web  http://tudominio/aplicacion  o bien  http://tuDireccionIP/aplicacion  y seguir las instrucciones de instalaci\u00f3n.    Base de datos  Dependiendo de la aplicaci\u00f3n web que hayas elegido, es posible que necesites crear una base de datos. Para ello, dirigite a  http://tudominio/phpmyadmin  o  http://tuDireccionIP/phpmyadmin  e ingres\u00e1 con las credenciales del usuario root. Una vez all\u00ed podr\u00e1s crear la base de datos solicitada.", 
             "title": "Instalando la aplicaci\u00f3n"
+        }, 
+        {
+            "location": "/samba/", 
+            "text": "Samba es un servidor para computadoras con GNU/Linux, Mac OS X o Unix que permite \nadministrar y compartir recursos en redes de computadoras con Microsoft Windows\n como:\n\n\n\n\narchivos y directorios\n\n\nimpresoras \n\n\nautenticaci\u00f3n de usuarios en dominios Active Directory.\n\n\n\n\n\n\n\n\n\n\nSe trata de una implementaci\u00f3n libre del protocolo de archivos compartidos de Microsoft Windows (antiguamente llamado \nSMB\n, renombrado luego a \nCIFS\n) y fue desarrollado originalmente para Unix por Andrew Tridgell utilizando un sniffer o capturador de tr\u00e1fico para entender el protocolo usando ingenier\u00eda inversa. El nombre viene de insertar dos vocales al protocolo est\u00e1ndar que Microsoft usa para sus redes, el SMB o server message block. En un principio Samba tom\u00f3 el nombre de smbserver pero tuvieron que cambiarlo por problemas con una marca registrada. Tridgell busc\u00f3 en el diccionario de su m\u00e1quina Unix alguna palabra que incluyera las letras.", 
+            "title": "\u00bfQu\u00e9 es?"
+        }, 
+        {
+            "location": "/samba/instalacion/", 
+            "text": "Para instalar el paquete b\u00e1sico de samba, a fin iniciar un servidor de compartici\u00f3n de archivos ejecutamos:\n\n\nsudo\n apt-get install samba\n\n\n\n\n\nEl archivo de configuraci\u00f3n de Samba\n\n\nCada vez que configuramos un servicio en GNU/Linux, conviene realizar una copia de seguridad de los archivos que vayamos a modificar de manera de disponer del archivo original en caso de errores de configuraci\u00f3n. El archivo de configuraci\u00f3n de Samba es \n/etc/samba/smb.conf\n. Hacemos una copia de seguridad: \n\n\nsudo\n mv \n/etc/samba/smb.conf\n \n/etc/samba/smb.conf.original\n\n\n\n\n\n\nLlegado este punto, podemos editar directamente el archivo smb.conf o crear un nuevo archivo en blanco. Por cuestiones de claridad en la explicaci\u00f3n, nos inclinaremos por el segundo caso: \n\n\nsudo\n touch \n/etc/samba/smb.conf\n\n\n\n\n\n\nA partir de ac\u00e1 iremos modificando este \u00fanico archivo de configuraci\u00f3n.", 
+            "title": "Instalaci\u00f3n"
+        }, 
+        {
+            "location": "/samba/instalacion/#el-archivo-de-configuracion-de-samba", 
+            "text": "Cada vez que configuramos un servicio en GNU/Linux, conviene realizar una copia de seguridad de los archivos que vayamos a modificar de manera de disponer del archivo original en caso de errores de configuraci\u00f3n. El archivo de configuraci\u00f3n de Samba es  /etc/samba/smb.conf . Hacemos una copia de seguridad:   sudo  mv  /etc/samba/smb.conf   /etc/samba/smb.conf.original   Llegado este punto, podemos editar directamente el archivo smb.conf o crear un nuevo archivo en blanco. Por cuestiones de claridad en la explicaci\u00f3n, nos inclinaremos por el segundo caso:   sudo  touch  /etc/samba/smb.conf   A partir de ac\u00e1 iremos modificando este \u00fanico archivo de configuraci\u00f3n.", 
+            "title": "El archivo de configuraci\u00f3n de Samba"
+        }, 
+        {
+            "location": "/samba/configuracionGeneral/", 
+            "text": "Antes que nada hay que decir que \nlas opciones de configuraci\u00f3n de Samba exceden ampliamente los alcances de esta gu\u00eda\n. En los ejemplos dados a continuaci\u00f3n se explica como: \n\n\n\n\nDotar a cada usuario del sistema de su propia carpeta almacenada en el servidor\n\n\nCompartir una carpeta entre los usuarios del sistema\n\n\nCompartir una carpeta de manera an\u00f3nima en la red\n\n\n\n\nModificando el archivo de configuraci\u00f3n de Samba\n\n\nsudo\n nano \n/etc/samba/smb.conf\n\n\n\n\n\n\nY procedemos al incluir los datos de configuraci\u00f3n del servidor:\n\n\n[global]\n\n    \n# Grupo de trabajo\n\n    \nworkgroup\n = WORKGROUP\n\n    \n# Nombre visible del servidor en la red\n\n    \nserver\n string = Servidor Samba %v en %L\n\n    \n# Nombre corto del servidor en la red NetBIOS\n\n    \nnetbios\n name = debian\n\n    \n# Un usuario v\u00e1lido deber\u00e1 iniciar sesi\u00f3n para \n\n    \n# poder acceder a los recursos compartidos.\n\n    \nsecurity\n = \nuser\n\n\n    \n# Comportamiento del servidor en caso del ingreso de no usuarios. \n\n    \n# En este caso, ser\u00e1 an\u00f3nimo.\n\n    \nmap\n to guest = bad \nuser\n\n\n    \n# Descativar servidor de nombres. \n\n    \n# S\u00f3lo \u00fatil si Samba act\u00faa como servidor Wins.  \n\n    \ndns\n proxy = no\n\n\n\n\n\n\n\nGrupo de trabajo\nReemplazar \nWORKGROUP\n por el nombre de \ngrupo de trabajo\n de los clientes \nWindows\n. Si no conoc\u00e9s el nombre de trabajo en el que se encuentra un cliente, ejecut\u00e1 en la terminal de Windows (cmd):\n\n\napache\nnet config workstation", 
+            "title": "Configuraci\u00f3n general"
+        }, 
+        {
+            "location": "/samba/configuracionGeneral/#modificando-el-archivo-de-configuracion-de-samba", 
+            "text": "sudo  nano  /etc/samba/smb.conf   Y procedemos al incluir los datos de configuraci\u00f3n del servidor:  [global] \n     # Grupo de trabajo \n     workgroup  = WORKGROUP\n\n     # Nombre visible del servidor en la red \n     server  string = Servidor Samba %v en %L\n\n     # Nombre corto del servidor en la red NetBIOS \n     netbios  name = debian\n\n     # Un usuario v\u00e1lido deber\u00e1 iniciar sesi\u00f3n para  \n     # poder acceder a los recursos compartidos. \n     security  =  user \n\n     # Comportamiento del servidor en caso del ingreso de no usuarios.  \n     # En este caso, ser\u00e1 an\u00f3nimo. \n     map  to guest = bad  user \n\n     # Descativar servidor de nombres.  \n     # S\u00f3lo \u00fatil si Samba act\u00faa como servidor Wins.   \n     dns  proxy = no   Grupo de trabajo Reemplazar  WORKGROUP  por el nombre de  grupo de trabajo  de los clientes  Windows . Si no conoc\u00e9s el nombre de trabajo en el que se encuentra un cliente, ejecut\u00e1 en la terminal de Windows (cmd):  apache\nnet config workstation", 
+            "title": "Modificando el archivo de configuraci\u00f3n de Samba"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/", 
+            "text": "Gesti\u00f3n de usuarios\n\n\nPara compartir carpetas entre equipos con \nWindows\n y \nGNU/Linux\n, tendremos que configurar usuarios en ambos sistemas.  \n\n\n\n\nSobre los usuarios\nEs recomendable, aunque no excluyendete,  disponer de \nlos mismos usuarios\n tanto en el servidor \nSAMBA\n, como en \nWindows\n para un correcto funcionamiento del servicio.\n\n\n\n\n\n\nCreaci\u00f3n de usuarios en GNU/Linux\n\n\nA continuaci\u00f3n, repasaremos el modo de creaci\u00f3n de usuarios en GNU/Linux:\n\n\nsudo adduser usuario\n\n\n\n\n\nDonde \nusuario\n es el nombre de usuario que deseamos crear. El mismo nombre de usuario debe existir en Windows. Recordar que en GNU/Linux, los nombres de usuario son sensibles a letras may\u00fasculas y min\u00fasculas. \n\n\nCreaci\u00f3n de grupos en GNU/Linux\n\n\nCuando creamos un usuario en GNU/Linux, autom\u00e1ticamente \nel sistema crea un grupo con el mismo nombre que el usuario\n. Sin embargo, podemos agregar los grupos que querramos de la siguiente manera: \n\n\nsudo addgroup nuevo_grupo\n\n\n\n\n\nDonde \nnuevo_grupo\n es el nombre de grupo que deseamos crear. \n\n\nAgregando usuarios a un grupo en GNU/Linux\n\n\nPodemos modificar o agregar los grupos a los que pertenece el usuario de la siguiente manera: \n\n\nsudo usermod -G grupo1,grupo2 usuario\n\n\n\n\n\nDonde \nusermod\n es el comando para agregar al usuario llamado \nusuario\n a los grupos \ngrupo1\n y \ngrupo2\n  \n\n\n\n\nGestionando usuarios y grupos de manera simult\u00e1nea\nEs posible crear un \nusuario\n y \nagregarlo a un grupo\n determinado por nosotros, \nde manera simult\u00e1nea\n:\n\n\napache\nsudo useradd usuario -m -G users\n\n\nPero si usamos este m\u00e9todo, deberemos configurar la contrase\u00f1a del usuario en un segundo paso: \n\n\napache\nsudo passwd usuario\n\n\n\n\n\n\nVerificando a que grupos pertenece un usuario en GNU/Linux\n\n\nPara verificar el/los grupo/s a los que pertenece el usuario, ejecutamos: \n\n\nsudo\n id usuario\n\n\n\n\n\nDonde \nusuario\n, es el usuario que deseamos investigar. \n\n\nAgregando usuarios al servidor SAMBA\n\n\nLos usuarios ya fueron creados en GNU/Linux. S\u00f3lo resta agregarlos al servidor SAMBA de la siguiente manera: \n\n\nsudo\n smbpasswd -a usuario\n\n\n\n\n\nDonde \nusuario\n es el usuario al que deseamos agregar a SAMBA. El sistema nos solicitar\u00e1 la contrase\u00f1a del usuario en SAMBA que deber\u00e1 ser la misma que en Windows.\n\n\nCreaci\u00f3n de usuario en Windows 7\n\n\nPara el correcto funcionamiento de SAMBA es recomendable que existan en Windows los mismos usuarios que en el servidor de compartici\u00f3n. En otro tutorial se explica como crear y gestionar los usuarios en GNU/Linux. A continuaci\u00f3n, se detallan los pasos para la creaci\u00f3n de usuarios en Windows 7. \n\n\nPaso 0\n\n\n\n\nPaso 1\n\n\n\n\nPaso 2\n\n\n\n\nPaso 3\n\n\n\n\nPaso 4\n\n\n\n\nPaso 5\n\n\n\n\nPaso 6", 
+            "title": "Gesti\u00f3n de usuarios"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#gestion-de-usuarios", 
+            "text": "Para compartir carpetas entre equipos con  Windows  y  GNU/Linux , tendremos que configurar usuarios en ambos sistemas.     Sobre los usuarios Es recomendable, aunque no excluyendete,  disponer de  los mismos usuarios  tanto en el servidor  SAMBA , como en  Windows  para un correcto funcionamiento del servicio.", 
+            "title": "Gesti\u00f3n de usuarios"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#creacion-de-usuarios-en-gnulinux", 
+            "text": "A continuaci\u00f3n, repasaremos el modo de creaci\u00f3n de usuarios en GNU/Linux:  sudo adduser usuario  Donde  usuario  es el nombre de usuario que deseamos crear. El mismo nombre de usuario debe existir en Windows. Recordar que en GNU/Linux, los nombres de usuario son sensibles a letras may\u00fasculas y min\u00fasculas.", 
+            "title": "Creaci\u00f3n de usuarios en GNU/Linux"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#creacion-de-grupos-en-gnulinux", 
+            "text": "Cuando creamos un usuario en GNU/Linux, autom\u00e1ticamente  el sistema crea un grupo con el mismo nombre que el usuario . Sin embargo, podemos agregar los grupos que querramos de la siguiente manera:   sudo addgroup nuevo_grupo  Donde  nuevo_grupo  es el nombre de grupo que deseamos crear.", 
+            "title": "Creaci\u00f3n de grupos en GNU/Linux"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#agregando-usuarios-a-un-grupo-en-gnulinux", 
+            "text": "Podemos modificar o agregar los grupos a los que pertenece el usuario de la siguiente manera:   sudo usermod -G grupo1,grupo2 usuario  Donde  usermod  es el comando para agregar al usuario llamado  usuario  a los grupos  grupo1  y  grupo2      Gestionando usuarios y grupos de manera simult\u00e1nea Es posible crear un  usuario  y  agregarlo a un grupo  determinado por nosotros,  de manera simult\u00e1nea :  apache\nsudo useradd usuario -m -G users  Pero si usamos este m\u00e9todo, deberemos configurar la contrase\u00f1a del usuario en un segundo paso:   apache\nsudo passwd usuario", 
+            "title": "Agregando usuarios a un grupo en GNU/Linux"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#verificando-a-que-grupos-pertenece-un-usuario-en-gnulinux", 
+            "text": "Para verificar el/los grupo/s a los que pertenece el usuario, ejecutamos:   sudo  id usuario  Donde  usuario , es el usuario que deseamos investigar.", 
+            "title": "Verificando a que grupos pertenece un usuario en GNU/Linux"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#agregando-usuarios-al-servidor-samba", 
+            "text": "Los usuarios ya fueron creados en GNU/Linux. S\u00f3lo resta agregarlos al servidor SAMBA de la siguiente manera:   sudo  smbpasswd -a usuario  Donde  usuario  es el usuario al que deseamos agregar a SAMBA. El sistema nos solicitar\u00e1 la contrase\u00f1a del usuario en SAMBA que deber\u00e1 ser la misma que en Windows.", 
+            "title": "Agregando usuarios al servidor SAMBA"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#creacion-de-usuario-en-windows-7", 
+            "text": "Para el correcto funcionamiento de SAMBA es recomendable que existan en Windows los mismos usuarios que en el servidor de compartici\u00f3n. En otro tutorial se explica como crear y gestionar los usuarios en GNU/Linux. A continuaci\u00f3n, se detallan los pasos para la creaci\u00f3n de usuarios en Windows 7.", 
+            "title": "Creaci\u00f3n de usuario en Windows 7"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#paso-0", 
+            "text": "", 
+            "title": "Paso 0"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#paso-1", 
+            "text": "", 
+            "title": "Paso 1"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#paso-2", 
+            "text": "", 
+            "title": "Paso 2"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#paso-3", 
+            "text": "", 
+            "title": "Paso 3"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#paso-4", 
+            "text": "", 
+            "title": "Paso 4"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#paso-5", 
+            "text": "", 
+            "title": "Paso 5"
+        }, 
+        {
+            "location": "/samba/gestionUsuarios/#paso-6", 
+            "text": "", 
+            "title": "Paso 6"
+        }, 
+        {
+            "location": "/samba/comparticionUsuario/", 
+            "text": "Es posible que necesitamos que \ncada usuario del sistema sea capaz de leer y escribir en su directorio de trabajo v\u00eda \nSamba**, seg\u00fan el siguiente esquema: \n\n\n\n\n\n\nPara ello agregamos al archivo de configuraci\u00f3n \n/etc/samba/smb.conf\n debajo del bloque \n[global]\n:\n\n\n[homes]\n\n    \n# Comentario\n\n    \ncomment\n = Carpeta personal de cada usuario\n\n    \n# \u00bfLa carpeta ser\u00e1 visible por el resto de los usuarios?\n\n    \nbrowseable\n = no\n\n    \n# %S es reemplazado por el nombre del usuario actual\n\n    \nvalid\n users = %S\n\n    \n# \u00bfSe puede escribir dentro de la carpeta?\n\n    \nwritable\n = yes\n\n    \n# M\u00e1scara de permisos con la que se crear\u00e1n los archivos    \n\n    \ncreate\n mask = \n0700\n\n\n    \n# M\u00e1scara de permisos con la que se crear\u00e1n las carpetas\n\n    \ndirectory\n mask = \n0700\n\n\n\n\n\n\nLuego, reiniciamos Samba (lo haremos cada vez que modifiquemos el archivo de configuraci\u00f3n):\n\n\nsudo\n service samba restart", 
+            "title": "Carpeta de usuario"
+        }, 
+        {
+            "location": "/samba/comparticionGrupo/", 
+            "text": "En otras ocasiones, tal vez resulte pr\u00e1ctico \ncompartir una carpeta entre los usuarios que pertenecen a un grupo determinado\n. \n\n\nPara ello, creamos la carpeta a compartir: \n\n\nmkdir\n -p \n/home/compartir/usuarios\n\n\n\n\n\n\nModificamos el propietario de dicha carpeta: \n\n\nchown\n -R root:users \n/home/compartir/usuarios/\n\n\n\n\n\n\nY finalmente, modificamos los permisos de la carpeta: \n\n\nchmod\n -R ug+rwx,o+rx-w \n/home/compartir/usuarios/\n\n\n\n\n\n\nLa carpeta usuarios es accesible y escribible por todos los miembros del grupo \nusers\n. Agregamos la siguiente l\u00ednea al final del archivo de configuraci\u00f3n de Samba \n/etc/samba/smb.conf\n:\n\n\n[usuarios]\n\n    \n# Comentario\n\n    \ncomment\n = Carpeta compartida entre todos los usuarios\n\n    \n# Carpeta a compartir\n\n    \npath\n = \n/home/compartir/usuarios\n\n\n    \n# Todos los usuarios pertenecientes al grupo users\n\n    \nvalid\n users = @users\n\n    \n# Grupo al que pertenecen los usuarios\n\n    \nforce\n \ngroup\n = users\n\n    \n# M\u00e1scara de permisos con la que se crear\u00e1n los archivos\n\n    \ncreate\n mask = \n0660\n\n\n    \n# M\u00e1scara de permisos con la que se crear\u00e1n las carpetas\n\n    \ndirectory\n mask = \n0771\n\n\n    \n# \u00bfSe puede escribir dentro de la carpeta?\n\n    \nwritable\n = yes\n\n\n\n\n\n\n\nUsuarios\nEl la directiva \nvalid users\n tambi\u00e9n podr\u00edamos haber indicado solo un nombre de usuario o varios, se parados por comas (p.e. force users = juan, pedro, jorge). Lo mismo vale para la directiva \nforce group\n, pero para los grupos.", 
+            "title": "Carpeta de grupo"
+        }, 
+        {
+            "location": "/samba/comparticionInvitados/", 
+            "text": "Por \u00faltimo, si necesitamos que \ncualquier usuario de la red (incluso si no es un usuario Samba) pueda acceder as una carpeta compartida\n, daremos los siguientes pasos: \n\n\nPrimeramente tendremos que crear la carpeta a compartir: \n\n\nmkdir\n -p \n/home/compartir/anonimo/\n\n\n\n\n\n\nLuego, modificar la propiedad de la carpeta: \n\n\nchown\n -R root:users \n/home/compartir/anonimo/\n \n\n\n\n\n\nY los permisos:  \n\n\nchmod\n -R ug+rwx,o+rx-w \n/home/compartir/anonimo/\n \n\n\n\n\n\nPor \u00faltimo, tendremos que agregar al archivo de configuraci\u00f3n principal de Samba (\n/etc/samba/smb.conf\n) el siguiente bloque de c\u00f3digo: \n\n\n[anonimo]\n\n\n    \n# Carpeta a compartir\n\n    \npath\n = \n/home/compartir/anonimo\n\n\n    \n# Grupo de usuarios\n\n    \nforce\n \ngroup\n = users\n\n    \n# M\u00e1scara de permisos con la que se crear\u00e1n los archivos \n\n    \ncreate\n mask = \n0660\n\n\n    \n# M\u00e1scara de permisos con la que se crear\u00e1n las carpetas\n\n    \ndirectory\n mask = \n0771\n\n\n    \n# \u00bfLa carpeta ser\u00e1 visible por el resto de los usuarios?\n\n    \nbrowsable\n = yes\n\n    \n# \u00bfSe puede escribir dentro de la carpeta?\n\n    \nwritable\n = yes\n\n    \n# \u00bfSe permite el acceso an\u00f3nimo?\n\n    \nguest\n ok = yes\n\n\n\n\n\n\n\nAtenci\u00f3n\nCualquier usuario del sistema Windows podr\u00e1 leer y escribir en esta carpeta, a\u00fan cuando no posea una contrase\u00f1a para el inicio de sesi\u00f3n en Windows ni est\u00e9 registrado en el servidor Samba.", 
+            "title": "Carpeta de invitados"
+        }, 
+        {
+            "location": "/samba/clientesWindows/", 
+            "text": "Si todo qued\u00f3 correctamente configurado, podremos acceder a los recursos compartidos por el servidor Samba desde una m\u00e1quina con el sistema Windows.\n\n\nAccediendo a las carpetas compartidas de manera temporal\n\n\nPara ello, tendremos que abrir con el explorador de Windows la direcci\u00f3n IP del servidor Samba (*\nusar barra invertida *\n), de la siguiente manera: \n\n\n\n\n\n\nNote\nEl acceso a las carpetas compartidas \nno es permanente y se perder\u00e1 cuando reiniciemos la maquina Windows\n. Para que los recursos compartidos est\u00e9n disponibles cuando inicie el sistema, segu\u00ed las instrucciones que se detallan a continuaci\u00f3n.\n\n\n\n\n\n\nAccediendo a las carpetas compartidas de forma permanente\n\n\nAbrimos el \nExplorador de Windows\n y hacemos clic derecho en \nEquipo\n y seleccionaremos la opci\u00f3n \"Conectar a una unidad de red\" \n\n\n\n\nLuego ingresamos la \ndirecci\u00f3n IP\n o el \nnombre del dominio\n del servidor Samba seguido del nombre de carpeta que queremos montar (usar barras invertidas):\n\n\n\n\nFinalmente veremos la carpeta compartida y que estar\u00e1 disponible cada vez que iniciemos sesi\u00f3n:\n\n\n\n\nRepetiremos el procedimiento con cada carpeta alojada en servidor Samba a la que deseemos acceder y para la cual poseamos los permisos de lectura y escritura correspondientes:\n\n\n\n\nNota: en el ejemplo, se inici\u00f3 sesi\u00f3n en Windows con el usuario de Samba/Windows llamado \nprueba\n. La unidad de red con su nombre pertenece a dicho usuaruio.", 
+            "title": "Clientes Windows"
+        }, 
+        {
+            "location": "/samba/clientesWindows/#accediendo-a-las-carpetas-compartidas-de-manera-temporal", 
+            "text": "Para ello, tendremos que abrir con el explorador de Windows la direcci\u00f3n IP del servidor Samba (* usar barra invertida * ), de la siguiente manera:     Note El acceso a las carpetas compartidas  no es permanente y se perder\u00e1 cuando reiniciemos la maquina Windows . Para que los recursos compartidos est\u00e9n disponibles cuando inicie el sistema, segu\u00ed las instrucciones que se detallan a continuaci\u00f3n.", 
+            "title": "Accediendo a las carpetas compartidas de manera temporal"
+        }, 
+        {
+            "location": "/samba/clientesWindows/#accediendo-a-las-carpetas-compartidas-de-forma-permanente", 
+            "text": "Abrimos el  Explorador de Windows  y hacemos clic derecho en  Equipo  y seleccionaremos la opci\u00f3n \"Conectar a una unidad de red\"    Luego ingresamos la  direcci\u00f3n IP  o el  nombre del dominio  del servidor Samba seguido del nombre de carpeta que queremos montar (usar barras invertidas):   Finalmente veremos la carpeta compartida y que estar\u00e1 disponible cada vez que iniciemos sesi\u00f3n:   Repetiremos el procedimiento con cada carpeta alojada en servidor Samba a la que deseemos acceder y para la cual poseamos los permisos de lectura y escritura correspondientes:   Nota: en el ejemplo, se inici\u00f3 sesi\u00f3n en Windows con el usuario de Samba/Windows llamado  prueba . La unidad de red con su nombre pertenece a dicho usuaruio.", 
+            "title": "Accediendo a las carpetas compartidas de forma permanente"
         }
     ]
 }

@@ -70,4 +70,12 @@ pages:
     - Hosts virtuales: 'lamp/virtualHosts.md'
 #    - WebDav: 'lamp/webDav.md'
     - Ejercicios prácticos: 'lamp/ejercicios.md'
-
+- Samba:
+    - ¿Qué es?: 'samba/index.md'
+    - Instalación: 'samba/instalacion.md'
+    - Configuración general: 'samba/configuracionGeneral.md'
+    - Gestión de usuarios: 'samba/gestionUsuarios.md'
+    - Carpeta de usuario: 'samba/comparticionUsuario.md'
+    - Carpeta de grupo: 'samba/comparticionGrupo.md'
+    - Carpeta de invitados: 'samba/comparticionInvitados.md'
+    - Clientes Windows: 'samba/clientesWindows.md'
