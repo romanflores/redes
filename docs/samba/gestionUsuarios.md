@@ -16,9 +16,9 @@ Donde `usuario` es el nombre de usuario que deseamos crear. El mismo nombre de u
 Cuando creamos un usuario en GNU/Linux, automáticamente **el sistema crea un grupo con el mismo nombre que el usuario**. Sin embargo, podemos agregar los grupos que querramos de la siguiente manera: 
 
 ```bash
-sudo addgroup nuevo_grupo
+sudo addgroup nuevoGrupo
 ```
-Donde `nuevo_grupo` es el nombre de grupo que deseamos crear. 
+Donde `nuevoGrupo` es el nombre de grupo que deseamos crear. 
 
 
 ## Agregando usuarios a un grupo en GNU/Linux 
@@ -33,14 +33,13 @@ Donde `usermod` es el comando para agregar al usuario llamado `usuario` a los gr
 !!!tip "Gestionando usuarios y grupos de manera simultánea"
 		Es posible crear un **usuario** y **agregarlo a un grupo** determinado por nosotros, **de manera simultánea**:
 
-		```apache
+		```
 		sudo useradd usuario -m -G users
 		```
 
 		Pero si usamos este método, deberemos configurar la contraseña del usuario en un segundo paso: 
 
-
-		```apache
+		```
 		sudo passwd usuario
 		```
 
@@ -61,6 +60,7 @@ sudo smbpasswd -a usuario
 ```
 
 Donde `usuario` es el usuario al que deseamos agregar a SAMBA. El sistema nos solicitará la contraseña del usuario en SAMBA que deberá ser la misma que en Windows.
+
 
 ## Creación de usuario en Windows 7
 Para el correcto funcionamiento de SAMBA es recomendable que existan en Windows los mismos usuarios que en el servidor de compartición. En otro tutorial se explica como crear y gestionar los usuarios en GNU/Linux. A continuación, se detallan los pasos para la creación de usuarios en Windows 7. 
@@ -86,3 +86,5 @@ Para el correcto funcionamiento de SAMBA es recomendable que existan en Windows 
 ### Paso 6
 ![Samba Windows - Paso 6](imgSamba/usuariowin6.png)
 
+!!!warning "Sobre la creación de usuarios en Windows"
+	GNU/Linux es un sistema _case sensitive_, es decir, discrimina las mayúsculas de las minúsculas. Por ejemplo, `juan` y `Juan` son vistos por el sistema como dos usuarios diferentes. Hay que tener en cuenta este punto al crear los usuarios en Windows, ya que deberán llamarse de igual manera que en el servidor GNU/Linux. 

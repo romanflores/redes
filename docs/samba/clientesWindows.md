@@ -15,16 +15,16 @@ Abrimos el **Explorador de Windows** y hacemos clic derecho en **Equipo** y sele
 
 ![Samba Windows 2](imgSamba/sambawindows2.png)
 
-Luego ingresamos la **dirección IP** o el **nombre del dominio** del servidor Samba seguido del nombre de carpeta que queremos montar (usar barras invertidas):
+Luego ingresamos la **dirección IP** o el **nombre del dominio** del servidor Samba seguido del nombre del **nombre de la carpeta compartida** que queremos montar (usar barras invertidas):
 
-![Samba Windows 3](imgimgSamba/sambawindows3.png)
+![Samba Windows 3](imgSamba/sambawindows3.png)
 
 Finalmente veremos la carpeta compartida y que estará disponible cada vez que iniciemos sesión:
 
-![Samba Windows x](imgSamba/sambawindows4.png)
+![Samba Windows 4](imgSamba/sambawindows4.png)
 
 Repetiremos el procedimiento con cada carpeta alojada en servidor Samba a la que deseemos acceder y para la cual poseamos los permisos de lectura y escritura correspondientes:
 
-![Samba Windows 4](imgSamba/sambawindows5.png)
+![Samba Windows 5](imgSamba/sambawindows5.png)
 
 Nota: en el ejemplo, se inició sesión en Windows con el usuario de Samba/Windows llamado **prueba**. La unidad de red con su nombre pertenece a dicho usuaruio. 

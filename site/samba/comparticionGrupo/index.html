@@ -38,9 +38,11 @@
         
         
         
+        <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
+      <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
@@ -496,6 +498,102 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Servidor de streaming
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Servidor de streaming
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/" title="Icecast" class="md-nav__link">
+      Icecast
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/instalacion/" title="Instalación" class="md-nav__link">
+      Instalación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/inicializacion/" title="Inicializando el servidor" class="md-nav__link">
+      Inicializando el servidor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/configuracionGeneral/" title="Configuración general" class="md-nav__link">
+      Configuración general
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/broadcasting/" title="Broadcasting" class="md-nav__link">
+      Broadcasting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/administracion/" title="Administración" class="md-nav__link">
+      Administración
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -526,49 +624,60 @@
                 
                 <p>En otras ocasiones, tal vez resulte práctico <strong>compartir una carpeta entre los usuarios que pertenecen a un grupo determinado</strong>. </p>
 <p>Para ello, creamos la carpeta a compartir: </p>
-<div class="codehilite"><pre><span class="nb">mkdir</span> -p <span class="sx">/home/compartir/usuarios</span>
+<div class="codehilite"><pre><span class="nb">mkdir</span> -p carpetaCompartida
 </pre></div>
 
 
-<p>Modificamos el propietario de dicha carpeta: </p>
-<div class="codehilite"><pre><span class="nb">chown</span> -R root:users <span class="sx">/home/compartir/usuarios/</span>
+<p>Modificamos el usuario y grupo propietario de dicha carpeta: </p>
+<div class="codehilite"><pre><span class="nb">chown</span> -R usuario:grupo carpetaCompartida
 </pre></div>
 
 
+<p>Donde <code>usuario</code> es el <strong>usuario dueño</strong> de la carpeta compartida (generalmente es el usuario <code>root</code>) y <code>grupo</code> es el <strong>grupo de usuarios</strong> al que deseamos dar permiso sobre la carpeta compardida. </p>
 <p>Y finalmente, modificamos los permisos de la carpeta: </p>
-<div class="codehilite"><pre><span class="nb">chmod</span> -R ug+rwx,o+rx-w <span class="sx">/home/compartir/usuarios/</span>
+<div class="codehilite"><pre><span class="nb">chmod</span> -R ug+rwx,o+rx-w carpetaCompartida
 </pre></div>
 
 
-<p>La carpeta usuarios es accesible y escribible por todos los miembros del grupo <code>users</code>. Agregamos la siguiente línea al final del archivo de configuración de Samba <code>/etc/samba/smb.conf</code>:</p>
-<div class="codehilite"><pre><span class="err">[usuarios]</span>
+<p>O, lo que es lo mismo: </p>
+<div class="codehilite"><pre><span class="nb">chmod</span> -R <span class="m">775</span> carpetaCompartida
+</pre></div>
+
+
+<p>En el siguiente ejemplo, se comparte una carpeta llamada <strong>ventas</strong> que será accesible y escribible por todos los miembros del grupo <strong>facturacion</strong> (el bloque siguiente de código se deberá agregar en el archivo <code>/etc/samba/smb.conf</code>):</p>
+<div class="codehilite"><pre><span class="err">[ventas]</span>
     <span class="c"># Comentario</span>
-    <span class="nb">comment</span> = Carpeta compartida entre todos los usuarios
+    <span class="nb">comment</span> = Carpeta compartida entre los usuarios del grupo facturacion
 
     <span class="c"># Carpeta a compartir</span>
-    <span class="nb">path</span> = <span class="sx">/home/compartir/usuarios</span>
+    <span class="nb">path</span> = <span class="sx">/opt/ventas</span>
 
-    <span class="c"># Todos los usuarios pertenecientes al grupo users</span>
-    <span class="nb">valid</span> users = @users
+    <span class="c"># Damos permiso de acceso a todos los usuarios </span>
+    <span class="c"># pertenecientes al grupo llamado &quot;facturacion&quot;</span>
+    <span class="nb">valid</span> users = @facturacion
 
-    <span class="c"># Grupo al que pertenecen los usuarios</span>
-    <span class="nb">force</span> <span class="k">group</span> = users
-
-    <span class="c"># Máscara de permisos con la que se crearán los archivos</span>
-    <span class="nb">create</span> mask = <span class="m">0660</span>
-
-    <span class="c"># Máscara de permisos con la que se crearán las carpetas</span>
-    <span class="nb">directory</span> mask = <span class="m">0771</span>
+    <span class="c"># Fuerza el grupo con permisos de acceso</span>
+    <span class="nb">force</span> <span class="k">group</span> = facturacion
 
     <span class="c"># ¿Se puede escribir dentro de la carpeta?</span>
     <span class="nb">writable</span> = yes
+
+    <span class="c"># ¿La carpeta será visible por el resto de los usuarios?</span>
+    <span class="nb">browseable</span> = no
 </pre></div>
 
 
 <div class="admonition tip">
-<p class="admonition-title">Usuarios<p>El la directiva <code>valid users</code> también podríamos haber indicado solo un nombre de usuario o varios, se parados por comas (p.e. force users = juan, pedro, jorge). Lo mismo vale para la directiva <code>force group</code>, pero para los grupos. </p>
+<p class="admonition-title">Usuarios<p>El la directiva <code>valid users</code> podríamos haber indicado el nombre de uno o varios usuarios:</p>
+<p><code>force users = juan, pedro, jorge</code></p>
+<p>O incluir los usuarios pertenecientes a distintos grupos: </p>
+<p><code>force users = @ventas, @facturacion</code></p>
+<p>Lo indicado vale también para la directiva <code>force group</code> que es para los grupos. </p>
 </p>
 </div>
+<p>Rreiniciamos Samba para que el servidor haga efectivos los cambios:</p>
+<div class="codehilite"><pre><span class="nb">sudo</span> service smbd restart
+</pre></div>
                 
                   
                 
@@ -664,12 +773,8 @@
       <script src="../../assets/javascripts/application-7018102a8b.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
     
     
-      
-      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-98408177-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
       
     
   </body>

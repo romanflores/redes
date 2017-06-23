@@ -22,26 +22,36 @@ Y procedemos al incluir los datos de configuración del servidor:
 	server string = Servidor Samba %v en %L
 
 	# Nombre corto del servidor en la red NetBIOS
-	netbios name = debian
+	netbios name = SambaUbuntu
 
-	# Un usuario válido deberá iniciar sesión para 
-	# poder acceder a los recursos compartidos.
+	# Acceso a Samba sólo para usuarios
 	security = user
 
-	# Comportamiento del servidor en caso del ingreso de no usuarios. 
-	# En este caso, será anónimo.
-	map to guest = bad user
+	# Las solicitudes de conexión con clave incorrecta se rechazan.
+	# En ese caso, los usuarios no serán tratados como invitados. 
+	map to guest = never
 
-	# Descativar servidor de nombres. 
-	# Sólo útil si Samba actúa como servidor Wins.  
+	# Desactivar el servidor de nombres, útil si 
+	# Samba actúa como servidor Wins.  
 	dns proxy = no
 
 ```
 
 
-!!!done "Grupo de trabajo"
+!!!tip "Grupo de trabajo"
 		Reemplazar **WORKGROUP** por el nombre de **grupo de trabajo** de los clientes **Windows**. Si no conocés el nombre de trabajo en el que se encuentra un cliente, ejecutá en la terminal de Windows (cmd):
 
-		```apache
+		```
 		net config workstation
 		```
+
+Cerramos el archivo habiendo guardado los cambios y reiniciamos el servicio Samba:
+
+```apache
+sudo service smbd restart
+```
+
+!!!done "Secciones"
+	El archivo de configuración de Samba está dividido en secciones que comienzan con el nombre de la sección encerrada entre corchetes. Ninguna sección es obligatoria aunque las más comunes son: `[global]` en la que se determina el comportamiento general (global) del servidor Samba, `[homes]` que permite compartir las carpetas `home` de los usuarios de GNU/LInux en Windows y `[printers]` que permite compartir impresoras en la red. 
+
+	Sin embargo, se pueden crear secciones personalizadas, por ejemplo `[profesores]` y `[alumnos]`, etc. y personalizar para cada una, las opciones de compartición. 

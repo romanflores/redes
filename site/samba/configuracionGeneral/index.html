@@ -38,9 +38,11 @@
         
         
         
+        <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
+      <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
@@ -527,6 +529,102 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Servidor de streaming
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Servidor de streaming
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/" title="Icecast" class="md-nav__link">
+      Icecast
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/instalacion/" title="Instalación" class="md-nav__link">
+      Instalación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/inicializacion/" title="Inicializando el servidor" class="md-nav__link">
+      Inicializando el servidor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/configuracionGeneral/" title="Configuración general" class="md-nav__link">
+      Configuración general
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/broadcasting/" title="Broadcasting" class="md-nav__link">
+      Broadcasting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/administracion/" title="Administración" class="md-nav__link">
+      Administración
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -595,27 +693,35 @@
     <span class="nb">server</span> string = Servidor Samba %v en %L
 
     <span class="c"># Nombre corto del servidor en la red NetBIOS</span>
-    <span class="nb">netbios</span> name = debian
+    <span class="nb">netbios</span> name = SambaUbuntu
 
-    <span class="c"># Un usuario válido deberá iniciar sesión para </span>
-    <span class="c"># poder acceder a los recursos compartidos.</span>
+    <span class="c"># Acceso a Samba sólo para usuarios</span>
     <span class="nb">security</span> = <span class="k">user</span>
 
-    <span class="c"># Comportamiento del servidor en caso del ingreso de no usuarios. </span>
-    <span class="c"># En este caso, será anónimo.</span>
-    <span class="nb">map</span> to guest = bad <span class="k">user</span>
+    <span class="c"># Las solicitudes de conexión con clave incorrecta se rechazan.</span>
+    <span class="c"># En ese caso, los usuarios no serán tratados como invitados. </span>
+    <span class="nb">map</span> to guest = never
 
-    <span class="c"># Descativar servidor de nombres. </span>
-    <span class="c"># Sólo útil si Samba actúa como servidor Wins.  </span>
+    <span class="c"># Desactivar el servidor de nombres, útil si </span>
+    <span class="c"># Samba actúa como servidor Wins.  </span>
     <span class="nb">dns</span> proxy = no
 </pre></div>
 
 
-<div class="admonition done">
+<div class="admonition tip">
 <p class="admonition-title">Grupo de trabajo<p>Reemplazar <strong>WORKGROUP</strong> por el nombre de <strong>grupo de trabajo</strong> de los clientes <strong>Windows</strong>. Si no conocés el nombre de trabajo en el que se encuentra un cliente, ejecutá en la terminal de Windows (cmd):</p>
-<p><code>apache
-net config workstation</code></p>
+<p><code>net config workstation</code></p>
 </p>
+</div>
+<p>Cerramos el archivo habiendo guardado los cambios y reiniciamos el servicio Samba:</p>
+<div class="codehilite"><pre><span class="nb">sudo</span> service smbd restart
+</pre></div>
+
+
+<div class="admonition done">
+<p class="admonition-title">Secciones</p>
+<p>El archivo de configuración de Samba está dividido en secciones que comienzan con el nombre de la sección encerrada entre corchetes. Ninguna sección es obligatoria aunque las más comunes son: <code>[global]</code> en la que se determina el comportamiento general (global) del servidor Samba, <code>[homes]</code> que permite compartir las carpetas <code>home</code> de los usuarios de GNU/LInux en Windows y <code>[printers]</code> que permite compartir impresoras en la red. </p>
+<p>Sin embargo, se pueden crear secciones personalizadas, por ejemplo <code>[profesores]</code> y <code>[alumnos]</code>, etc. y personalizar para cada una, las opciones de compartición. </p>
 </div>
                 
                   
@@ -712,12 +818,8 @@ net config workstation</code></p>
       <script src="../../assets/javascripts/application-7018102a8b.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
     
     
-      
-      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-98408177-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
       
     
   </body>

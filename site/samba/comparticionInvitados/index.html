@@ -38,9 +38,11 @@
         
         
         
+        <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
+      <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
@@ -496,6 +498,102 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Servidor de streaming
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Servidor de streaming
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/" title="Icecast" class="md-nav__link">
+      Icecast
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/instalacion/" title="Instalación" class="md-nav__link">
+      Instalación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/inicializacion/" title="Inicializando el servidor" class="md-nav__link">
+      Inicializando el servidor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/configuracionGeneral/" title="Configuración general" class="md-nav__link">
+      Configuración general
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/broadcasting/" title="Broadcasting" class="md-nav__link">
+      Broadcasting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/administracion/" title="Administración" class="md-nav__link">
+      Administración
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -526,34 +624,33 @@
                 
                 <p>Por último, si necesitamos que <strong>cualquier usuario de la red (incluso si no es un usuario Samba) pueda acceder as una carpeta compartida</strong>, daremos los siguientes pasos: </p>
 <p>Primeramente tendremos que crear la carpeta a compartir: </p>
-<div class="codehilite"><pre><span class="nb">mkdir</span> -p <span class="sx">/home/compartir/anonimo/</span>
+<div class="codehilite"><pre><span class="nb">mkdir</span> -p <span class="sx">/opt/invitados</span>
 </pre></div>
 
 
 <p>Luego, modificar la propiedad de la carpeta: </p>
-<div class="codehilite"><pre><span class="nb">chown</span> -R root:users <span class="sx">/home/compartir/anonimo/</span> 
+<div class="codehilite"><pre><span class="nb">chown</span> -R nobody:nogroup <span class="sx">/opt/invitados</span>
 </pre></div>
 
 
 <p>Y los permisos:  </p>
-<div class="codehilite"><pre><span class="nb">chmod</span> -R ug+rwx,o+rx-w <span class="sx">/home/compartir/anonimo/</span> 
+<div class="codehilite"><pre><span class="nb">chmod</span> -R ugo+rwx <span class="sx">/opt/invitados</span> 
+</pre></div>
+
+
+<p>O el comando equivalente:</p>
+<div class="codehilite"><pre><span class="nb">chmod</span> -R <span class="m">777</span> <span class="sx">/opt/invitados</span> 
 </pre></div>
 
 
 <p>Por último, tendremos que agregar al archivo de configuración principal de Samba (<code>/etc/samba/smb.conf</code>) el siguiente bloque de código: </p>
-<div class="codehilite"><pre><span class="err">[anonimo]</span>
+<div class="codehilite"><pre><span class="err">[invitados]</span>
 
     <span class="c"># Carpeta a compartir</span>
-    <span class="nb">path</span> = <span class="sx">/home/compartir/anonimo</span>
+    <span class="nb">path</span> = <span class="sx">/opt/invitados</span>
 
-    <span class="c"># Grupo de usuarios</span>
+    <span class="c"># Todos los usuarios de Windows</span>
     <span class="nb">force</span> <span class="k">group</span> = users
-
-    <span class="c"># Máscara de permisos con la que se crearán los archivos </span>
-    <span class="nb">create</span> mask = <span class="m">0660</span>
-
-    <span class="c"># Máscara de permisos con la que se crearán las carpetas</span>
-    <span class="nb">directory</span> mask = <span class="m">0771</span>
 
     <span class="c"># ¿La carpeta será visible por el resto de los usuarios?</span>
     <span class="nb">browsable</span> = yes
@@ -561,7 +658,7 @@
     <span class="c"># ¿Se puede escribir dentro de la carpeta?</span>
     <span class="nb">writable</span> = yes
 
-    <span class="c"># ¿Se permite el acceso anónimo?</span>
+    <span class="c"># Cualquier usuario sin contraseña tiene permiso de acceso</span>
     <span class="nb">guest</span> ok = yes
 </pre></div>
 
@@ -570,6 +667,9 @@
 <p class="admonition-title">Atención<p>Cualquier usuario del sistema Windows podrá leer y escribir en esta carpeta, aún cuando no posea una contraseña para el inicio de sesión en Windows ni esté registrado en el servidor Samba.  </p>
 </p>
 </div>
+<p>Finalmente, reiniciamos Samba para que el sistema tome los cambios:</p>
+<div class="codehilite"><pre><span class="nb">sudo</span> service smbd restart
+</pre></div>
                 
                   
                 
@@ -665,12 +765,8 @@
       <script src="../../assets/javascripts/application-7018102a8b.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
     
     
-      
-      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-98408177-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
       
     
   </body>

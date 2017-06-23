@@ -20,9 +20,9 @@ extra:
   palette:
     primary: 'deep orange'
     accent: 'deep orange'
-  font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
+#  font:
+#    text: 'Roboto'
+#    code: 'Roboto Mono'
   social:
 #    - type: 'github'
 #      link: 'https://github.com/la9una'
@@ -35,9 +35,9 @@ extra:
   disqus: 'rauljesuscom'
 
 # Google Analytics
-google_analytics:
-  - 'UA-98408177-1'
-  - 'auto'
+#google_analytics:
+#  - 'UA-98408177-1'
+#  - 'auto'
 
 # Extensions
 markdown_extensions:
@@ -52,8 +52,8 @@ markdown_extensions:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
 
 # Extras
-extra_javascript:
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+#extra_javascript:
+#  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 
 # Páginas
 pages: 
@@ -79,3 +79,11 @@ pages:
     - Carpeta de grupo: 'samba/comparticionGrupo.md'
     - Carpeta de invitados: 'samba/comparticionInvitados.md'
     - Clientes Windows: 'samba/clientesWindows.md'
+
+- Servidor de streaming:
+    - Icecast: 'icecast/index.md'
+    - Instalación: 'icecast/instalacion.md'
+    - Inicializando el servidor: 'icecast/inicializacion.md'
+    - Configuración general: 'icecast/configuracionGeneral.md'
+    - Broadcasting: 'icecast/broadcasting.md'
+    - Administración: 'icecast/administracion.md'

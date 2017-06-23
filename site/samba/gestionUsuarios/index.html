@@ -38,9 +38,11 @@
         
         
         
+        <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
+      <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
@@ -621,6 +623,102 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Servidor de streaming
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Servidor de streaming
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/" title="Icecast" class="md-nav__link">
+      Icecast
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/instalacion/" title="Instalación" class="md-nav__link">
+      Instalación
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/inicializacion/" title="Inicializando el servidor" class="md-nav__link">
+      Inicializando el servidor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/configuracionGeneral/" title="Configuración general" class="md-nav__link">
+      Configuración general
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/broadcasting/" title="Broadcasting" class="md-nav__link">
+      Broadcasting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../icecast/administracion/" title="Administración" class="md-nav__link">
+      Administración
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -774,11 +872,11 @@
 <p>Donde <code>usuario</code> es el nombre de usuario que deseamos crear. El mismo nombre de usuario debe existir en Windows. Recordar que en GNU/Linux, los nombres de usuario son sensibles a letras mayúsculas y minúsculas. </p>
 <h2 id="creacion-de-grupos-en-gnulinux">Creación de grupos en GNU/Linux<a class="headerlink" href="#creacion-de-grupos-en-gnulinux" title="Permanent link">&para;</a></h2>
 <p>Cuando creamos un usuario en GNU/Linux, automáticamente <strong>el sistema crea un grupo con el mismo nombre que el usuario</strong>. Sin embargo, podemos agregar los grupos que querramos de la siguiente manera: </p>
-<div class="codehilite"><pre>sudo addgroup nuevo_grupo
+<div class="codehilite"><pre>sudo addgroup nuevoGrupo
 </pre></div>
 
 
-<p>Donde <code>nuevo_grupo</code> es el nombre de grupo que deseamos crear. </p>
+<p>Donde <code>nuevoGrupo</code> es el nombre de grupo que deseamos crear. </p>
 <h2 id="agregando-usuarios-a-un-grupo-en-gnulinux">Agregando usuarios a un grupo en GNU/Linux<a class="headerlink" href="#agregando-usuarios-a-un-grupo-en-gnulinux" title="Permanent link">&para;</a></h2>
 <p>Podemos modificar o agregar los grupos a los que pertenece el usuario de la siguiente manera: </p>
 <div class="codehilite"><pre>sudo usermod -G grupo1,grupo2 usuario
@@ -788,11 +886,9 @@
 <p>Donde <code>usermod</code> es el comando para agregar al usuario llamado <code>usuario</code> a los grupos <code>grupo1</code> y <code>grupo2</code>  </p>
 <div class="admonition tip">
 <p class="admonition-title">Gestionando usuarios y grupos de manera simultánea<p>Es posible crear un <strong>usuario</strong> y <strong>agregarlo a un grupo</strong> determinado por nosotros, <strong>de manera simultánea</strong>:</p>
-<p><code>apache
-sudo useradd usuario -m -G users</code></p>
+<p><code>sudo useradd usuario -m -G users</code></p>
 <p>Pero si usamos este método, deberemos configurar la contraseña del usuario en un segundo paso: </p>
-<p><code>apache
-sudo passwd usuario</code></p>
+<p><code>sudo passwd usuario</code></p>
 </p>
 </div>
 <h2 id="verificando-a-que-grupos-pertenece-un-usuario-en-gnulinux">Verificando a que grupos pertenece un usuario en GNU/Linux<a class="headerlink" href="#verificando-a-que-grupos-pertenece-un-usuario-en-gnulinux" title="Permanent link">&para;</a></h2>
@@ -825,6 +921,10 @@ sudo passwd usuario</code></p>
 <p><img alt="Samba Windows - Paso 5" src="../imgSamba/usuariowin5.png" /></p>
 <h3 id="paso-6">Paso 6<a class="headerlink" href="#paso-6" title="Permanent link">&para;</a></h3>
 <p><img alt="Samba Windows - Paso 6" src="../imgSamba/usuariowin6.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Sobre la creación de usuarios en Windows</p>
+<p>GNU/Linux es un sistema <em>case sensitive</em>, es decir, discrimina las mayúsculas de las minúsculas. Por ejemplo, <code>juan</code> y <code>Juan</code> son vistos por el sistema como dos usuarios diferentes. Hay que tener en cuenta este punto al crear los usuarios en Windows, ya que deberán llamarse de igual manera que en el servidor GNU/Linux. </p>
+</div>
                 
                   
                 
@@ -920,12 +1020,8 @@ sudo passwd usuario</code></p>
       <script src="../../assets/javascripts/application-7018102a8b.js"></script>
       <script>app.initialize({url:{base:"../.."}})</script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
     
     
-      
-      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-98408177-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
       
     
   </body>

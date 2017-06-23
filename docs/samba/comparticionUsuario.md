@@ -10,25 +10,20 @@ Para ello agregamos al archivo de configuración `/etc/samba/smb.conf` debajo de
 	# Comentario
 	comment = Carpeta personal de cada usuario
 	
-	# ¿La carpeta será visible por el resto de los usuarios?
-	browseable = no
-
-	# %S es reemplazado por el nombre del usuario actual
+	# La variable %S es reemplazada por el nombre 
+	# del usuario que inicia sesión
 	valid users = %S
 
 	# ¿Se puede escribir dentro de la carpeta?
 	writable = yes
 
-	# Máscara de permisos con la que se crearán los archivos	
-	create mask = 0700
-
-	# Máscara de permisos con la que se crearán las carpetas
-	directory mask = 0700
+	# ¿La carpeta será visible por el resto de los usuarios?
+	browseable = no
 ```
 
 Luego, reiniciamos Samba (lo haremos cada vez que modifiquemos el archivo de configuración):
 
 ```apache
-sudo service samba restart
+sudo service smbd restart
 ```
 
