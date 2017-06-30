@@ -587,9 +587,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#como-transmitir" title="¿Cómo transmitir?" class="md-nav__link">
-    ¿Cómo transmitir?
+  <a href="#transmitiendo-con-mixxx" title="Transmitiendo con Mixxx" class="md-nav__link">
+    Transmitiendo con Mixxx
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#streaming-en-mp3" title="Streaming en mp3" class="md-nav__link">
+    Streaming en mp3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -644,9 +657,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#como-transmitir" title="¿Cómo transmitir?" class="md-nav__link">
-    ¿Cómo transmitir?
+  <a href="#transmitiendo-con-mixxx" title="Transmitiendo con Mixxx" class="md-nav__link">
+    Transmitiendo con Mixxx
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#streaming-en-mp3" title="Streaming en mp3" class="md-nav__link">
+    Streaming en mp3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -674,7 +700,7 @@
                   <h1>Broadcasting</h1>
                 
                 <p>Icecast es solamente un servidor de streaming. Tendremos que proporcionar una fuente de audio y/o video para que el servidor lo retransmita entre los clientes de la red. </p>
-<p>Existen varias herramientas para este cometido. A continuación se listan algunas de ellas: </p>
+<p>Existen <a href="http://icecast.org/apps/">varias herramientas para este cometido</a>. En el presente tutorial utilizaremos una de ellas llamada <strong>Mixxx</strong> la cual podremos descargar desde los siguientes enlaces: </p>
 <ul>
 <li>
 <p><a href="http://downloads.mixxx.org/mixxx-2.0.0/mixxx-2.0.0-win32.exe">Mixxx (32 bits)</a></p>
@@ -683,19 +709,49 @@
 <p><a href="http://downloads.mixxx.org/mixxx-2.0.0/mixxx-2.0.0-win64.exe">Mixxx (64 bits)</a></p>
 </li>
 </ul>
-<h2 id="como-transmitir">¿Cómo transmitir?<a class="headerlink" href="#como-transmitir" title="Permanent link">&para;</a></h2>
-<p>En los siguientes enlaces, se listan tutoriales de uso de software libre para transmitir audio:   </p>
-<ul>
-<li>
-<p><a href="https://radioslibres.net/article/software-para-transmitir-online">Radios Libres</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=8-Fs_FjgtJI&amp;list=PLE8naO7tXu8neE4Fn-ijxqQ9cnoT8QQOf">Lista de reproducción en YouTube</a></p>
-</li>
-</ul>
-<p>En la siguiente captura, podemos ver un ejemplo de opciones de configuración del programa Mixxx, si deseamos transmitir con éste:</p>
+<h2 id="transmitiendo-con-mixxx">Transmitiendo con Mixxx<a class="headerlink" href="#transmitiendo-con-mixxx" title="Permanent link">&para;</a></h2>
+<p>En la siguiente captura, podemos ver un ejemplo de opciones de configuración del programa Mixxx, al cual accedemos yendo al <code>Menu &gt; Opciones &gt; Preferencias</code>.</p>
 <p><img alt="Screenshot de Mixxx" src="../imgIcecast/mixxx1.png" /></p>
-<p>Donde <code>192.168.0.202</code> la dirección IP del servidor Icecast (deberás reemplazarla por la dirección IP de tu servidor).</p>
+<p>Donde:</p>
+<ol>
+<li>
+<p><strong>Activar la transmisión en vivo</strong>: cuando está activada, la reproducción es enviada al servidor de audio.</p>
+</li>
+<li>
+<p><strong>Conexión al servidor</strong>: </p>
+<ul>
+<li><strong>Tipo</strong>: Seleccionar tipo de servidor</li>
+<li><strong>Servidor</strong>: Dirección IP o nombre de dominio del servidor de audio.</li>
+<li><strong>Identificación</strong>: Usuario autorizado para realizar <em>streming</em>. Por defecto, el usuario es <code>source</code>.</li>
+<li><strong>Montar</strong>: Nombre del punto de montaje. Modificar a elección. </li>
+<li><strong>Puerto</strong>: número de puerto donde <em>escuchará</em> el servicio.</li>
+<li><strong>Contraseña</strong>: contraseña del usuario <code>source</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Codificación</strong>: formato, <em>bitrate</em> y canales del audio de salida. </p>
+</li>
+<li>
+<p><strong>Metadatos personzalidados</strong>: sobreescribe los metadatos propios del audio en reproducción. </p>
+</li>
+<li>
+<p><strong>Configuración de la emisión</strong>: codificación y metadatos de la transmisión.</p>
+</li>
+</ol>
+<h3 id="streaming-en-mp3">Streaming en mp3<a class="headerlink" href="#streaming-en-mp3" title="Permanent link">&para;</a></h3>
+<p>Si deseamos transmitir en formato mp3 <a href="https://www.mixxx.org/wiki/doku.php/internet_broadcasting#mp3_streaming">tendremos que incluir algunas librerías</a>. </p>
+<p>En sistemas <strong>GNU/Linux</strong>, bastará con ejecutar el siguiente comando: </p>
+<div class="codehilite"><pre>sudo apt install libmp3lame0
+</pre></div>
+
+
+<p>Si utilizamos un sistema <strong>Windows</strong>, tendremos que completar los siguients pasos: </p>
+<ol>
+<li>Descargar la librería <code>libmp3lame</code> desde <a href="http://www.rarewares.org/mp3-lame-libraries.php">el siguiente enlace</a> teniendo en cuenta la arquitectura de nuestro sistema (32 o 64 bits).</li>
+<li>Descomprimir el archivo descargado con algún gestor de archivadores como, por ejemplo, <a href="http://www.7-zip.org/">7-zip</a>.</li>
+<li>Copiar el archivo <code>libmp3lame.dll</code> <strong>dentro de la carpeta de instalación de Mixxx</strong> (generalmente es <code>C:\Archivos de programa\Mixxx\</code>.</li>
+<li>Si estamos usando <strong>Mixxx</strong> en su versión 1.11 o anterior, es necesario renombrar el archivo <code>libmp3lame.dll</code> como <code>lame_enc.dll</code>.</li>
+</ol>
                 
                   
                 

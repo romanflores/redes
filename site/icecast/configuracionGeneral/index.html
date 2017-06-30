@@ -702,16 +702,6 @@
                   <h1>Configuración general</h1>
                 
                 <p>Icecast2 viene con los archivos de configuración ubicados en <code>/etc/icecast2</code>. Podemos modificar las opciones del servidor editando el archivo <code>/etc/icecast2/icecast.xml</code>. </p>
-<p>Siguiendo las buenas prácticas, creamos una copia de seguridad del archivo de configuración:</p>
-<div class="codehilite"><pre>sudo cp /etc/icecast2/icecast.xml /etc/icecast2/icecast.xml.original
-</pre></div>
-
-
-<p>Luego, abrimos el archivo de configuración con nuestro editor favorito: </p>
-<div class="codehilite"><pre>sudo vim /etc/icecast2/icecast.xml
-</pre></div>
-
-
 <h2 id="usuarios-y-contrasenas">Usuarios y contraseñas<a class="headerlink" href="#usuarios-y-contrasenas" title="Permanent link">&para;</a></h2>
 <p>Buscamos la sección <code>authentication</code>: </p>
 <div class="codehilite"><pre><span class="nt">&lt;authentication&gt;</span>
@@ -764,11 +754,10 @@
 
 
 <p>O bien, si disponemos de la dirección IP del servidor</p>
-<div class="codehilite"><pre><span class="nt">&lt;hostname&gt;</span><span class="err">http://192</span>.<span class="err">168</span>.<span class="err">0</span>.<span class="err">202</span><span class="nt">&lt;/hostname&gt;</span>
+<div class="codehilite"><pre><span class="nt">&lt;hostname&gt;</span><span class="err">http://192</span>.<span class="err">168</span>.<span class="err">0</span>.<span class="err">232</span><span class="nt">&lt;/hostname&gt;</span>
 </pre></div>
 
 
-<p>Donde <code>192.168.0.202</code> la dirección IP del servidor Icecast (deberás reemplazarla por la dirección IP de tu servidor).</p>
 <p>Por último, nos desplazamos a la sección <code>listen-socket</code> y colocamos el <strong>número de puerto</strong> desde el cual trasmitiremos: </p>
 <div class="codehilite"><pre><span class="nt">&lt;listen-socket&gt;</span>
  <span class="nt">&lt;port&gt;</span><span class="err">8000</span><span class="nt">&lt;/port&gt;</span>

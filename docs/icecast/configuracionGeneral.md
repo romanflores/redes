@@ -1,17 +1,5 @@
 Icecast2 viene con los archivos de configuración ubicados en `/etc/icecast2`. Podemos modificar las opciones del servidor editando el archivo `/etc/icecast2/icecast.xml`. 
-
-Siguiendo las buenas prácticas, creamos una copia de seguridad del archivo de configuración:
-
-```bash
-sudo cp /etc/icecast2/icecast.xml /etc/icecast2/icecast.xml.original
-```
-Luego, abrimos el archivo de configuración con nuestro editor favorito: 
-
-```bash
-sudo vim /etc/icecast2/icecast.xml
-```
-
-
+ 
 ##Usuarios y contraseñas
 
 Buscamos la sección `authentication`: 
@@ -52,9 +40,8 @@ Buscamos la sección `hostname` y colocamos la **dirección IP** o **nombre de d
 O bien, si disponemos de la dirección IP del servidor
 
 ```apache
-<hostname>http://192.168.0.202</hostname>
+<hostname>http://192.168.0.232</hostname>
 ```
-Donde `192.168.0.202` la dirección IP del servidor Icecast (deberás reemplazarla por la dirección IP de tu servidor).
 
 Por último, nos desplazamos a la sección `listen-socket` y colocamos el **número de puerto** desde el cual trasmitiremos: 
 
