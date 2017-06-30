@@ -14,14 +14,14 @@ En la siguiente captura, podemos ver un ejemplo de opciones de configuración de
 
 Donde:
 
-1. **Activar la transmisión en vivo**: cuando está activada, la reproducción es enviada al servidor de audio.
+1. **Activar la transmisión en vivo**: envía la reproducción actual hacia el servidor de audio.
 
 2. **Conexión al servidor**: 
-	* **Tipo**: Seleccionar tipo de servidor
+	* **Tipo**: Seleccionar tipo de servidor (Icecast, ShoutCast, etc.)
 	* **Servidor**: Dirección IP o nombre de dominio del servidor de audio.
-	* **Identificación**: Usuario autorizado para realizar _streming_. Por defecto, el usuario es `source`.
+	* **Identificación**: Usuario autorizado para realizar _streaming_. Por defecto, el usuario es `source`.
 	* **Montar**: Nombre del punto de montaje. Modificar a elección. 
-	* **Puerto**: número de puerto donde _escuchará_ el servicio.
+	* **Puerto**: número de puerto donde _escuchará_ el servicio. Modificar a elección.
 	* **Contraseña**: contraseña del usuario `source`.
 3. **Codificación**: formato, _bitrate_ y canales del audio de salida. 
 
