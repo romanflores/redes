@@ -18,3 +18,8 @@ Para que los cambios efectuados tengan efecto, tendremos que reiniciar el servid
 ```bash
 service icecast2 restart
 ```
+Y comprobar, finalmente, el estado actual del servidor: 
+
+```bash
+service icecast2 status
+```
