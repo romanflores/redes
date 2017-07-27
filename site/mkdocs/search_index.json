@@ -372,8 +372,33 @@
         }, 
         {
             "location": "/samba/comparticionGrupo/", 
-            "text": "En otras ocasiones, tal vez resulte pr\u00e1ctico \ncompartir una carpeta entre los usuarios que pertenecen a un grupo determinado\n. \n\n\nPara ello, creamos la carpeta a compartir: \n\n\nmkdir\n -p carpetaCompartida\n\n\n\n\n\nModificamos el usuario y grupo propietario de dicha carpeta: \n\n\nchown\n -R usuario:grupo carpetaCompartida\n\n\n\n\n\nDonde \nusuario\n es el \nusuario due\u00f1o\n de la carpeta compartida (generalmente es el usuario \nroot\n) y \ngrupo\n es el \ngrupo de usuarios\n al que deseamos dar permiso sobre la carpeta compardida. \n\n\nY finalmente, modificamos los permisos de la carpeta: \n\n\nchmod\n -R ug+rwx,o+rx-w carpetaCompartida\n\n\n\n\n\nO, lo que es lo mismo: \n\n\nchmod\n -R \n775\n carpetaCompartida\n\n\n\n\n\nEn el siguiente ejemplo, se comparte una carpeta llamada \nventas\n que ser\u00e1 accesible y escribible por todos los miembros del grupo \nfacturacion\n (el bloque siguiente de c\u00f3digo se deber\u00e1 agregar en el archivo \n/etc/samba/smb.conf\n):\n\n\n[ventas]\n\n    \n# Comentario\n\n    \ncomment\n = Carpeta compartida entre los usuarios del grupo facturacion\n\n    \n# Carpeta a compartir\n\n    \npath\n = \n/opt/ventas\n\n\n    \n# Damos permiso de acceso a todos los usuarios \n\n    \n# pertenecientes al grupo llamado \nfacturacion\n\n    \nvalid\n users = @facturacion\n\n    \n# Fuerza el grupo con permisos de acceso\n\n    \nforce\n \ngroup\n = facturacion\n\n    \n# \u00bfSe puede escribir dentro de la carpeta?\n\n    \nwritable\n = yes\n\n    \n# \u00bfLa carpeta ser\u00e1 visible por el resto de los usuarios?\n\n    \nbrowseable\n = no\n\n\n\n\n\n\n\nUsuarios\nEl la directiva \nvalid users\n podr\u00edamos haber indicado el nombre de uno o varios usuarios:\n\n\nforce users = juan, pedro, jorge\n\n\nO incluir los usuarios pertenecientes a distintos grupos: \n\n\nforce users = @ventas, @facturacion\n\n\nLo indicado vale tambi\u00e9n para la directiva \nforce group\n que es para los grupos. \n\n\n\n\n\n\nRreiniciamos Samba para que el servidor haga efectivos los cambios:\n\n\nsudo\n service smbd restart", 
+            "text": "En otras ocasiones, tal vez resulte pr\u00e1ctico \ncompartir una carpeta entre los usuarios que pertenecen a un grupo determinado\n. \n\n\nCreando la carpeta a compartir\n\n\nDebemos crear la carpeta en cualquier lugar (p.e. \n/opt\n)\n\n\nmkdir\n -p carpetaCompartida\n\n\n\n\n\nModificando el usuario y grupo propietario de la carpeta\n\n\nchown\n -R usuario:grupo carpetaCompartida\n\n\n\n\n\nDonde:\n\n\n\n\nusuario\n es el \nusuario due\u00f1o\n de la carpeta compartida (generalmente es el usuario \nroot\n) y \n\n\ngrupo\n es el \ngrupo de usuarios\n al que deseamos dar permiso sobre la carpeta compardida. \n\n\n\n\nModificando los permisos de la carpeta\n\n\nY finalmente, modificamos los permisos de la carpeta: \n\n\nchmod\n -R ug+rwx,o+rx-w carpetaCompartida\n\n\n\n\n\nO, lo que es lo mismo: \n\n\nchmod\n -R \n775\n carpetaCompartida\n\n\n\n\n\nModificando el archivo de configuraci\u00f3n de Samba\n\n\nEn el siguiente ejemplo, se comparte una carpeta llamada \nventas\n que ser\u00e1 accesible y escribible por todos los miembros del grupo \nfacturacion\n (el bloque siguiente de c\u00f3digo se deber\u00e1 agregar en el archivo \n/etc/samba/smb.conf\n):\n\n\n[ventas]\n\n    \n# Comentario\n\n    \ncomment\n = Carpeta compartida entre los usuarios del grupo facturacion\n\n    \n# Carpeta a compartir\n\n    \npath\n = \n/opt/ventas\n\n\n    \n# Damos permiso de acceso a todos los usuarios \n\n    \n# pertenecientes al grupo llamado \nfacturacion\n\n    \nvalid\n users = @facturacion\n\n    \n# Fuerza el grupo con permisos de acceso\n\n    \nforce\n \ngroup\n = facturacion\n\n    \n# \u00bfSe puede escribir dentro de la carpeta?\n\n    \nwritable\n = yes\n\n    \n# \u00bfLa carpeta ser\u00e1 visible por el resto de los usuarios?\n\n    \nbrowseable\n = no\n\n\n\n\n\n\n\nUsuarios\nEl la directiva \nvalid users\n podr\u00edamos haber indicado el nombre de uno o varios usuarios:\n\n\nforce users = juan, pedro, jorge\n\n\nO incluir los usuarios pertenecientes a distintos grupos: \n\n\nforce users = @ventas, @facturacion\n\n\nLo indicado vale tambi\u00e9n para la directiva \nforce group\n que es para los grupos. \n\n\n\n\n\n\nReiniciando el servidor\n\n\nRreiniciamos Samba para que el servidor haga efectivos los cambios:\n\n\nsudo\n service smbd restart", 
             "title": "Carpeta de grupo"
+        }, 
+        {
+            "location": "/samba/comparticionGrupo/#creando-la-carpeta-a-compartir", 
+            "text": "Debemos crear la carpeta en cualquier lugar (p.e.  /opt )  mkdir  -p carpetaCompartida", 
+            "title": "Creando la carpeta a compartir"
+        }, 
+        {
+            "location": "/samba/comparticionGrupo/#modificando-el-usuario-y-grupo-propietario-de-la-carpeta", 
+            "text": "chown  -R usuario:grupo carpetaCompartida  Donde:   usuario  es el  usuario due\u00f1o  de la carpeta compartida (generalmente es el usuario  root ) y   grupo  es el  grupo de usuarios  al que deseamos dar permiso sobre la carpeta compardida.", 
+            "title": "Modificando el usuario y grupo propietario de la carpeta"
+        }, 
+        {
+            "location": "/samba/comparticionGrupo/#modificando-los-permisos-de-la-carpeta", 
+            "text": "Y finalmente, modificamos los permisos de la carpeta:   chmod  -R ug+rwx,o+rx-w carpetaCompartida  O, lo que es lo mismo:   chmod  -R  775  carpetaCompartida", 
+            "title": "Modificando los permisos de la carpeta"
+        }, 
+        {
+            "location": "/samba/comparticionGrupo/#modificando-el-archivo-de-configuracion-de-samba", 
+            "text": "En el siguiente ejemplo, se comparte una carpeta llamada  ventas  que ser\u00e1 accesible y escribible por todos los miembros del grupo  facturacion  (el bloque siguiente de c\u00f3digo se deber\u00e1 agregar en el archivo  /etc/samba/smb.conf ):  [ventas] \n     # Comentario \n     comment  = Carpeta compartida entre los usuarios del grupo facturacion\n\n     # Carpeta a compartir \n     path  =  /opt/ventas \n\n     # Damos permiso de acceso a todos los usuarios  \n     # pertenecientes al grupo llamado  facturacion \n     valid  users = @facturacion\n\n     # Fuerza el grupo con permisos de acceso \n     force   group  = facturacion\n\n     # \u00bfSe puede escribir dentro de la carpeta? \n     writable  = yes\n\n     # \u00bfLa carpeta ser\u00e1 visible por el resto de los usuarios? \n     browseable  = no   Usuarios El la directiva  valid users  podr\u00edamos haber indicado el nombre de uno o varios usuarios:  force users = juan, pedro, jorge  O incluir los usuarios pertenecientes a distintos grupos:   force users = @ventas, @facturacion  Lo indicado vale tambi\u00e9n para la directiva  force group  que es para los grupos.", 
+            "title": "Modificando el archivo de configuraci\u00f3n de Samba"
+        }, 
+        {
+            "location": "/samba/comparticionGrupo/#reiniciando-el-servidor", 
+            "text": "Rreiniciamos Samba para que el servidor haga efectivos los cambios:  sudo  service smbd restart", 
+            "title": "Reiniciando el servidor"
         }, 
         {
             "location": "/samba/comparticionInvitados/", 
@@ -394,6 +419,26 @@
             "location": "/samba/clientesWindows/#accediendo-a-las-carpetas-compartidas-de-forma-permanente", 
             "text": "Abrimos el  Explorador de Windows  y hacemos clic derecho en  Equipo  y seleccionaremos la opci\u00f3n \"Conectar a una unidad de red\"    Luego ingresamos la  direcci\u00f3n IP  o el  nombre del dominio  del servidor Samba seguido del nombre del  nombre de la carpeta compartida  que queremos montar (usar barras invertidas):   Finalmente veremos la carpeta compartida y que estar\u00e1 disponible cada vez que iniciemos sesi\u00f3n:   Repetiremos el procedimiento con cada carpeta alojada en servidor Samba a la que deseemos acceder y para la cual poseamos los permisos de lectura y escritura correspondientes:   Nota: en el ejemplo, se inici\u00f3 sesi\u00f3n en Windows con el usuario de Samba/Windows llamado  prueba . La unidad de red con su nombre pertenece a dicho usuaruio.", 
             "title": "Accediendo a las carpetas compartidas de forma permanente"
+        }, 
+        {
+            "location": "/samba/ejercicios/", 
+            "text": "Ejercicio 1\n\n\n\n\nCre\u00e1 los siguientes usuarios: \nuno\n y \ndos\n. \n\n\nCre\u00e1 una carpeta compartida para cada usuario, la cual, s\u00f3lo pueda ser accedida por su due\u00f1o. \n\n\n\n\nEjercicio 2\n\n\nLa pyme ficticia \"El Trigal\" elabora diferentes tipos de panificados. Su personal es peque\u00f1o y los mismos comparten carpetas seg\u00fan su \u00e1rea de desempe\u00f1o: \n\n\n\n\n\n\n\n\nUsuario\n\n\n\u00c1rea de desempe\u00f1o\n\n\nAcceso\n\n\n\n\n\n\n\n\n\n\njose\n\n\nGerencia\n\n\nA la carpeta \ngerencia\n y a cualquier carpeta\n\n\n\n\n\n\nsol\n\n\nAdministracion\n\n\nA la carpeta compartida \nadministracion\n y a la carpeta \npublica\n\n\n\n\n\n\nmia\n\n\nAdministracion\n\n\nA la carpeta compartida \nadministracion\n y a la carpeta \npublica\n\n\n\n\n\n\npedro\n\n\nTaller\n\n\nA la carpeta compartida \ntaller\n y a la carpeta \npublica\n\n\n\n\n\n\nroberto\n\n\nTaller\n\n\nA la carpeta compartida \ntaller\n y a la carpeta \npublica\n\n\n\n\n\n\njuan\n\n\nTaller\n\n\nA la carpeta compartida \ntaller\n y a la carpeta \npublica\n\n\n\n\n\n\n\n\nProcedimiento para resolver el ejercicio\n\n\nEn GNU/Linux\n\n\n\n\nInstalando Samba\n\n\nCreando usuarios\n\n\nCreando grupos\n\n\nAgregando usuarios a los grupos\n\n\nAgresando usuarios a Samba\n\n\nCreando carpetas\n\n\nCambiando el usuario y grupo due\u00f1o de la carpeta\n\n\nCambiando los permisos de las carpeta\n\n\nConfiguraci\u00f3n de Samba para carpeta grupal\n\n\nConfiguraci\u00f3n de Samba para carpeta an\u00f3nima\n\n\nReiniciando el servidor Samba\n\n\n\n\nEn Windows\n\n\n\n\nCreando usuarios\n\n\nVerfificando carpetas compartidas", 
+            "title": "Ejercicios"
+        }, 
+        {
+            "location": "/samba/ejercicios/#ejercicio-1", 
+            "text": "Cre\u00e1 los siguientes usuarios:  uno  y  dos .   Cre\u00e1 una carpeta compartida para cada usuario, la cual, s\u00f3lo pueda ser accedida por su due\u00f1o.", 
+            "title": "Ejercicio 1"
+        }, 
+        {
+            "location": "/samba/ejercicios/#ejercicio-2", 
+            "text": "La pyme ficticia \"El Trigal\" elabora diferentes tipos de panificados. Su personal es peque\u00f1o y los mismos comparten carpetas seg\u00fan su \u00e1rea de desempe\u00f1o:      Usuario  \u00c1rea de desempe\u00f1o  Acceso      jose  Gerencia  A la carpeta  gerencia  y a cualquier carpeta    sol  Administracion  A la carpeta compartida  administracion  y a la carpeta  publica    mia  Administracion  A la carpeta compartida  administracion  y a la carpeta  publica    pedro  Taller  A la carpeta compartida  taller  y a la carpeta  publica    roberto  Taller  A la carpeta compartida  taller  y a la carpeta  publica    juan  Taller  A la carpeta compartida  taller  y a la carpeta  publica", 
+            "title": "Ejercicio 2"
+        }, 
+        {
+            "location": "/samba/ejercicios/#procedimiento-para-resolver-el-ejercicio", 
+            "text": "En GNU/Linux   Instalando Samba  Creando usuarios  Creando grupos  Agregando usuarios a los grupos  Agresando usuarios a Samba  Creando carpetas  Cambiando el usuario y grupo due\u00f1o de la carpeta  Cambiando los permisos de las carpeta  Configuraci\u00f3n de Samba para carpeta grupal  Configuraci\u00f3n de Samba para carpeta an\u00f3nima  Reiniciando el servidor Samba   En Windows   Creando usuarios  Verfificando carpetas compartidas", 
+            "title": "Procedimiento para resolver el ejercicio"
         }, 
         {
             "location": "/icecast/", 

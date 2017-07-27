@@ -462,9 +462,68 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Carpeta de grupo
+      </label>
+    
     <a href="./" title="Carpeta de grupo" class="md-nav__link md-nav__link--active">
       Carpeta de grupo
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creando-la-carpeta-a-compartir" title="Creando la carpeta a compartir" class="md-nav__link">
+    Creando la carpeta a compartir
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificando-el-usuario-y-grupo-propietario-de-la-carpeta" title="Modificando el usuario y grupo propietario de la carpeta" class="md-nav__link">
+    Modificando el usuario y grupo propietario de la carpeta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificando-los-permisos-de-la-carpeta" title="Modificando los permisos de la carpeta" class="md-nav__link">
+    Modificando los permisos de la carpeta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificando-el-archivo-de-configuracion-de-samba" title="Modificando el archivo de configuración de Samba" class="md-nav__link">
+    Modificando el archivo de configuración de Samba
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reiniciando-el-servidor" title="Reiniciando el servidor" class="md-nav__link">
+    Reiniciando el servidor
+  </a>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comentarios" class="md-nav__link md-nav__link--active">
+            Comentarios
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -489,6 +548,18 @@
   <li class="md-nav__item">
     <a href="../clientesWindows/" title="Clientes Windows" class="md-nav__link">
       Clientes Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ejercicios/" title="Ejercicios" class="md-nav__link">
+      Ejercicios
     </a>
   </li>
 
@@ -609,6 +680,54 @@
   
   
   
+    <label class="md-nav__title" for="toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creando-la-carpeta-a-compartir" title="Creando la carpeta a compartir" class="md-nav__link">
+    Creando la carpeta a compartir
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificando-el-usuario-y-grupo-propietario-de-la-carpeta" title="Modificando el usuario y grupo propietario de la carpeta" class="md-nav__link">
+    Modificando el usuario y grupo propietario de la carpeta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificando-los-permisos-de-la-carpeta" title="Modificando los permisos de la carpeta" class="md-nav__link">
+    Modificando los permisos de la carpeta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modificando-el-archivo-de-configuracion-de-samba" title="Modificando el archivo de configuración de Samba" class="md-nav__link">
+    Modificando el archivo de configuración de Samba
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reiniciando-el-servidor" title="Reiniciando el servidor" class="md-nav__link">
+    Reiniciando el servidor
+  </a>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comentarios" class="md-nav__link md-nav__link--active">
+            Comentarios
+          </a>
+        </li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -623,17 +742,23 @@
                   <h1>Carpeta de grupo</h1>
                 
                 <p>En otras ocasiones, tal vez resulte práctico <strong>compartir una carpeta entre los usuarios que pertenecen a un grupo determinado</strong>. </p>
-<p>Para ello, creamos la carpeta a compartir: </p>
+<h2 id="creando-la-carpeta-a-compartir">Creando la carpeta a compartir<a class="headerlink" href="#creando-la-carpeta-a-compartir" title="Permanent link">&para;</a></h2>
+<p>Debemos crear la carpeta en cualquier lugar (p.e. <code>/opt</code>)</p>
 <div class="codehilite"><pre><span class="nb">mkdir</span> -p carpetaCompartida
 </pre></div>
 
 
-<p>Modificamos el usuario y grupo propietario de dicha carpeta: </p>
+<h2 id="modificando-el-usuario-y-grupo-propietario-de-la-carpeta">Modificando el usuario y grupo propietario de la carpeta<a class="headerlink" href="#modificando-el-usuario-y-grupo-propietario-de-la-carpeta" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span class="nb">chown</span> -R usuario:grupo carpetaCompartida
 </pre></div>
 
 
-<p>Donde <code>usuario</code> es el <strong>usuario dueño</strong> de la carpeta compartida (generalmente es el usuario <code>root</code>) y <code>grupo</code> es el <strong>grupo de usuarios</strong> al que deseamos dar permiso sobre la carpeta compardida. </p>
+<p>Donde:</p>
+<ul>
+<li><code>usuario</code> es el <strong>usuario dueño</strong> de la carpeta compartida (generalmente es el usuario <code>root</code>) y </li>
+<li><code>grupo</code> es el <strong>grupo de usuarios</strong> al que deseamos dar permiso sobre la carpeta compardida. </li>
+</ul>
+<h2 id="modificando-los-permisos-de-la-carpeta">Modificando los permisos de la carpeta<a class="headerlink" href="#modificando-los-permisos-de-la-carpeta" title="Permanent link">&para;</a></h2>
 <p>Y finalmente, modificamos los permisos de la carpeta: </p>
 <div class="codehilite"><pre><span class="nb">chmod</span> -R ug+rwx,o+rx-w carpetaCompartida
 </pre></div>
@@ -644,6 +769,7 @@
 </pre></div>
 
 
+<h2 id="modificando-el-archivo-de-configuracion-de-samba">Modificando el archivo de configuración de Samba<a class="headerlink" href="#modificando-el-archivo-de-configuracion-de-samba" title="Permanent link">&para;</a></h2>
 <p>En el siguiente ejemplo, se comparte una carpeta llamada <strong>ventas</strong> que será accesible y escribible por todos los miembros del grupo <strong>facturacion</strong> (el bloque siguiente de código se deberá agregar en el archivo <code>/etc/samba/smb.conf</code>):</p>
 <div class="codehilite"><pre><span class="err">[ventas]</span>
     <span class="c"># Comentario</span>
@@ -675,6 +801,7 @@
 <p>Lo indicado vale también para la directiva <code>force group</code> que es para los grupos. </p>
 </p>
 </div>
+<h2 id="reiniciando-el-servidor">Reiniciando el servidor<a class="headerlink" href="#reiniciando-el-servidor" title="Permanent link">&para;</a></h2>
 <p>Rreiniciamos Samba para que el servidor haga efectivos los cambios:</p>
 <div class="codehilite"><pre><span class="nb">sudo</span> service smbd restart
 </pre></div>

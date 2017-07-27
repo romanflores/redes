@@ -1,16 +1,23 @@
 En otras ocasiones, tal vez resulte práctico **compartir una carpeta entre los usuarios que pertenecen a un grupo determinado**. 
 
-Para ello, creamos la carpeta a compartir: 
+## Creando la carpeta a compartir
+Debemos crear la carpeta en cualquier lugar (p.e. `/opt`)
+
 ```apache
 mkdir -p carpetaCompartida
 ```
 
-Modificamos el usuario y grupo propietario de dicha carpeta: 
+## Modificando el usuario y grupo propietario de la carpeta
 
 ```apache
 chown -R usuario:grupo carpetaCompartida
 ```
-Donde `usuario` es el **usuario dueño** de la carpeta compartida (generalmente es el usuario `root`) y `grupo` es el **grupo de usuarios** al que deseamos dar permiso sobre la carpeta compardida. 
+Donde:
+
+ * `usuario` es el **usuario dueño** de la carpeta compartida (generalmente es el usuario `root`) y 
+ * `grupo` es el **grupo de usuarios** al que deseamos dar permiso sobre la carpeta compardida. 
+
+## Modificando los permisos de la carpeta
 
 Y finalmente, modificamos los permisos de la carpeta: 
 ```apache
@@ -22,6 +29,7 @@ O, lo que es lo mismo:
 chmod -R 775 carpetaCompartida
 ```
 
+## Modificando el archivo de configuración de Samba
 
 En el siguiente ejemplo, se comparte una carpeta llamada **ventas** que será accesible y escribible por todos los miembros del grupo **facturacion** (el bloque siguiente de código se deberá agregar en el archivo `/etc/samba/smb.conf`):
 
@@ -59,6 +67,7 @@ En el siguiente ejemplo, se comparte una carpeta llamada **ventas** que será ac
 
 		Lo indicado vale también para la directiva `force group` que es para los grupos. 
 
+## Reiniciando el servidor
 Rreiniciamos Samba para que el servidor haga efectivos los cambios:
 
 ```apache
