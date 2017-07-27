@@ -4,7 +4,7 @@ En otras ocasiones, tal vez resulte práctico **compartir una carpeta entre los 
 Debemos crear la carpeta en cualquier lugar (p.e. `/opt`)
 
 ```apache
-mkdir -p carpetaCompartida
+mkdir -p /opt/carpetaCompartida
 ```
 
 ## Modificando el usuario y grupo propietario de la carpeta
@@ -15,7 +15,13 @@ chown -R usuario:grupo carpetaCompartida
 Donde:
 
  * `usuario` es el **usuario dueño** de la carpeta compartida (generalmente es el usuario `root`) y 
- * `grupo` es el **grupo de usuarios** al que deseamos dar permiso sobre la carpeta compardida. 
+ * `grupo` es el **grupo dueño** al que deseamos dar permiso sobre la carpeta compardida.
+
+ Por ejemplo, si deseamos permitir que usuarios de un hipotético grupo llamado _ventas_ tenga acceso a la carpeta imaginaria _recursos_ ejecutamos: 
+
+```apache
+chown -R root:ventas recursos
+```
 
 ## Modificando los permisos de la carpeta
 
@@ -28,6 +34,13 @@ O, lo que es lo mismo:
 ```apache
 chmod -R 775 carpetaCompartida
 ```
+
+Siguiendo con el ejemplo del apartado anterior, escribiríamos: 
+
+```apache
+chmod -R 775 recursos
+```
+De esta manera estaríamos dando permiso total de acceso al usuario y grupo dueños de la carpeta _recursos_ y permisos de lectura y ejecución al resto de los usuarios del sistema. 
 
 ## Modificando el archivo de configuración de Samba
 

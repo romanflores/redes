@@ -744,7 +744,7 @@
                 <p>En otras ocasiones, tal vez resulte práctico <strong>compartir una carpeta entre los usuarios que pertenecen a un grupo determinado</strong>. </p>
 <h2 id="creando-la-carpeta-a-compartir">Creando la carpeta a compartir<a class="headerlink" href="#creando-la-carpeta-a-compartir" title="Permanent link">&para;</a></h2>
 <p>Debemos crear la carpeta en cualquier lugar (p.e. <code>/opt</code>)</p>
-<div class="codehilite"><pre><span class="nb">mkdir</span> -p carpetaCompartida
+<div class="codehilite"><pre><span class="nb">mkdir</span> -p <span class="sx">/opt/carpetaCompartida</span>
 </pre></div>
 
 
@@ -756,8 +756,13 @@
 <p>Donde:</p>
 <ul>
 <li><code>usuario</code> es el <strong>usuario dueño</strong> de la carpeta compartida (generalmente es el usuario <code>root</code>) y </li>
-<li><code>grupo</code> es el <strong>grupo de usuarios</strong> al que deseamos dar permiso sobre la carpeta compardida. </li>
+<li><code>grupo</code> es el <strong>grupo dueño</strong> al que deseamos dar permiso sobre la carpeta compardida.</li>
 </ul>
+<p>Por ejemplo, si deseamos permitir que usuarios de un hipotético grupo llamado <em>ventas</em> tenga acceso a la carpeta imaginaria <em>recursos</em> ejecutamos: </p>
+<div class="codehilite"><pre><span class="nb">chown</span> -R root:ventas recursos
+</pre></div>
+
+
 <h2 id="modificando-los-permisos-de-la-carpeta">Modificando los permisos de la carpeta<a class="headerlink" href="#modificando-los-permisos-de-la-carpeta" title="Permanent link">&para;</a></h2>
 <p>Y finalmente, modificamos los permisos de la carpeta: </p>
 <div class="codehilite"><pre><span class="nb">chmod</span> -R ug+rwx,o+rx-w carpetaCompartida
@@ -769,6 +774,12 @@
 </pre></div>
 
 
+<p>Siguiendo con el ejemplo del apartado anterior, escribiríamos: </p>
+<div class="codehilite"><pre><span class="nb">chmod</span> -R <span class="m">775</span> recursos
+</pre></div>
+
+
+<p>De esta manera estaríamos dando permiso total de acceso al usuario y grupo dueños de la carpeta <em>recursos</em> y permisos de lectura y ejecución al resto de los usuarios del sistema. </p>
 <h2 id="modificando-el-archivo-de-configuracion-de-samba">Modificando el archivo de configuración de Samba<a class="headerlink" href="#modificando-el-archivo-de-configuracion-de-samba" title="Permanent link">&para;</a></h2>
 <p>En el siguiente ejemplo, se comparte una carpeta llamada <strong>ventas</strong> que será accesible y escribible por todos los miembros del grupo <strong>facturacion</strong> (el bloque siguiente de código se deberá agregar en el archivo <code>/etc/samba/smb.conf</code>):</p>
 <div class="codehilite"><pre><span class="err">[ventas]</span>
