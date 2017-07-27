@@ -1,10 +1,10 @@
 En otras ocasiones, tal vez resulte práctico **compartir una carpeta entre los usuarios que pertenecen a un grupo determinado**. 
 
 ## Creando la carpeta a compartir
-Debemos crear la carpeta en cualquier lugar (p.e. `/opt`)
+Debemos crear la carpeta en cualquier lugar (p.e. dentro de la carpeta `/opt`)
 
 ```apache
-mkdir -p /opt/carpetaCompartida
+mkdir -p carpetaCompartida
 ```
 
 ## Modificando el usuario y grupo propietario de la carpeta
