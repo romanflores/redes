@@ -20,7 +20,7 @@ Si quieres comprobar tu configuración, puedes usar el comando `git config --lis
 
 ```bash
 git config --list
-...
+```
 
 También puedes comprobar qué valor que Git utilizará para una clave específica ejecutando `git config <key>`:
 

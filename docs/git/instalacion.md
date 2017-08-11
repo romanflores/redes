@@ -10,5 +10,10 @@ sudo apt install git
 ```
 
 ## Instalación en Windows 
-La forma más oficial está disponible para ser descargada en el sitio web de Git. Solo tienes que visitar [http://git-scm.com/download/win](http://git-scm.com/download/win) y la descarga empezará automáticamente. Fíjate que éste es un proyecto conocido como Git para Windows (también llamado msysGit), el cual es diferente de Git. Para más información acerca de este proyecto visita http://msysgit.github.io/.
+La forma más oficial está disponible para ser descargada en el sitio web de Git. Solo tienes que visitar [http://git-scm.com/download/win](http://git-scm.com/download/win) y la descarga empezará automáticamente. 
+
+!!!note "Sobre Git para Windows"
+		Este es un proyecto conocido como Git para Windows (también llamado msysGit), el cual es diferente de Git. Para más información acerca de este proyecto visitá [https://git-for-windows.github.io/](https://git-for-windows.github.io/).
+
+
 

@@ -1,27 +1,21 @@
 Puedes obtener un proyecto Git de dos maneras. La primera es tomar un proyecto o directorio existente e importarlo en Git. La segunda es clonar un repositorio existente en Git desde otro servidor.
 
 ## Inicializando un repositorio vacío
-Para comenzar un repositorio vacío primero debes crear la carpeta que alojará al mismo
+Para comenzar un repositorio vacío primero debes crear la carpeta que alojará al mismo:
+
 ```bash
 mkdir miProyecto
 ```
 Luego, desplazarse al directorio: 
+
 ```bash
 cd miProyecto
 ```
 Por último, inicializar el repositorio con el siguiente comando: 
+
 ```bash
 git init --bare
 ```
-##Inicializando un repositorio en un directorio existente
-Si estás empezando a seguir un proyecto existente en Git, debes ir al directorio del proyecto y usar el siguiente comando:
-
-```bash
-git init
-```
-
-!!!done "Directorio oculto .git"
-        Al inicializar un repositorio se creará un directorio oculto llamado `.git` el cual contiene todos los archivos necesarios del repositorio – un esqueleto de un repositorio de Git. 
 
 ##Clonando un repositorio existente
 Si deseas obtener una copia de un repositorio Git existente — por ejemplo, un proyecto en el que te gustaría contribuir — el comando que necesitas es `git clone`. Cada versión de cada archivo de la historia del proyecto es descargada por defecto cuando ejecutas `git clone`. De hecho, si el disco de tu servidor se corrompe, puedes usar cualquiera de los clones en cualquiera de los clientes para devolver al servidor al estado en el que estaba cuando fue clonado (puede que pierdas algunos hooks del lado del servidor y demás, pero toda la información acerca de las versiones estará ahí).
@@ -47,3 +41,6 @@ git clone usuario@servidor:ruta/del/repositorio
 ```
 
 Donde _servidor_ hace referencia a la dirección IP o dominio del servidor donde se encuentra alojado el recurso que deseamos clonar. 
+
+!!!done "Directorio oculto .git"
+        En el repositorio existe un directorio oculto llamado `.git` el cual contiene todos los archivos necesarios para el correcto funcionamiento de Git. 
