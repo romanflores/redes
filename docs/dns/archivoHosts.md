@@ -49,3 +49,5 @@ Si configuramos correctamente el archivo _hosts_ de nuestro sistema, podremos ac
 
 !!! done "Resolución de dominios empleando el archivo _hosts_"
 	Si en una red local, decidimos resolver los nombres de dominio valiéndonos del archivo _hosts_ tendremos que copiar el mismo archivo _hosts_ en cada uno de los equipos que compongan la red.
+	
+	Esto está siendo modificado para prueba
